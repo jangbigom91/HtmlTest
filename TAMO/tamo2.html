@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <style>
+            * {
+                border-collapse: collapse;
+                margin: 0px;
+                padding: 0px;
+                text-decoration: none;
+                color: black;
+                list-style: none;
+            }
+            div {
+                background: pink;
+                padding: 10px;
+                margin-left: 450px;
+                            }
+            div > span:first-child {
+                background: red;
+                padding-top: 20px;
+                padding-bottom: 100px;
+                padding-left: 50px;
+                padding-right: 80px;
+            }
+            div > span:last-child {
+                background: red;
+                padding: 20px;
+            }
+            div > span {
+                background: yellowgreen;
+                padding: 10px;
+                margin: 40px;
+            }
+
+            table {
+               border: 1px solid black;
+            }
+            table > thead > tr > th {
+                border: 1px solid grey;
+            }
+            table > tbody > tr > td {
+                border: 1px solid grey;
+                background: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <!--  
+        <h1>이번 강좌에서 배울 목록</h1>
+
+        <ol>
+            <li>여백과 면적의 차이 - margin, padding</li>
+            <li>테이블 태그 다루기(table, thead, tbody, tr, th ,td)</li>
+            <li>*선택자로 html 기본 속성 죽이기</li>
+            <li>Position의 위치속성 비교하기(absolute, relative, fixed)</li>
+            <li>어떻게 보여질까? Display 속성(none, block, inline, flex)</li>
+        </ol>-->
+        <div>
+            <span>타모</span>
+            <span>디자인</span>
+            <span>입니다</span>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>이름</th>
+                    <th>성별</th>
+                    <th>나이</th>
+                    <th>키</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>김타모</td>
+                    <td>남성</td>
+                    <td>30</td>
+                    <td>175</td>
+                </tr>
+                <tr>
+                    <td>아로니아</td>
+                    <td>여성</td>
+                    <td>30</td>
+                    <td>165</td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="https://www.naver.com">네이버 바로가기</a>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <style>
+            * {
+                border-collapse: collapse;
+                margin: 0px;
+                padding: 0px;
+                text-decoration: none;
+                color: black;
+                list-style: none;
+            }
+
+            .blankPosition {
+                width: 100%;
+                height: 400px;
+                background: grey;
+            }
+            
+            .relativePosition {
+                width: 100%;
+                height: 300px;
+                background: pink;
+            }
+
+            .relativePosition > div {
+                padding: 50px;
+                background: red;
+                margin-top: 10px;
+            }
+            .relativePosition > div:first-child {
+                position: relative;
+                top: -100px;
+            }
+            
+            .absolutePosition {
+                width: 100%;
+                height: 300px;
+                background: violet
+            }
+            .absolutePosition > div {
+                position: absolute;
+                right: 0px;
+                bottom: 0px;
+                width: 400px;
+                height: 100px;
+                background: blue;
+            }
+            
+            .fixedPosition {
+                width: 100%;
+                height: 500px;
+                background: skyblue;
+            }
+            .fixedPosition > div {
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                background: royalblue;
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="blankPosition">
+            <div>blank</div>
+        </div>
+        <div class="relativePosition">
+            <div>relative</div>
+            <div>relative</div>
+        </div>
+        <div class="absolutePosition">
+            <div>absolute</div>
+        </div>
+        <div class="fixedPosition">
+            <div>fixed</div>
+        </div>
+
+        <div>
+            <span>span</span>
+            <span>span</span>
+        </div>
+        <div>
+            <div>div</div>
+            <div>div</div>
+            <div>div</div>
+        </div>
+    </body>
+</html>
