@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>맨유::list</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="../js/top.js"></script>
+    <script src="../js/category.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="../css/style.css"/>
+    <script>
+       
+    </script>
+    <style>
+/* list페이지 */
+#list {
+    padding: 16px;
+    box-sizing: border-box;
+}
+#list > nav > h1 {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.5em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0 0 7px;
+    line-height: 1em;
+}
+#list > .sort {
+    margin: 0 0 20px 0;
+    border-bottom: 1px solid #dfdfdf;
+    width: 1300px;
+    overflow: hidden;
+}
+#list > .sort > li {
+    float: left;
+    position: relative;
+    padding: 15px 0;
+    line-height: 15px;
+}
+#list > .sort > li > a {
+    display: block;
+    padding: 0 10px;
+    border-right: 1px solid #ddd;
+}
+#list > .sort > li > a:hover {
+    color: #fe434c;
+    text-decoration: none;
+}
+#list > .sort > li > a.on {
+    color: #fe434c;
+    font-weight: bold;
+}
+
+#list > section > article {
+    width: 100%;
+    height: 230px;
+    border-bottom: 1px solid #ececec;
+}
+#list > section > article > ul > li > .item_option > .item_size {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #c4c4c4;
+}
+#list > section > article > ul {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#list > section > article > ul > li:nth-child(1) {width: 20%; padding: 0;}
+#list > section > article > ul > li:nth-child(2) {width: 40%;}
+#list > section > article > ul > li:nth-child(3) {width: 20%;}
+#list > section > article > ul > li:nth-child(4) {width: 20%;}
+
+#list > section > article > ul > li > .desc {margin-top: 20px;}
+#list > section > article > ul > li > .desc > a {color: blue;}
+
+#list > section > article > ul > li {
+    position: relative;
+    float: left;
+    height: 100%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+
+#list > section > article > ul > .price {
+    position: relative;
+    margin-left: 250px;
+}
+#list > section > article > ul > .price .coupon-no {
+    margin-top: 20px;
+}
+#list > section > article > ul > .price .coupon-ok {
+    margin-top: 20px;
+}
+
+#list > section > article .mu {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#list > section > article .name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 6px;
+}
+#list > section > article .desc > a:hover {
+    text-decoration: underline;
+}
+#list > section > article .org_price {}
+#list > section > article .org_price > del::after {content: "원";}
+#list > section > article .org_price > ins::after {content: "원";}
+#list > section > article .org_price > del {
+    font-size: 12px;
+    color: #aaa;
+}
+#list > section > article .org_price > span {
+    color: #eb000a;
+    font-size: 10px;
+}
+#list > section > article .org_price > span::after { content: "↓"; }
+#list > section > article .dis_price {}
+#list > section > article .dis_price > ins {
+    font-size: 16px;
+    text-decoration: none;
+}
+#list > section > article .dis_price > ins::after { content: "원"; }
+
+#list > .paging {
+    width: 1300px;
+    padding: 30px 0;
+    text-align: center;
+}
+
+#list > .paging > span > a {
+    color: #777;            
+    font-size: 11px;
+    letter-spacing: -1px;
+}
+
+#list > .paging > span > a:hover {
+    text-decoration: underline;
+}
+
+#list > .paging > .num > a {
+    display: inline-block;
+    min-width: 14px;
+    margin: 0 2px;
+    padding: 8px 9px;
+    border: 1px solid #c4c4c4;
+    background: url() 0 0 repeat-x;
+    color: #000;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+}
+#list > .paging > .num > a:hover {
+    border: 1px solid #454c5f;
+    text-decoration: none;
+}
+#list > .paging > .num > a.on {
+    color: #fe434c;
+    font-weight: bold;
+}
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="top">
+                <div>
+                    <a href="#"><i class="far fa-user"></i>&nbsp;LOGIN</a>
+                    <a href="#">SIGN UP</a>
+                    <a href="#">MYPAGE</a>
+                    <a href="#">HELP</a>
+                    <a href="#"><i class="fas fa-star"></i>&nbsp;FAVORITE</a>
+                    <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;</a>
+                </div>
+            </div>
+            <div class="logo">
+                <div>
+                    <a href="#"><img src="../img/mu_header_logo.png" alt="로고"></a>
+                    <form action="#">
+                        <input type="text" name="search" />
+                        <button><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="menu">
+                    <ul class="category">
+                        <li>
+                            <a href="#"><i class="fas fa-futbol"></i>KITS</a>
+                            <ul class="category-bar">
+                                <li><a href="#">&nbsp;Home</a></li>
+                                <li><a href="#">&nbsp;Away</a></li>
+                                <li><a href="#">&nbsp;Third</a></li>
+                                <li><a href="#">&nbsp;GoalKeeper</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-running"></i>&nbsp;TRAINING</a>
+                            <ul class="category-bar">
+                                <li><a href="">&nbsp;MAN</a></li>
+                                <li><a href="">&nbsp;WOMAN</a></li>
+                                <li><a href="">&nbsp;KID</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-tshirt"></i>RETRO</a>
+                            <ul class="category-bar">
+                                <li><a href="">&nbsp;Shirt</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-gift"></i>GIFT</a>
+                            <ul class="category-bar">
+                                <li><a href="">&nbsp;Accessory</a></li>
+                                <li><a href="">&nbsp;Bag</a></li>
+                                <li><a href="">&nbsp;Cap</a></li>
+                                <li><a href="">&nbsp;Flag</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fas fa-percentage"></i>&nbsp;SALE</a>
+                        </li>
+                    </ul>
+                    <div>
+                        <ul>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">주문조회</a></li>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">고객센터</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+        </header>
+        <main>
+            <!-- 상품 목록 -->
+            <section id="list">
+              
+                <!-- 제목, 페이지 네비게이션-->
+                <nav>
+                  <h1>KITS 상품리스트</h1>
+                  <p>
+                    HOME >
+                    <span>KITS</span>
+                    >
+                    <strong>Home</strong>
+                  </p>
+                </nav>
+  
+                <!-- 정렬방식 링크 -->
+                <ul class="sort">
+                  <li><a href="#" class="on">판매많은순</a></li>
+                  <li><a href="#">낮은가격순</a></li>
+                  <li><a href="#">높은가격순</a></li>
+                  <li><a href="#">평점높은순</a></li>
+                  <li><a href="#">후기많은순</a></li>
+                  <li><a href="#">최근등록순</a></li>
+                </ul>
+  
+                <!-- 상품목록 10개 -->
+                <section>
+                  <article>
+                    <ul>
+                      <li><a href="#" class="mu"><img src="../img/mu_item1.png" alt="상품이미지"></a></li>
+                      <li>
+                        <h3 class="name">맨유 홈 저지 2020-21</h3>
+                        <p class="desc">
+                          <a href="#">맨체스터 유나이티드 홈 저지</a>
+                        </p>
+                        <div class="item_option">
+                            <span class="item_size">S | M | L | XL | 2XL | 3XL | 4XL</span>
+                        </div>
+                      </li>
+                      <li class="price">
+                        <div class="org_price">
+                            <del>106,900</del>
+                            <span>10%</span>
+                        </div>
+                        <div class="dis_price">
+                          <ins>96,210</ins>
+                        </div>
+                        <div class="coupon-no">
+                            <img src="../img/icon_couponno.png" alt="쿠폰불가">
+                            <img src="../img/adidas_brand.png" alt="브랜드">
+                        </div>
+                      </li>
+                    </ul>
+                  </article>
+                  <article>
+                    <ul>
+                      <li><a href="#" class="mu"><img src="../img/mu_item2.png" alt="상품이미지"></a></li>
+                      <li>
+                        <h3 class="name">맨유 트래블 재킷</h3>
+                        <p class="desc">
+                          <a href="#">맨유 트래블 재킷 - 적갈색</a>
+                        </p>
+                        <div class="item_option">
+                            <span class="item_size">S | M | L | XL | 2XL | 3XL | 4XL</span>
+                        </div>
+                      </li>
+                      <li class="price">
+                        <div class="org_price">
+                            <del>154,400</del>
+                            <span>10%</span>
+                        </div>
+                        <div class="dis_price">
+                          <ins>138,960</ins>
+                        </div>
+                        <div class="coupon-no">
+                            <img src="../img/icon_couponno.png" alt="쿠폰불가">
+                            <img src="../img/adidas_brand.png" alt="브랜드">
+                        </div>
+                      </li>
+                    </ul>
+                  </article>
+                  <article>
+                    <ul>
+                      <li><a href="#" class="mu"><img src="../img/mu_item3.png" alt="상품이미지"></a></li>
+                      <li>
+                        <h3 class="name">맨유 트레이닝 탑</h3>
+                        <p class="desc">
+                          <a href="#">맨유 트레이닝 탑 - 화이트</a>
+                        </p>
+                        <div class="item_option">
+                            <span class="item_size">S | M | L | XL | 2XL | 3XL | 4XL</span>
+                        </div>
+                      </li>
+                      <li class="price">
+                        <div class="org_price">
+                            <del>106,900</del>
+                            <span>10%</span>
+                        </div>
+                        <div class="dis_price">
+                          <ins>96,210</ins>
+                        </div>
+                        <div class="coupon-no">
+                            <img src="../img/icon_couponno.png" alt="쿠폰불가">
+                            <img src="../img/adidas_brand.png" alt="브랜드">
+                        </div>
+                    </li>
+                    </ul>
+                  </article>
+                  <article>
+                    <ul>
+                      <li><a href="#" class="mu"><img src="../img/mu_item4.png" alt="상품이미지"></a></li>
+                      <li>
+                        <h3 class="name">맨유 트레이닝 탑</h3>
+                        <p class="desc">
+                          <a href="#">맨유 트레이닝 탑 - 그린</a>
+                        </p>
+                        <div class="item_option">
+                            <span class="item_size">S | M | L | XL | 2XL | 3XL | 4XL</span>
+                        </div>
+                      </li>
+                      <li class="price">
+                        <div class="org_price">
+                            <del>130,600</del>
+                            <span>10%</span>
+                        </div>
+                        <div class="dis_price">
+                          <ins>117,540</ins>
+                        </div>
+                        <div class="coupon-no">
+                            <img src="../img/icon_couponno.png" alt="쿠폰불가">
+                            <img src="../img/adidas_brand.png" alt="브랜드">
+                        </div>
+                    </li>
+                    </ul>
+                  </article>
+                  <article>
+                    <ul>
+                      <li><a href="#" class="mu"><img src="../img/mu_item5.png" alt="상품이미지"></a></li>
+                      <li>
+                        <h3 class="name">맨유 골키퍼 홈 저지 2020-21</h3>
+                        <p class="desc">
+                          <a href="#">맨체스터 유나이티드 골키퍼 홈 저지</a>
+                        </p>
+                        <div class="item_option">
+                            <span class="item_size">S | M | L | XL | 2XL | 3XL | 4XL</span>
+                        </div>
+                      </li>
+                      <li class="price">
+                        <div class="org_price">
+                            <del>116,400</del>
+                            <span>10%</span>
+                        </div>
+                        <div class="dis_price">
+                          <ins>104,760</ins>
+                        </div>
+                        <div class="coupon-no">
+                            <img src="../img/icon_couponno.png" alt="쿠폰불가">
+                            <img src="../img/adidas_brand.png" alt="브랜드">
+                        </div>
+                      </li>
+                    </ul>
+                  </article>
+                  <article>
+                    <ul>
+                      <li><a href="#" class="mu"><img src="../img/mu_item6.png" alt="상품이미지"></a></li>
+                      <li>
+                        <h3 class="name">맨유 골키퍼 어웨이 저지 2020-21</h3>
+                        <p class="desc">
+                          <a href="#">맨체스터 유나이티드 골키퍼 어웨이 저지</a>
+                        </p>
+                        <div class="item_option">
+                            <span class="item_size">S | M | L | XL | 2XL | 3XL | 4XL</span>
+                        </div>
+                      </li>
+                      <li class="price">
+                        <div class="org_price">
+                            <del>118,800</del>
+                            <span>10%</span>
+                        </div>
+                        <div class="dis_price">
+                          <ins>106,920</ins>
+                        </div>
+                        <div class="coupon-ok">
+                            <img src="../img/icon_coupon.png" alt="쿠폰가능">
+                            <img src="../img/adidas_brand.png" alt="브랜드">
+                        </div>
+                      </li>
+                    </ul>
+                  </article>
+                  <article>
+                    <ul>
+                      <li><a href="#" class="mu"><img src="../img/mu_item7.png" alt="상품이미지"></a></li>
+                      <li>
+                        <h3 class="name">맨유 Anthem 재킷</h3>
+                        <p class="desc">
+                          <a href="#">맨유 Anthem 재킷 - 블랙</a>
+                        </p>
+                        <div class="item_option">
+                            <span class="item_size">S | M | L | XL | 2XL | 3XL | 4XL</span>
+                        </div>
+                      </li>
+                      <li class="price">
+                        <div class="org_price">
+                            <del>106,900</del>
+                            <span>10%</span>
+                        </div>
+                        <div class="dis_price">
+                          <ins>96,210</ins>
+                        </div>
+                        <div class="coupon-ok">
+                            <img src="../img/icon_coupon.png" alt="쿠폰가능">
+                            <img src="../img/adidas_brand.png" alt="브랜드">
+                        </div>
+                      </li>
+                    </ul>
+                  </article>
+                  <article>
+                    <ul>
+                      <li><a href="#" class="mu"><img src="../img/mu_item8.png" alt="상품이미지"></a></li>
+                      <li>
+                        <h3 class="name">맨유 어웨이 저지 2020-21</h3>
+                        <p class="desc">
+                          <a href="#">맨체스터 유나이티드 어웨이 저지</a>
+                        </p>
+                        <div class="item_option">
+                            <span class="item_size">S | M | L | XL | 2XL | 3XL | 4XL</span>
+                        </div>
+                      </li>
+                      <li class="price">
+                        <div class="org_price">
+                            <del>106,900</del>
+                            <span>10%</span>
+                        </div>
+                        <div class="dis_price">
+                          <ins>96,210</ins>
+                        </div>
+                        <div class="coupon-ok">
+                            <img src="../img/icon_coupon.png" alt="쿠폰가능">
+                            <img src="../img/adidas_brand.png" alt="브랜드">
+                        </div>
+                      </li>
+                    </ul>
+                  </article>
+                  <article>
+                    <ul>
+                      <li><a href="#" class="mu"><img src="../img/mu_item9.png" alt="상품이미지"></a></li>
+                      <li>
+                        <h3 class="name">맨유 1963년 FA컵 결승 셔츠</h3>
+                        <p class="desc">
+                          <a href="#">맨체스터 유나이티드 레트로 셔츠</a>
+                        </p>
+                        <div class="item_option">
+                            <span class="item_size">S | M | L | XL | 2XL | 3XL | 4XL</span>
+                        </div>
+                      </li>
+                      <li class="price">
+                        <div class="org_price">
+                            <del>62,700</del>
+                            <span>10%</span>
+                        </div>
+                        <div class="dis_price">
+                          <ins>56,430</ins>
+                        </div>
+                        <div class="coupon-ok">
+                            <img src="../img/icon_coupon.png" alt="쿠폰가능">
+                            <img src="../img/adidas_brand.png" alt="브랜드">
+                        </div>
+                      </li>
+                    </ul>
+                  </article>
+                  <article>
+                    <ul>
+                      <li><a href="#" class="mu"><img src="../img/mu_item10.png" alt="상품이미지"></a></li>
+                      <li>
+                        <h3 class="name">맨유 프리매치 저지</h3>
+                        <p class="desc">
+                          <a href="#">맨체스터 유나이티드 프리매치 저지 - 레드</a>
+                        </p>
+                        <div class="item_option">
+                            <span class="item_size">S | M | L | XL | 2XL | 3XL | 4XL</span>
+                        </div>
+                      </li>
+                      <li class="price">
+                        <div class="org_price">
+                            <del>78,300</del>
+                            <span>10%</span>
+                        </div>
+                        <div class="dis_price">
+                          <ins>70,470</ins>
+                        </div>
+                        <div class="coupon-ok">
+                            <img src="../img/icon_coupon.png" alt="쿠폰가능">
+                            <img src="../img/adidas_brand.png" alt="브랜드">
+                        </div>
+                      </li>
+                    </ul>
+                  </article>
+                </section>
+  
+                <!-- 상품목록 페이지번호 -->
+                <div class="paging">
+                  
+                  <span class="prev">
+                    <a href="#"><&nbsp;이전</a>
+                  </span>
+                  
+                  <span class="num">
+                    <a href="#" class="on">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">7</a>
+                  </span>
+                  
+                  <span class="next">
+                    <a href="#">&nbsp;다음></a>
+                  </span>
+                </div>
+  
+              </section>
+          </main>
+        </main>
+        <footer>
+            <ul>
+                <li><a href="#">개인정보 보호 정책</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">사이트맵</a></li>
+                <li><a href="#">더 알아보기</a></li>
+            </ul>
+
+            <div>
+                <p class="footer1">
+                    <img src="../img/mu_footer_logo.png" alt="푸터로고">
+                </p>
+                <p class="footer2">
+                    <strong>MANCHESTER UNITED</strong><br />
+                    영국 스트렛포드 올드 트래포드<br />
+                    대표이사 : 김우드워드<br />
+                    사업자등록번호 : 110-11-12345 사업자정보확인<br />
+                    통신판매업신고 : 부산 12345호 Fax : 051-211-1123<br />
+                </p>
+                <p class="footer3">
+                    <strong>고객센터</strong><br />
+                    Tel : 051-243-1234 (평일 9:00~18:00)<br />
+                    올드 트래포드 전용 : 1554-1212 (365일 9:00~18:00)<br />
+                    부산시 부산진구 구덕로 123번길 맨체스터빌딩<br />
+                    Fax : 051-243-1111 | Mail : MU@ManUtd.co.kr<br />
+                </p>
+            </div>
+        </footer>
+        <button type="button" id="top" style="display: inline-block;">상단이동</button>
+    </div>
+</body>
+</html>
