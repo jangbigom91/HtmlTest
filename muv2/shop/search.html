@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>맨유::list</title>
+    <title>맨유::search</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
@@ -17,9 +17,229 @@
        
     </script>
     <style>
+/* 상품검색 */
+#search {
+  float: right;
+  width: 1331px;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+#search > nav {
+  width: 100%;
+  height: 36px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #000;
+  box-sizing: border-box;
+}
+#search > nav > h1 {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.5em;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0 0 7px;
+  line-height: 1em;
+  margin-top: 10px;
+}
+#search > nav > h1 > p {
+  float: right;
+  margin-top: 10px;
+}
 
+#search > .detail_search * {font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+#search > .detail_search {
+  width: 100%;
+  margin: 16px 0 0;
+  border: 1px solid #d7d7d7;
+}
+#search > .detail_search > h3 {
+  border-bottom: 1px solid #d7d7d7;
+  color: #111;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 30px;
+  padding: 10px 15px;
+}
+#search > .detail_search > h3 > strong {
+  color: #fe434c;
+  font-size: 18px;
+  margin-right: 6px;
+}
+#search > .detail_search > h3 > em {
+  color: #888;
+  font-size: 14px;
+}
+#search > .detail_search > h3 span {
+  color: #fe434c;
+}
+#search > .detail_search > form {
+  border-bottom: 1px solid #d7d7d7;
+  padding: 10px 15px;
+}
+#search > .detail_search > form > input[type=text] {
+  height: 30px;
+  border: 1px solid #bbb;
+  padding: 0 10px;
+}
+#search > .detail_search > form > input[type=submit] {
+  height: 32px;
+  padding: 0 5px;
+  font-weight: bold;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fe434c;
+  color: #fff;
+  border: 0;
+}
+#search > .detail_search > form > span {
+  float: right;
+  margin-top: 0;
+}
+#search > .detail_search > form > span > label {margin-right: 10px;}
+#search > .detail_search > form > span > input {
+  width: 100%;
+  height: 30px;
+  border: 1px solid #bbb;
+  padding: 0 10px;
+}
 
+#search > .detail_search > .info {
+  padding: 15px;
+  background: #f5f5f5;
+  color: #737373;
+}
 
+#search > .sort {
+  margin: 0 0 20px 0;
+  border-bottom: 1px solid #dfdfdf;
+  overflow: hidden;
+}
+#search > .sort > li {
+  float: left;
+  position: relative;
+  padding: 15px 0;
+  line-height: 15px;
+}
+#search > .sort > li > a {
+  display: block;
+  padding: 0 10px;
+  border-right: 1px solid #ddd;
+}
+
+#search > section > article {
+    width: 100%;
+    height: 230px;
+    border-bottom: 1px solid #ececec;
+}
+#search > section > article > ul > li > .item_option > .item_size {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #c4c4c4;
+}
+#search > section > article > ul {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#search > section > article > ul > li:nth-child(1) {width: 20%; padding: 0;}
+#search > section > article > ul > li:nth-child(2) {width: 40%;}
+#search > section > article > ul > li:nth-child(3) {width: 20%;}
+#search > section > article > ul > li:nth-child(4) {width: 20%;}
+
+#search > section > article > ul > li > .desc {margin-top: 20px;}
+#search > section > article > ul > li > .desc > a {color: blue;}
+
+#search > section > article > ul > li {
+    position: relative;
+    float: left;
+    height: 100%;
+    margin-left: 5px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+#search > section > article > ul > li > img {margin-top: 20px;}
+#search > section > article > ul > .price {
+    position: relative;
+    margin-left: 250px;
+}
+#search > section > article > ul > .price .coupon-no {
+    margin-top: 20px;
+}
+#search > section > article > ul > .price .coupon-ok {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#search > section > article .mu {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#search > section > article .name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 6px;
+}
+#search > section > article .desc > a:hover {
+    text-decoration: underline;
+}
+#search > section > article .org_price {}
+#search > section > article .org_price > del::after {content: "원";}
+#search > section > article .org_price > ins::after {content: "원";}
+#search > section > article .org_price > del {
+    font-size: 12px;
+    color: #aaa;
+}
+#search > section > article .org_price > span {
+    color: #eb000a;
+    font-size: 10px;
+}
+#search > section > article .org_price > span::after { content: "↓"; }
+#search > section > article .dis_price {}
+#search > section > article .dis_price > ins {
+    font-size: 16px;
+    text-decoration: none;
+}
+#search > section > article .dis_price > ins::after { content: "원"; }
+
+#search > .paging {
+    width: 1300px;
+    padding: 30px 0;
+    text-align: center;
+}
+
+#search > .paging > span > a {
+    color: #777;            
+    font-size: 11px;
+    letter-spacing: -1px;
+}
+
+#search > .paging > span > a:hover {
+    text-decoration: underline;
+}
+
+#search > .paging > .num > a {
+    display: inline-block;
+    min-width: 14px;
+    margin: 0 2px;
+    padding: 8px 9px;
+    border: 1px solid #c4c4c4;
+    background: url() 0 0 repeat-x;
+    color: #000;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+}
+#search > .paging > .num > a:hover {
+    border: 1px solid #454c5f;
+    text-decoration: none;
+}
+#search > .paging > .num > a.on {
+    color: #fe434c;
+    font-weight: bold;
+}
     </style>
 </head>
 
@@ -95,31 +315,55 @@
                 </div>
         </header>
         <main>
-            <!-- 상품 목록 -->
-            <section id="list">
+            <!-- 상품 검색 -->
+            <section id="search">
               
                 <!-- 제목, 페이지 네비게이션-->
                 <nav>
-                  <h1>KITS 상품리스트</h1>
+                  <h1>상품 검색 결과</h1>
                   <p>
                     HOME >
-                    <span>KITS</span>
+                    <span>상품검색</span>
                     >
-                    <strong>Home</strong>
+                    <strong>검색키워드</strong>
                   </p>
                 </nav>
   
-                <!-- 정렬방식 링크 -->
+                <div class="detail_search">
+                  <h3>
+                    <strong>맨유</strong>
+                    검색결과
+                    <em>
+                      (총&nbsp;:
+                      <span>20</span>
+                      건)
+                    </em>
+                  </h3>
+                  <form action="#">
+                    <input type="text" name="search">
+                    <input type="submit" value="검색">
+                    <span>
+                      <label><input type="checkbox" name="chk" value="상품명">상품명</label>
+                      <label><input type="checkbox" name="chk" value="상품설명">상품설명</label>
+                      <label><input type="checkbox" name="chk" value="상품가격">상품가격</label>
+                      <input type="text" name="min">원&nbsp;~&nbsp;
+                      <input type="text" name="max">원
+                    </span>
+                  </form>
+                  <p class="info">
+                    상세검색을 선택하지 않거나, 상품가격을 입력하지 않으면 전체에서 검색합니다.<br>
+                    검색어는 최대 30글자까지, 여러개의 검색어를 공백으로 구분하여 입력 할수 있습니다.
+                  </p>
+                </div>
                 <ul class="sort">
-                  <li><a href="#" class="on">판매많은순</a></li>
+                  <li><a href="#">판매많은순</a></li>
                   <li><a href="#">낮은가격순</a></li>
                   <li><a href="#">높은가격순</a></li>
                   <li><a href="#">평점높은순</a></li>
                   <li><a href="#">후기많은순</a></li>
                   <li><a href="#">최근등록순</a></li>
                 </ul>
-  
-                <!-- 상품목록 10개 -->
+                
                 <section>
                   <article>
                     <ul>
