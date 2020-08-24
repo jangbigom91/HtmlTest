@@ -1,0 +1,321 @@
+/* 이벤트 */
+caption {
+    widows: 700px;
+    height: 50px;
+}
+
+caption span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fe343c;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 800px;
+    height: auto;
+}
+
+td {
+    border-bottom: 1px solid #000;
+    text-align:center;
+    padding:5px 10px;
+}
+th {
+    background-color: #fe343c;
+    height:34px;
+    padding:0px 0px;
+    font-size:12px;
+    color: #fff;
+}
+th span {
+    display:block;
+    padding:0px 0px 2px 0px;
+}
+tr:first-child {}
+tr:last-child {
+    border-bottom: 2px solid #000;
+}
+.ev-view {border: none;}
+
+td > input[type=button] {
+    padding: 10px 5px 10px 5px;
+    cursor: pointer;
+}
+
+.paging {
+    width: 1300px;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.paging > span > a {
+    color: #777;            
+    font-size: 11px;
+    letter-spacing: -1px;
+}
+
+.paging > span > a:hover {
+    text-decoration: underline;
+}
+
+.paging > .num > a {
+    display: inline-block;
+    min-width: 14px;
+    margin: 0 2px;
+    padding: 8px 9px;
+    border: 1px solid #c4c4c4;
+    background: url() 0 0 repeat-x;
+    color: #000;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+}
+.paging > .num > a:hover {
+    border: 1px solid #454c5f;
+    text-decoration: none;
+}
+.paging > .num > a.on {
+    color: #fe434c;
+    font-weight: bold;
+}
+
+/* faq */
+.normal {width: auto; margin: 0 20px;}
+.subBanner {padding: 40px 0;}
+.subBanner > h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fe434c;
+    margin-left: 645px;
+}
+.customer {
+    width: 100%;
+    overflow: hidden;
+}
+.tabs {
+    width: 100%;
+    overflow: hidden;
+}
+.tabs ul {
+    width: 100%;
+    overflow: hidden;
+}
+.tabs ul li {
+    float: left;
+    width: 50%;
+    height: 50px;
+}
+.tabs.four ul li {
+    width: 25%;
+}
+.tabs ul li a {
+    border-left: 1px solid #fff;
+    display: block;
+    text-align: center;
+    background: #fe434c;
+    transition: all 0.2s ease-in-out;
+}
+.tabs ul li:first-child a {border-left: 0;}
+.tabs ul li a span {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.2;
+    padding: 17px 0;
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+}
+.customer .subHeadTxt {
+    margin: 30px 0 48px 0;
+    border: 1px solid #d9d9d9;
+    word-break: keep-all;
+}
+.customer .subHeadTxt .tit {
+    font-size: 20px;
+    color: #333;
+    line-height: 1.2;
+    padding: 40px 10px 15px;
+    text-align: center;
+}
+.customer .subHeadTxt .txt.ty {
+    padding: 0 10px 22px;
+}
+.customer .subHeadTxt .txt {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.5;
+    padding: 0 10px 38px;
+    text-align: center;
+}
+.customer .subHeadTxt .txt span {
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+}
+.customer .subHeadTxt .btn {
+    width: 100%;
+    overflow: hidden;
+}
+.customer .subHeadTxt .btn a {
+    display: block;
+    width: 160px;
+    height: 40px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 40px;
+    margin: 0 auto 40px;
+    text-align: center;
+    background: #fe434c;
+}
+.customer .subHeadTxt::after {
+    content: "";
+    display: block;
+    clear: none;
+}
+
+.categoryTab {margin: 50px 0 15px;}
+.categoryTab ul {text-align: center;}
+.categoryTab ul li {
+    display: inline;
+    background: url('../img/categoryTab_li.png') right 1px no-repeat;
+}
+.categoryTab ul li.on a {color: #fe434c;}
+.categoryTab ul li a {
+    display: inline-block;
+    font-size: 16px;
+    color: #999;
+    margin: 0 25px 0 22px;
+    padding: 0 0 5px 0;
+}
+.categoryTab ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.categoryTab::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.faqList {
+    border: 1px solid #d9d9d9;
+    border-top: 2px solid #231f20;
+    border-bottom: 0;
+    word-break: keep-all;
+}
+.faqList ul li {
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid #d9d9d9;
+    overflow: hidden;
+}
+.faqList ul li .question {
+    width: 100%;
+    padding: 18px 0;
+    line-height: 1.2;
+    overflow: hidden;
+}
+.faqList ul li .question .blet {
+    position: absolute;
+    left: 52px;
+    top: 20px;
+    font-size: 16px;
+    color: #536782;
+    font-weight: 600;
+}
+.faqList ul li.hover .question .title {
+    color: #333;
+}
+.faqList ul li .question .title {
+    font-size: 14px;
+    color: #777;
+    margin: 0 20px 0 82px;
+    line-height: 1.4;
+}
+.faqanswer {
+    display: none;
+    width: 100%;
+    background: #fafafa;
+    overflow: hidden;
+    clear: both;
+}
+.faqanswer .faqbox {
+    position: relative;
+    border-top: 1px solid #d9d9d9;
+    padding: 24px 0;
+}
+.faqanswer .faqbox .blet {
+    position: absolute;
+    left: 52px;
+    top: 27px;
+    font-size: 16px;
+    color: #fe434c;
+    font-weight: 600;
+}
+.faqanswer .faqbox .text {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.6;
+    margin: 0 20px 0 84px;
+}
+.faqanswer .faqbox::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.listSearch {
+    width: 100%;
+    margin: 44px 0 0 0;
+    text-align: center;
+    overflow: hidden;
+}
+.listSearch .sinput {
+    width: 300px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+    color: #000;
+    padding: 0 10px;
+    border: 0;
+    border-bottom: 1px solid #000;
+}
+.listSearch a img {vertical-align: bottom;}
+.paging {
+    width: 1300px;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.paging > span > a {
+    color: #777;            
+    font-size: 11px;
+    letter-spacing: -1px;
+}
+
+.paging > span > a:hover {
+    text-decoration: underline;
+}
+
+.paging > .num > a {
+    display: inline-block;
+    min-width: 14px;
+    margin: 0 2px;
+    padding: 8px 9px;
+    border: 1px solid #c4c4c4;
+    background: url() 0 0 repeat-x;
+    color: #000;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+}
+.paging > .num > a:hover {
+    border: 1px solid #454c5f;
+    text-decoration: none;
+}
+.paging > .num > a.on {
+    color: #fe434c;
+    font-weight: bold;
+}
