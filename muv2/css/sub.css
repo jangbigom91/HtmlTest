@@ -1,10 +1,11 @@
 /* sub - event */
-caption {
-    widows: 700px;
+.event_caption {
+    width: 700px;
     height: 50px;
+    margin-left: 300px;
 }
 
-caption span {
+.event_caption span {
     font-size: 24px;
     font-weight: bold;
     color: #fe343c;
@@ -88,7 +89,6 @@ td > input[type=button] {
     font-size: 28px;
     font-weight: bold;
     color: #fe434c;
-    margin-left: 590px;
 }
 .customer {
     width: 100%;
@@ -326,7 +326,6 @@ td > input[type=button] {
     font-size: 28px;
     font-weight: bold;
     color: #fe434c;
-    margin-left: 590px;
 }
 .listDiv {
     margin: 30px 0 0 0;
@@ -819,3 +818,227 @@ col {display: table-column;}
     width: 210px;
     padding: 0;
 }
+
+/* sub - qna */
+.inquireH {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    padding: 0 0 10px 0;
+}
+.inquireDiv {
+    position: relative;
+    border: 1px solid #d9d9d9;
+    border-top: 2px solid #231f20;
+}
+.inquireTable {
+    width: 100%;
+    border-width: 0;
+    border-spacing: 0;
+    border-style: none;
+    font-size: 12px;
+}
+.inquireTable th {
+    border-color: #d9d9d9;
+    border-width: 0 1px 1px 0;
+    color: #303e48;
+    border-style: none solid solid none;
+    text-align: left;
+    background: #fcfcfc;
+    padding: 20px 10px 20px 0;
+    font-size: 13px;
+    line-height: 1.2;
+    vertical-align: top;
+}
+.inquireTable th span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #303e48;
+    padding: 0 0 0 40px;
+    line-height: 1.2;
+}
+.inquireTable th u {
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 1.2;
+    display: inline-block;
+}
+.inquireTable td {
+    border-color: #d9d9d9;
+    border-width: 0 0 1px 0;
+    color: #777;
+    border-style: none none solid none;
+    text-align: left;
+    background: #fff;
+    padding: 9px 10px 9px 10px;
+    font-size: 13px;
+    line-height: 1.4;
+    vertical-align: middle;
+}
+
+.pta li {float: left;}
+.pta li.pr {padding-right: 15px;}
+.custom-radio {
+    position: relative;
+    z-index: 1;
+}
+input {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+.custom-radio input {
+    position: absolute;
+    left: -9999999999px;
+    top: 5px;
+    margin: 0;
+    z-index: 0;
+    height: 5px;
+    width: 5px;
+}
+label {
+    vertical-align: middle;
+}
+.pta.selection li label {
+    line-height: 38px;
+    background-position: left -156px;
+    padding: 0 15px 0 35px;
+}
+.custom-radio label {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    font-size: 13px;
+    color: #777;
+    font-weight: bold;
+    padding-left: 35px;
+    line-height: 27px;
+}
+.custom-radio label.empty {padding-left: 26px;}
+.custom-radio label.checked {background-position: 0 -40px;}
+.custom-radio label {background: url('../img/ico_checkbox_w.png') 0 -162px no-repeat;}
+.w387 {
+    width: 377px;
+    height: 38px;
+    font-size: 13px;
+    color: #777;
+    line-height: 38px;
+    padding: 0 0 0 10px;
+    border: 1px solid #d9d9d9;
+}
+select {font-family: 'Noto Sans KR', 'Dotum', 'Gulim', 'Arial', sans-serif;}
+select {
+    height: 24px;
+    margin: 0;
+    border: 1px solid #dcdcdc;
+    padding: 0;
+    font-size: 13px;
+    vertical-align: middle;
+    color: #666;
+    cursor: pointer;
+}
+span.searchStyleSelectBox {
+    height: 40px;
+    font-size: 13px;
+    color: #777;
+    background: url('../img/bg_search_select.gif') right center #fff no-repeat;
+    border-left: 1px solid #d9d9d9;
+}
+.searchStyleSelectBoxInner {
+    font-size: 13px;
+    color: #777;
+    white-space: nowrap;
+    line-height: 40px;
+    padding: 0 68px 0 18px;
+}
+.pta li span.unit {
+    padding: 0 8px;
+    line-height: 38px;
+}
+.w118c {
+    width: 118px;
+    height: 38px;
+    font-size: 13px;
+    color: #777;
+    line-height: 38px;
+    padding: 0;
+    text-align: center;
+    border: 1px solid #d9d9d9;
+}
+.pta li span.valign {
+    line-height: 38px;
+    font-family: 'ITCAvantGardePro-Bk','Noto Sans KR';
+}
+.custom-checkbox {
+    position: relative;
+    z-index: 1;
+}
+.custom-checkbox label.empty {padding-left: 26px;}
+.custom-checkbox label.checked {background-position: 0 -207px;}
+.custom-checkbox input {
+    position: absolute;
+    left: -999999px;
+    top: 5px;
+    margin: 0;
+    z-index: 0;
+    height: 5px;
+    width: 5px;
+}
+.pta li span .custom-checkbox label {
+    line-height: 38px;
+    background-position: left 8px;
+}
+.pta li span .custom-checkbox label.checked {
+    background-position: left -32px;
+}
+.pta li p .custom-checkbox label {
+    line-height: 38px;
+    background-position: left 8px;
+    margin: -9px 0 0 0;
+}
+.pta li p .custom-checkbox label.checked {
+    background-position: left -32px;
+}
+.custom-checkbox label {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    font-size: 13px;
+    color: #777;
+    font-weight: bold;
+    padding-left: 35px;
+}
+.custom-checkbox label {background: url('../img/ico_checkbox_w.png') no-repeat;}
+
+.w100b {
+    width: 98%;
+    height: 38px;
+    font-size: 13px;
+    color: #777;
+    line-height: 38px;
+    padding: 0 0 0 10px;
+    border: 1px solid #d9d9d9;
+}
+.tta {
+    width: 97%;
+    height: 250px;
+    font-size: 13px;
+    color: #777;
+    line-height: 1.6;
+    padding: 10px;
+    border: 1px solid #d9d9d9;
+}
+a.okbtn {padding: 0;}
+.okbtn {
+    width: 210px;
+    height: 50px;
+    overflow: hidden;
+}
+.okbtn span {
+    font-size: 16px;
+    color: #fff;
+    line-height: 50px;
+}
+.custom-checkbox label.checkedHover, .custom-checkbox label.checkedFocus {background-position:0 -31px;}
