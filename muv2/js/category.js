@@ -1,8 +1,20 @@
-$(document).on('mouseover', '.menu i', function(){
-    $('.category-bar').slideDown(1000);
-});
-$(document).on('mouseover', 'div', function(){
-   if(!$(this).hasClass('menu')) {
-       $('.category-bar').slideUp(1000);
-   }
+$(document).ready(function(){
+
+    var gnb = $('.menu > .category > li > a');
+  
+    gnb.click(function(e){
+      e.preventDefault();
+  
+      var isOpen = $(this).next().is(':visible');
+  
+      if(isOpen) {
+        // 현재 서브메뉴를 닫음
+        $(this).next().slideUp(200);
+  
+      }else {
+        // 현재 서브메뉴를 펼침
+        $(this).next().slideDown(200);
+      }
+    });
+  
 });
