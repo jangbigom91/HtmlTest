@@ -5,7 +5,7 @@
     <title>맨유::order-list</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="./js/admin.js"></script>
+    <script src="../js/admin.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="../css/admin.css">
     <link rel="stylesheet" href="../css/product.css">
@@ -347,7 +347,7 @@
                                         기간
                                     </th>
                                     <td colspan="3">
-                                        <select name="data_type" style="width: 115px;" class="fSelect disabled">
+                                        <select name="date_type" style="width: 115px;" class="fSelect disabled">
                                             <option value="order_date" selected="selected">주문일</option>
                                             <option value="memo_date">메모작성일</option>
                                             <option value="pay_date">결제일</option>
@@ -473,18 +473,145 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">입금/결제상태</th>
-                                    <td></td>
+                                    <td>
+                                        <label class="gLabel eSelected">
+                                            <input type="radio" name="orderStatusPayment" class="fChk" value="all" checked="checked">
+                                            전체
+                                        </label>
+                                        <label class="gLabel">
+                                            <input type="radio" name="orderStatusPayment" class="fChk" value="F">
+                                            입금전
+                                        </label>
+                                        <label class="gLabel">
+                                            <input type="radio" name="orderStatusPayment" class="fChk" value="M">
+                                            추가입금대기
+                                        </label>
+                                        <label class="gLabel">
+                                            <input type="radio" name="orderStatusPayment" class="fChk" value="TA">
+                                            입금완료
+                                        </label>
+                                        <label class="gLabel">
+                                            <input type="radio" name="orderStatusPayment" class="fChk" value="P">
+                                            결제완료
+                                        </label>
+                                    </td>
                                     <th scope="row">회원구분</th>
-                                    <td></td>
+                                    <td>
+                                        <label class="gLabel eSelectd">
+                                            <input type="radio" name="memberType" class="fChk" value="1" checked="checked">
+                                            전체
+                                        </label>
+                                        <label class="gLabel">
+                                            <input type="radio" name="memberType" class="fChk" value="2">
+                                            회원
+                                        </label>
+                                        <label class="gLabel">
+                                            <input type="radio" name="memberType" class="fChk" value="3">
+                                            비회원
+                                        </label>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <div class="mOption gDivision"></div>
-                    <div class="mOptionToggle" style="display: none;"></div>
-                    <div class="mButton gCenter"></div>
+                    <div class="mButton gCenter">
+                        <a href="#" id="eBtnSearch" class="btnSearch">
+                            <span>검색</span>
+                        </a>
+                        <a href="#" id="eBtnInit" class="btnSearch reset">
+                            <span>초기화</span>
+                        </a>
+                    </div>
                     <input type="hidden" name="main_search" id="main_search" value>
                 </div>
+                <div class="section" id="QA_inquiry2">
+                    <div class="mTab typeTab eTab" bindstatus="true">
+                        <ul>
+                            <li class="selected">
+                                <a href="#" id="eOrdNumTab">주문번호별</a>
+                            </li>
+                            <li>
+                                <a href="#" id="ePrdNumTab">품목주문별</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="tabNumber" class="tabCont">
+                        <div class="mState">
+                            <div class="gLeft">
+                                <p class="total">
+                                    [ 검색결과
+                                    <strong>0</strong>
+                                    건
+                                    ]
+                                </p>
+                            </div>
+                            <div class="gRight">
+                                <label>
+                                    <input type="checkbox" id="eResponseInfo" class="fChk">
+                                    수령자 정보 표시
+                                </label>
+                                <select name="searchSorting" class="fSelect">
+                                    <option value="order_asc">주문일순</option>
+                                    <option value="order_desc">주문일역순</option>
+                                    <option value="settle_price_asc">총 실결제금액순</option>
+                                    <option value="settle_price_desc">총 실결제금액역순</option>
+                                </select>
+                                <select name="rows" class="fSelect" init_rows="20">
+                                    <option value="10">10개씩보기</option>
+                                    <option value="20" selected }>20개씩보기</option>
+                                    <option value="30">30개씩보기</option>
+                                    <option value="50">50개씩보기</option>
+                                    <option value="100">100개씩보기</option>
+                                    <option value="200">200개씩보기</option>
+                                    <option value="300">300개씩보기</option>
+                                    <option value="500">500개씩보기</option>
+                                </select>
+                            </div>
+                        </div>
+                               
+                        <div id="searchResultList" class="mBoard typeOrder typeList gScroll gCellSingle">
+                            <table border="1" summary class="thead">
+                                <caption>전체주문 조회 목록</caption>
+                                <tbody>
+                                    <tr>
+                                        <th scope="col" class="w24">
+                                            <input type="checkbox" id="allChk">
+                                        </th>
+                                        <th scope="col" class="w120">주문일(결제일)</th>
+                                        <th scope="col" class="w150">주문번호</th>
+                                        <th scope="col" class="w95">
+                                            주문자
+                                            <div class="cTip eSmartMode" code="OD.AO.170">
+                                                <div class="mTooltip gMedium">
+                                                    <button type="button" class="icon eTipScroll" nametip="tempId_0" bindstatus="true">도움말</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th scope="col" class="w120" style>상품명</th>
+                                        <th scope="col" class="w105" style>총 실결제금액</th>
+                                        <th scope="col" class="w60" style>결제수단</th>
+                                        <th scope="col" class="w60" style>결제상태</th>
+                                        <th scope="col" class="w45" style>미배송</th>
+                                        <th scope="col" class="w45" style>배송중</th>
+                                        <th scope="col" class="w60" style>배송완료</th>
+                                        <th scope="col" class="w45" style>취소</th>
+                                        <th scope="col" class="w45" style>교환</th>
+                                        <th scope="col" class="w45" style>반품</th>
+                                        <th scope="col" class="w35" style>메모</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table border="1" summary>
+                                <caption>전체주문 조회 목록</caption>
+                                <tbody class="empty">
+                                    <tr>
+                                        <td colspan="15">검색된 주문내역이 없습니다.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                       
+                        <div class="mPaginate"></div>
+                    </div>
+                </div>
             </div>
-                              
-              
