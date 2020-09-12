@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LOTTE CINEMA::시작페이지</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+
+<style>
+/* 공통 */
+.ad_wrap {margin-top:70px;}
+.clear:after {content:''; display:table; clear:both;}
+.fl_l {float:left !important;}
+.fl_r {float:right !important;}
+.b_none {border:0 none !important;}
+.text_c {text-align:center !important;}
+.text_l {text-align:left !important;}
+.text_r {text-align:right !important;}
+.txt_form {font-size:13px; color:#666666; letter-spacing:-0.5px;}
+.w_full {width:100%;}
+</style>
+</head>
+<body>
+    <div id="loading" class="loader loader-bouncing is-active hidden"></div>
+    <div id="skip_nav_section" class="skip_nav">
+        <ul>
+            <li>
+                <a href="#">주 메뉴 바로가기</a>
+            </li>
+            <li>
+                <a href="#">본문 바로가기</a>
+            </li>
+        </ul>
+    </div>
+    <div id="main_top_of_top_banner" class="banner_top_wrap banner_type01" style="background-color: rgb(250, 243, 227);">
+        <div class="inner">
+            <a href="#">
+                <img src="./img/Ava_98080.jpg" alt="에이바 2020.09.09 15세 이상 관람가 아드레날린 폭발! 성공확률 100% 숨멎 액션! 제시카 차스테인의 압도적인 원 톱 액션 확인">
+            </a>
+            <button class="btn_close">닫기</button>
+        </div>
+    </div>
+    <div id="header_section" class="header ty3">
+        <h1 class="logo">
+            <a href="#">LOTTE CINEMA</a>
+        </h1>
+        <div class="gnb">
+            <ul class="g_menu1">
+                <li>
+                    <a href="http://www.facebook.com/" class="btn_facebook" target="_blank" title="롯데시네마 페이스북 새창열림">좋아요</a>
+                </li>
+                <li>
+                    <a href="http://www.youtube.com/" class="btn_youtube" target="_blank" title="새창열림">구독하기</a>
+                </li>
+            </ul>
+            <ul class="g_menu2">
+                <li>
+                    <a href="#">멤버십</a>
+                </li>
+                <li>
+                    <a href="#">고객센터</a>
+                </li>
+                <li>
+                    <a href="#">로그인</a>
+                </li>
+            </ul>
+            <ul class="g_menu3">
+                <li>
+                    <a href="#" class="btn_my">회원가입</a>
+                </li>
+                <li>
+                    <a href="#" class="btn_reserve">바로 예매</a>
+                </li>
+                <li>
+                    <button class="btn_menu_all">전체 메뉴 레이어 열기</button>
+                    <div id="allmenu"></div>
+                </li>
+            </ul>
+        </div>
+        <div id="nav">
+            <ul>
+                <li class>
+                    <a href="#">예매</a>
+                </li>
+                <li class>
+                    <a href="#">영화</a>
+                </li>
+                <li class>
+                    <a href="#">영화관</a>
+                </li>
+                <li class>
+                    <a href="#">이벤트</a>
+                </li>
+                <li class>
+                    <a href="#">스토어</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="sub_section">
+        <div id="visualAd" class="visual_top_visual_main">
+            <div class="inner">
+                <div class="slide_wrap slide_main_visual">
+                    <div class="owl-carousel owl-loaded owl-drag">
+                        <div class="owl-stage-outer">
+                            <div class="owl-stage" style="transform: translate3d(-11520px, 0px, 0px); transition: all 0.25s ease 0s; width: 23040px;">
+                                <div class="owl-item cloned" style="width: 1920px;">
+                                    <div class="item">
+                                        <a>
+                                            <img src="./img/GeniusDog_1920774.jpg" alt="진짜 내 생각이 들려? 역대급 천재 댕댕이 탄생! 이프 온리 감독 작품 지니어스 독 9월 16일 함께하시개 12세 이상 관람가">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="owl-item cloned" style="width: 1920px;">
+                                    <div class="item">
+                                        <a>
+                                            <img src="./img/Mulan_1920774.jpg" alt="두려움 없는 용기란 없다 뮬란 9월 17일 대개봉 12세 이상 관람가">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="owl-item cloned" style="width: 1920px;">
+                                    <div class="item">
+                                        <a>
+                                            <img src="./img/Ava_1920774.jpg" alt="콜린 파렐 제시카 차스테인 존 말코비치 죽거나 죽이거나 에이바 2020.09.09 15세 이상 관람가">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="owl-item" style="width: 1920px;">
+                                    <div class="item">
+                                        <a>
+                                            <img src="./img/Greenland_1920774.jpg" alt="긴급 속보! 전세계를 강타할 우주적 재난! 제라드 버틀러 그린랜드 9월말 대개봉 관람등급미정">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="owl-item" style="width: 1920px;">
+                                    <div class="item">
+                                        <a>
+                                            <img src="./img/Mutants_1920774.jpg" alt="마블의 새로운 돌연변이 뉴 뮤턴트 9월 10일 대개봉 15세 이상 관람가">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="owl-item" style="width: 1920px;">
+                                    <div class="item">
+                                        <a>
+                                            <img src="./img/BeautyWater_1920774.jpg" alt="올여름 가장 기괴하고 독창적인 호러성형괴담 기기괴괴 성형수 2020.09.02 판매 시작! 15세 이상 관람가">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="owl-item" style="width: 1920px;">
+                                    <div class="item">
+                                        <a>
+                                            <img src="./img/GeniusDog_1920774.jpg" alt="진짜 내 생각이 들려? 역대급 천재 댕댕이 탄생! 이프 온리 감독 작품 지니어스 독 9월 16일 함께하시개 12세 이상 관람가">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="owl-item" style="width: 1920px;">
+                                    <div class="item">
+                                        <a>
+                                            <img src="./img/Mulan_1920774.jpg" alt="두려움 없는 용기란 없다 뮬란 9월 17일 대개봉 12세 이상 관람가">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="owl-item" style="width: 1920px;">
+                                    <div class="item">
+                                        <a>
+                                            <img src="./img/Ava_1920774.jpg" alt="콜린 파렐 제시카 차스테인 존 말코비치 죽거나 죽이거나 에이바 2020.09.09 15세 이상 관람가">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="owl-item cloned" style="width: 1920px;">
+                                    <div class="item">
+                                        <a>
+                                            <img src="./img/Greenland_1920774.jpg" alt="긴급 속보! 전세계를 강타할 우주적 재난! 제라드 버틀러 그린랜드 9월말 대개봉 관람등급미정">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="owl-item cloned" style="width: 1920px;">
+                                    <div class="item">
+                                        <a>
+                                            <img src="./img/Mutants_1920774.jpg" alt="마블의 새로운 돌연변이 뉴 뮤턴트 9월 10일 대개봉 15세 이상 관람가">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="owl-item cloned" style="width: 1920px;">
+                                    <div class="item">
+                                        <a>
+                                            <img src="./img/BeautyWater_1920774.jpg" alt="올여름 가장 기괴하고 독창적인 호러성형괴담 기기괴괴 성형수 2020.09.02 판매 시작! 15세 이상 관람가">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-nav" style="width: 843px; margin-left: -421.5px;">
+                            <button type="button" role="presentation" class="owl-prev">
+                                <span aria-label="Previous"><</span>
+                            </button>
+                            <button type="button" role="presentation" class="owl-next">
+                                <span aria-label="Next">></span>
+                            </button>
+                        </div>
+                        <div class="owl-dots">
+                            <button role="button" class="owl-dot">
+                                <span></span>
+                            </button>
+                            <button role="button" class="owl-dot">
+                                <span></span>
+                            </button>
+                            <button role="button" class="owl-dot">
+                                <span></span>
+                            </button>
+                            <button role="button" class="owl-dot">
+                                <span></span>
+                            </button>
+                            <button role="button" class="owl-dot">
+                                <span></span>
+                            </button>
+                            <button role="button" class="owl-dot">
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bx_ctrl" style="left: 90px;">
+                        <button class="play active">슬라이드 자동재생</button>
+                        <button class="stop">슬라이드 일시정지</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contents" class="contents_main">
+            <div class="movi_current_list">
+                <span class="movi_info_txt">
+                    <a href="#">
+                        <em>09.11 13:30</em>
+                        &nbsp;기준
+                    </a>
+                </span>
+                <ul class="tab_wrap outer lft">
+                    <li class="active">
+                        <button type="button" class="tab_tit" style="left: 0px; width: 20px;">
+                            <span></span>
+                        </button>
+                        <div class="tab_con">
+                            <h3 class="hidden"></h3>
+                            <div class="main_movie_list">
+                                <div class="slide_wrap slide_main_movie">
+                                    <div class="owl-carousel owl-loaded owl-drag">
+                                        <div class="owl-stage-outer">
+                                            <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 4378px;">
+                                                <div class="owl-item active" style="width: 184px; margin-right: 15px;">
+                                                    <div class="item">
+                                                        <div class="top_info">
+                                                            <span class="poster_info">
+                                                                <img src="./img/16095_101_1.jpg" alt="테넷">
+                                                                <em class="num_info">1</em>
+                                                                <span class="ic_grade gr_12">12</span>
+                                                            </span>
+                                                            <div class="over_box">
+                                                                <div class="inner" style="margin-top: -33px;">
+                                                                    <a href="#" class="btn_col3 ty3">예매하기</a>
+                                                                    <a href="#" class="btn_col3 ty3">상세정보</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="btm_info">
+                                                            <strong class="tit_info">테넷</strong>
+                                                            <span class="sub_info1">
+                                                                <span class="rate_info">
+                                                                    예매율&nbsp;
+                                                                    <em>31.8%</em>
+                                                                </span>
+                                                                <span class="star_info" style="cursor: pointer;">8.5</span>
+                                                                <span class="heart_info">
+                                                                    <button type="button" class="btn_heart_rnd">관심등록</button>
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="owl-item active" style="width: 184px; margin-right: 15px;">
+                                                    <div class="item">
+                                                        <div class="top_info">
+                                                            <span class="poster_info">
+                                                                <img src="./img/16285_101_1.jpg" alt="기기괴괴 성형수">
+                                                                <em class="num_info">2</em>
+                                                                <span class="ic_grade gr_15">15</span>
+                                                            </span>
+                                                            <div class="over_box">
+                                                                <div class="inner" style="margin-top: -33px;">
+                                                                    <a href="#" class="btn_col3 ty3">예매하기</a>
+                                                                    <a href="#" class="btn_col3 ty3">상세정보</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="btm_info">
+                                                            <strong class="tit_info">기기괴괴 성형수</strong>
+                                                            <span class="sub_info1">
+                                                                <span class="rate_info">
+                                                                    예매율&nbsp;
+                                                                    <em>24.1%</em>
+                                                                </span>
+                                                                <span class="star_info" style="cursor: pointer;">7.9</span>
+                                                                <span class="heart_info">
+                                                                    <button type="button" class="btn_heart_rnd">관심등록</button>
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="owl-item active" style="width: 184px; margin-right: 15px;">
+                                                    <div class="item">
+                                                        <div class="top_info">
+                                                            <span class="poster_info">
+                                                                <img src="./img/16325_101_1.jpg" alt="오! 문희">
+                                                                <em class="num_info">3</em>
+                                                                <span class="ic_grade gr_12">12</span>
+                                                            </span>
+                                                            <div class="over_box">
+                                                                <div class="inner" style="margin-top: -33px;">
+                                                                    <a href="#" class="btn_col3 ty3">예매하기</a>
+                                                                    <a href="#" class="btn_col3 ty3">상세정보</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="btm_info">
+                                                            <strong class="tit_info">오! 문희</strong>
+                                                            <span class="sub_info1">
+                                                                <span class="rate_info">
+                                                                    예매율&nbsp;
+                                                                    <em>9.4%</em>
+                                                                </span>
+                                                                <span class="star_info" style="cursor: pointer;">8.2</span>
+                                                                <span class="heart_info">
+                                                                    <button type="button" class="btn_heart_rnd">관심등록</button>
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="owl-item active" style="width: 184px; margin-right: 15px;">
+                                                    <div class="item">
+                                                        <div class="top_info">
+                                                            <span class="poster_info">
+                                                                <img src="./img/16372_101_1.jpg" alt="뉴 뮤턴트">
+                                                                <em class="num_info">4</em>
+                                                                <span class="ic_grade gr_12">15</span>
+                                                            </span>
+                                                            <div class="over_box">
+                                                                <div class="inner" style="margin-top: -33px;">
+                                                                    <a href="#" class="btn_col3 ty3">예매하기</a>
+                                                                    <a href="#" class="btn_col3 ty3">상세정보</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="btm_info">
+                                                            <strong class="tit_info">뉴 뮤턴트</strong>
+                                                            <span class="sub_info1">
+                                                                <span class="rate_info">
+                                                                    예매율&nbsp;
+                                                                    <em>6.5%</em>
+                                                                </span>
+                                                                <span class="star_info" style="cursor: pointer;">6.7</span>
+                                                                <span class="heart_info">
+                                                                    <button type="button" class="btn_heart_rnd">관심등록</button>
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="owl-item active" style="width: 184px; margin-right: 15px;">
+                                                    <div class="item">
+                                                        <div class="top_info">
+                                                            <span class="poster_info">
+                                                                <img src="./img/16317_101_1.jpg" alt="에이바">
+                                                                <em class="num_info">5</em>
+                                                                <span class="ic_grade gr_12">15</span>
+                                                            </span>
+                                                            <div class="over_box">
+                                                                <div class="inner" style="margin-top: -33px;">
+                                                                    <a href="#" class="btn_col3 ty3">예매하기</a>
+                                                                    <a href="#" class="btn_col3 ty3">상세정보</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="btm_info">
+                                                            <strong class="tit_info">에이바</strong>
+                                                            <span class="sub_info1">
+                                                                <span class="rate_info">
+                                                                    예매율&nbsp;
+                                                                    <em>4.4%</em>
+                                                                </span>
+                                                                <span class="star_info" style="cursor: pointer;">6.7</span>
+                                                                <span class="heart_info">
+                                                                    <button type="button" class="btn_heart_rnd">관심등록</button>
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="owl-nav">
+                                            <button type="button" role="presentation" class="owl-prev">
+                                                <span aria-label="Previous"><</span>
+                                            </button>
+                                            <button type="button" role="presentation" class="owl-next">
+                                                <span aria-label="Next">></span>
+                                            </button>
+                                        </div>
+                                        <div class="owl-dots disabled"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="main_specialCinema" class="main_cont_wrap special">
+                <div class="sec_tit">스페셜관</div>
+                <ul class="special_wrap2">
+                    <li style="padding-left: 13px;">
+                        <a href="#">
+                            <img src="./img/e2a94c82115c46f7b326baee6e10266a.png" alt="샤롯데바로가기">
+                        </a>
+                    </li>
+                    <li style="padding-left: 36px;">
+                        <a href="#">
+                            <img src="./img/3ffca854b1844fdc8b54d8d9db45a03f.png" alt>
+                        </a>
+                    </li>
+                    <li style="padding-left: 36px;">
+                        <a href="#">
+                            <img src="./img/ff43cb260a2647dbb5f3c62b709103c4.png" alt>
+                        </a>
+                    </li>
+                    <li style="padding-left: 36px;">
+                        <a href="#">
+                            <img src="./img/c9078226c9ad4085b1b629bee2aba138.png" alt>
+                        </a>
+                    </li>
+                    <li style="padding-left: 36px;">
+                        <a href="#">
+                            <img src="./img/61fb906fbd9b4ff1b34d6e0bd78dc655.png" alt>
+                        </a>
+                    </li>
+                    <li style="padding-left: 36px;">
+                        <a href="#">
+                            <img src="./img/208a5ede362244fb8ab2e5cc3ab07529.png" alt>
+                        </a>
+                    </li>
+                    <li style="padding-left: 36px;">
+                        <a href="#">
+                            <img src="./img/208a5ede362244fb8ab2e5cc3ab07529.png" alt>
+                        </a>
+                    </li>
+                    <li style="padding-left: 36px;">
+                        <a href="#">
+                            <img src="./img/5c23288d3a104f7fa4f7d3e725a2c6a8.png" alt>
+                        </a>
+                    </li>
+                </ul>
+                <button type="button" class="btn_txt_more ty2">더보기</button>
+            </div>
+            <div id="main_eventList" class="main_cont_wrap event">
+                <div class="sec_tit">이벤트</div>
+                <div class="event_wrap">
+                    <ul class="img_lst_wrap">
+                        <li class="img_w_01">
+                            <a href="#" title>
+                                <img src="./img/f7fea1481b664bc0897dd1fe373fd057.jpg" alt="<테넷> 시그니처 포스터 패키지 경품이벤트">
+                                <span class="bd_txt fin">마감임박</span>
+                            </a>
+                        </li>
+                        <li class="img_w_01">
+                            <a href="#">
+                                <img src="./img/ca6b7bb997f143b8a0d312f4a7f89629.jpg" alt>
+                            </a>
+                        </li>
+                        <li class="img_w_02">
+                            <a href="#">
+                                <img src="./img/49b35f89d9ce424fbb0147c2afd3ea63.jpg" alt>
+                            </a>
+                        </li>
+                        <li class="fl_r img_w_03">
+                            <a href="#" target="_blank">
+                                <img src="./img/Shinhan_296511.jpg" alt="롯데시네마x신한카드 나만 몰랐던 영화관람권 5매 득템 이벤트">
+                            </a>
+                        </li>
+                        <li class="img_w_04">
+                            <a href="#">
+                                <img src="./img/793e135eab534da6b91c682d7ef5f7a3.jpg" alt>
+                            </a>
+                        </li>
+                        <li class="img_w_01">
+                            <a href="#">
+                                <img src="./img/ac731e68e2ff4a1cbe16ac4ba15f389b.jpg" alt="컬쳐캐쉬로 롯데시네마 영화 예매하기">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <button type="button" class="btn_txt_more ty2">더보기</button>
+            </div>
+            <div class="main_cont_wrap premiere">
+                <div class="sec_tit">시사회/무대인사</div>
+                <ul class="premiere_wrap">
+                    <li>
+                        <a href="#">
+                            <img src="./img/6740322840e844a6baf7e4fded51c814.jpg" alt="<롯데시네마>와 함께하는 <나의 소녀시대> 앵콜 스페셜 굿즈 패키지 상영회">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/736660624b0149abb257fb9b2da514b4.jpg" alt="<이십일세기 소녀> 굿즈 상영 이벤트">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/391291917ad34245af359bb7c88bb75a.jpg" alt="<기기괴괴 성형수> 굿즈 상영회">
+                        </a>
+                    </li>
+                </ul>
+                <button type="button" class="btn_txt_more ty2">더보기</button>
+            </div>
+            <div class="mid_menu_wrap">
+                <a href="#" class="mid_itm" title>
+                    <img src="./img/3423e358b74d49d5b12867c7d9c6f6a8.png" alt="할인안내">
+                </a>
+                <a href="#" class="mid_itm" title>
+                    <img src="./img/16b056e5e6a04c609b94a5c21e786d3b.png" alt="포인트">
+                </a>
+                <a href="#" class="mid_itm" title>
+                    <img src="./img/3f5d90d60d4e4c66b49b9db33a38c951.png" alt="VIP">
+                </a>
+                <a href="#" class="mid_itm" title>
+                    <img src="./img/3633088df0644062b53cd88b34067895.png" alt="틴틴클럽">
+                </a>
+                <a href="#" class="mid_itm" title>
+                    <img src="./img/9c4e2721ecdd488d86df6d27e3c2a000.png" alt="bravo 브라보클럽">
+                </a>
+            </div>
+            <div class="main_cont_wrap notice">
+                <div class="sec_tit">
+                    공지사항
+                </div>
+                <div class="rolling_menu_wrap">
+                    <ul class="rolling_menu">
+                        <li>
+                            <a href="#">마스크 착용 의무화 안내</a>
+                        </li>
+                    </ul>
+                </div>
+                <button type="button" class="btn_txt_more ty2">더보기</button>
+            </div>
+        </div>
+    </div>
+    <div id="layerMovieTrailer" class="layer_wrap ty2 layer_movie_trailer"></div>
+    <div id="banner_side_section" class="banner_side_wrap"></div>
+    <div id="banner_section" class="banner_wrap">
+        <div class="banner_01"></div>
+        <div id="footerBanner" class="banner_type02" style="background-color: rgb(0, 179, 240); background-image: url('./img/bg_01.jpg'); background-repeat: repeat-x; background-position: 0px 0px;">
+            <a href="#" target="_blank">
+                <img src="./img/Shinhan_980240_1.png" alt="신한카드 쉿 나만 알고 싶은 이벤트! 영화도 할인 받고 영화예매권 5매까지! 자세히보기">
+            </a>
+        </div>
+    </div>
+    <div id="footer_section" class="footer">
+        <div class="inner">
+            <span class="f_logo"></span>
+            <ul class="f_menu"></ul>
+            <div class="bx_address"></div>
+            <p class="copyright">COPYRIGHT© LOTTE CINEMA ALL RIGHT RESERVED.</p>
+        </div>
+        <div class="article_award">
+            <div class="inner"></div>
+        </div>
+    </div>
+</body>
+</html>
