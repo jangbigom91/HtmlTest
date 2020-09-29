@@ -1,0 +1,11 @@
+/* 공통 */
+.ad_wrap {margin-top:70px;}
+.clear:after {content:''; display:table; clear:both;}
+.fl_l {float:left !important;}
+.fl_r {float:right !important;}
+.b_none {border:0 none !important;}
+.text_c {text-align:center !important;}
+.text_l {text-align:left !important;}
+.text_r {text-align:right !important;}
+.txt_form {font-size:13px; color:#666666; letter-spacing:-0.5px;}
+.w_full {width:100%;}
