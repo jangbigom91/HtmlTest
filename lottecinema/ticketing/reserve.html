@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>LOTTE CINEMA::로그인페이지</title>
+    <title>LOTTE CINEMA::예매</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
@@ -90,86 +90,79 @@
             </ul>
         </div>
     </div>
-    <div class="quick_wrap" style="padding-top: 105px;">
-        <div id="quick_menu" class="quick_menu" style="top: 220px;">
-            <a href="#">
-                <img src="../img/961c9cbf311b4f1299827c21a61fab76.png" alt="예매하기">
-            </a>
-            <a href="#">
-                <img src="../img/c1dbce4f91e948498c7c78239b7157ac.png" alt="상영시간표">
-            </a>
-            <a href="#">
-                <img src="../img/c793af89f3b648aa99cc679186ccfa02.png" alt="discount-guide">
-            </a>
-            <a href="#">
-                <img src="../img/c0945ca778f1470db48a5a90123f2e11.png" alt="merbership">
-            </a>
-            <a href="#">
-                <img src="../img/e339dfaae8d74acfbf7b0c6987442ac8.png" alt="고객센터">
-            </a>
-            <a href="#">
-                <img src="../img/df3d477b5f0f46fc86babc5de3753636.png" alt="스페셜관">
-            </a>
-            
-            <a href="#" class="qick_top">TOP</a>
-        </div>
+    <div id="contents" class="contents_full contents_reserve">
+       <div class="wrap_reserve">
+           <h2 class="hidden">예매하기</h2>
+           <div class="section_step_tit">
+               <ul>
+                   <li class="active step01">
+                       <a href="#">
+                           <strong class="tit">
+                               <span>01</span>
+                               <br>
+                               상영시간
+                           </strong>
+                           <div class="bx_con">
+                               <dl>
+                                   <dt>선택한 영화 제목</dt>
+                                   <dd></dd>
+                                   <dt>선택한 상영관</dt>
+                                   <dd></dd>
+                                   <dt>선택한 상영 날짜</dt>
+                                   <dd>2020-10-01(오늘)</dd>
+                                   <dt>선택한 시간</dt>
+                                   <dd></dd>
+                               </dl>
+                           </div>
+                       </a>
+                   </li>
+                   <li class="disabled">
+                       <a style="cursor: default;">
+                            <strong class="tit">
+                                <span>02</span>
+                                <br>
+                                인원/좌석
+                            </strong>
+                       </a>
+                   </li>
+                   <li class="disabled">
+                        <a style="cursor: default;">
+                            <strong class="tit">
+                                <span>03</span>
+                                <br>
+                                결제
+                            </strong>
+                        </a>
+                   </li>
+                   <li class="disabled">
+                        <a style="cursor: default;">
+                            <strong class="tit">
+                                <span>04</span>
+                                <br>
+                                결제완료
+                            </strong>
+                        </a>
+                   </li>
+               </ul>
+           </div>
+           <div id="reserveStep01" class="section_step_con step01 active">
+               <h3 class="hidden">상영시간</h3>
+               <div class="article article_cinema"></div>
+               <div class="article article_movie"></div>
+               <div class="article article_time"></div>
+           </div>
+       </div>
     </div>
-    <div id="contents" class="contents_full contents_member_comn">
-        <div id="loginContents">
-            <ul class="tab_wrap outer full">
-                <li class="active">
-                    <button type="button" class="tab_tit" style="left: 50%; width: 326.667px; margin-left: -490px;">
-                        <span>회원</span>
-                    </button>
-                    <div class="tab_con">
-                        <h3 class="hidden">회원</h3>
-                        <div class="member_login_wrap">
-                            <div class="contents_inner">
-                                <div class="login_box">
-                                    <p class="tip">L.POINT, 롯데시네마 ID로 별도의 회원가입 없이 이용 가능 합니다. </p>
-                                    <div class="login_area">
-                                        <input type="text" id="userId" maxlength="50" placeholder="아이디 또는 이메일을 입력해 주세요." title="입력태그">
-                                        <input type="password" id="userPassword" maxlength="15" placeholder="비밀번호를 입력해 주세요." title="입력태그">
-                                        <input type="hidden" name="hidLoginType" id="hidLoginType" value>
-                                        <button type="button" class="btn_login">로그인</button>
-                                    </div>
-                                    <div class="login_bot_wrap">
-                                        <div class="login_check">
-                                            <input type="checkbox" name="loginCheck" id="checkSavedID">
-                                            <label for="checkSavedID">아이디 저장</label>
-                                        </div>
-                                        <div class="login_menu">
-                                            <a href="#" title="페이지 이동">회원가입</a>
-                                            <a href="#" title="페이지 이동">아이디 찾기</a>
-                                            <a href="#" title="페이지 이동">비밀번호 찾기</a>
-                                        </div>
-                                    </div>
-                                    <div class="login_ad">
-                                        <a href="#" target>
-                                            <img src="../img/Minwise_18126.png" alt="테스트지면">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="ad_box">
-                                    <a href="#" target="_blank">
-                                        <img src="../img/Shinhan_450220.jpg" alt="신한카드 이용하고 영화관람권 5매 받자!">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class>
-                    <button type="button" class="tab_tit" style="left: 50%; width: 326.667px; margin-left: -163.333px;">
-                        <span>비회원</span>
-                    </button>
-                </li>
-                <li>
-                    <button type="button" class="tab_tit" style="left: 50%; width: 326.667px; margin-left: 163.333px;">
-                        <span>소셜 로그인</span>
-                    </button>
-                </li>
-            </ul>
+    <div id="banner_reserve_section" class="banner_reserve_wrap">
+        <div class="bx_lft">
+            <a href="#" target="_blank">
+                <img src="" alt="롯데시네마x신한카드 나만 몰랐던 영화관람권 5매 득템 이벤트">
+            </a>
+        </div>
+        <div class="bx_rgt">
+            <a href="#" target="_blank">
+                <img src="" alt="금요일 토요일 5000 엠포인트 사용 그 외 2500 엠포인트">
+            </a>
         </div>
     </div>
     <div id="banner_section" class="banner_wrap">

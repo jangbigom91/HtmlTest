@@ -1,0 +1,356 @@
+/* lottecinema - login */
+.quick_wrap {
+    position: absolute;
+    z-index: 11;
+    right: 20px;
+    padding-top: 50px;
+    width: 82px;
+    text-align: center;
+}
+.quick_wrap .quick_menu {
+    overflow: hidden;
+    background: #fff;
+    width: 76px;
+    padding-top: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    z-index: 91;
+    text-align: center;
+    -webkit-border-radius: 4px;
+}
+.quick_wrap .quick_menu a {
+    display: block;
+    padding: 5px;
+}
+.quick_wrap .quick_menu .qick_top {
+    background: #3A3A3A;
+    font-family: 'Roboto';
+    font-size: 11px;
+    color: #fff;
+    letter-spacing: 5px;
+    margin-top: 10px;
+    padding-left: 13px;
+}
+
+#contents.contents_member_comn {padding-top: 105px;}
+
+.tab_wrap {position: relative;}
+.tab_wrap.outer {padding-top: 80px;}
+.tab_wrap.outer > li.active > .tab_tit {
+    border-bottom: 2px solid #111;
+    color: #000;
+}
+.tab_wrap.outer > li > .tab_tit {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #CCC;
+    font-size: 15px;
+    color: #7F7F7F;
+}
+.tab_wrap > li > .tab_tit {border: none;}
+.tab_wrap > li > .tab_tit {
+    position: absolute;
+    top: 0;
+}
+.tab_wrap > li > .tab_tit span {
+    vertical-align: top;
+    white-space: nowrap;
+}
+.tab_wrap > li.active > .tab_con {
+    overflow: hidden;
+    position: relative;
+    width: auto;
+    height: auto;
+}
+.hidden {
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.member_login_wrap {
+    padding: 60px 0;
+    background-color: #F5F5F5;
+}
+.member_login_wrap .contents_inner {position: relative;}
+.member_login_wrap .login_box {
+    position: relative;
+    width: 470px;
+    min-height: 220px;
+    -webkit-box-sizing: border-box;
+}
+.member_login_wrap .login_box .tip {font-size: 15px;}
+.member_login_wrap .login_box .login_area {
+    position: relative;
+    margin-top: 21px;
+    padding-right: 120px;
+}
+.member_login_wrap .login_box .login_area input {
+    display: block;
+    width: 100%;
+    height: 45px;
+}
+.member_login_wrap .login_box .login_area input + input {margin-top: 10px;}
+.member_login_wrap .login_box .login_area .btn_login {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 110px;
+    height: 100px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: #FF243E;
+}
+.member_login_wrap .login_box .login_bot_wrap {margin: 15px 0 40px;}
+.member_login_wrap .login_box .login_bot_wrap .login_check {float: left;}
+.member_login_wrap .login_box .login_bot_wrap .login_check label {min-width: 88px;}
+input[type="radio"] + label, input[type="checkbox"] + label  {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+input[type="checkbox"] + label:before {
+    content: "";
+    display: inline-block;
+    border: 1px solid #DDD;
+    background-color: #fff;
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    vertical-align: -5px;
+    border-radius: 3px;
+}
+.member_login_wrap .login_box .login_bot_wrap .login_menu {
+    float: right;
+    font-size: 0;
+    line-height: 20px;
+}
+.member_login_wrap .login_box .login_bot_wrap .login_menu a:first-child {margin-left: 0;}
+.member_login_wrap .login_box .login_bot_wrap .login_menu a {
+    position: relative;
+    margin-left: 20px;
+    color: #666;
+    font-size: 12px;
+}
+.member_login_wrap .login_box .login_bot_wrap .login_menu a:after {
+    content: "";
+    position: absolute;
+    left: -11px;
+    top: 50%;
+    margin-top: -5px;
+    width: 1px;
+    height: 10px;
+    background: #ddd;
+}
+.member_login_wrap .login_box .login_bot_wrap:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+.member_login_wrap .login_box .login_ad {text-align: right;}
+
+.member_login_wrap .ad_box {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: 451px;
+    height: 220px;
+}
+.tab_wrap.outer > li > .tab_tit {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #CCC;
+    font-size: 15px;
+    color: #7F7F7F;
+}
+
+button > * {position: relative;}
+
+
+/* lottecinema - register */
+.tab_warp {position: relative;}
+.tab_wrap.outer {padding-top: 80px;}
+
+.tab_wrap.outer > li.active > .tab_tit {
+    border-bottom: 2px solid #111;
+    color: #000;
+}
+.tab_wrap.outer > li > .tab_tit {
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+}
+.tab_wrap > li > .tab_tit {border: none;}
+.tab_wrap > li > .tab_tit {
+    position: absolute;
+    top: 0;
+}
+.tab_wrap > li > .tab_tit span {
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.tab_wrap > li.active > .tab_con {
+    overflow: inherit;
+    position: relative;
+    width: auto;
+    height: auto;
+}
+.hidden {
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.contents_lpoint .join_wrap {margin-top: 55px;}
+.contents_lpoint .join_wrap .step_tit {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.contents_lpoint .join_wrap .step_tit .step {
+    display: block;
+    background: #23363D;
+    width: 104px;
+    height: 26px;
+    line-height: 26px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 15px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 10px;
+    vertical-align: text-bottom;
+    -webkit-border-radius: 4px;
+}
+.contents_lpoint .join_wrap p {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 1.4;
+}
+.contents_lpoint .join_wrap .btn_join {
+    float: right;
+    background: #2AA3FE;
+    margin-top: -15px;
+    width: 180px;
+}
+
+.btn_col1.ty6, .btn_col2.ty6, .btn_col3.ty6, .btn_col4.ty6, .btn_col5.ty6, .btn_col6.ty6, .btn_col7.ty6, .btn_col8.ty6, .btn_col9.ty6, .btn_col10.ty6 {
+    height: 45px;
+    line-height: 43px;
+    padding: 0 18px;
+}
+.btn_col7 {
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #0EAFEE;
+    font-size: 14px;
+    color: #ffffff !important;
+    text-align: center;
+    vertical-align: middle;
+}
+.contents_lpoint .join_wrap .btn_join:before {
+    content: '';
+    background: url('../img/join_16_new.png') no-repeat 50% 50%;
+    display: inline-block;
+    width: 20px;
+    height: 22px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.contents_lpoint .inner_table {
+    border-left: 0 none;
+    border-bottom: 1px solid #DDDDDD;
+    padding: 35px 40px;
+    vertical-align: top;
+    letter-spacing: -1px;
+}
+.inner_table {margin: 20px 0;}
+.contents_lpoint .inner_table th {
+    background: #ffffff;
+    border-right: 0 none;
+    font-size: 18px;
+    padding: 22px 0;
+}
+.inner_table thead th, .inner_table th {
+    font-size: 13px;
+    border-right: 1px solid;
+    border-color: #DDDDDD;
+    padding: 16px 0;
+    text-align: center;
+}
+.inner_table tbody td, .inner_table td {
+    border-right: 1px solid;
+    border-color: #DDDDDD;
+    padding: 16px 0;
+}
+.inner_table thead th {border-top: 1px solid;}
+.inner_table th {background: #F8F8F8; border-bottom: 1px solid;}
+.contents_lpoint .inner_table td {
+    border-right: 0 none;
+    border-bottom: 0 none;
+    padding: 35px 40px;
+    vertical-align: top;
+}
+.inner_table td {border-bottom: 1px solid;}
+.text_l {text-align: left !important;}
+.list_txt {font-size: 13px;}
+.list_txt > li {
+    line-height: 1.4;
+    margin: 0 0 5px 8px;
+    text-indent: -8px;
+    color: #333;
+}
+.list_txt > li:before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    margin: 8px 5px 0 0;
+    border-radius: 50%;
+    vertical-align: top;
+    background-color: #666;
+}
+.contents_lpoint .inner_table td .tit {
+    margin: 25px 0 15px;
+    color: #707070;
+}
+.contents_lpoint .inner_table td .list_txt.sm {padding-left: 5px;}
+.contents_lpoint .inner_table td .list_txt.sm li {color: #777;}
+
+.contents_lpoint .inner_table td .btn_col3 {width: 200px;}
+.btn_col3.ty7 {
+    height: 52px;
+    line-height: 50px;
+    padding: 0 24px;
+}
+.btn_col3 {
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #000000;
+    font-size: 14px;
+    color: #000000 !important;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #ffffff;
+}
+.ico_lpoint {
+    display: inline-block;
+    background: url('../img/txt_lpoint.png') no-repeat 50% 50%;
+    width: 66px;
+    height: 16px;
+    margin-right: 5px;
+    text-indent: -9999em;
+    font-size: 0;
+    vertical-align: middle;
+}
+.ico_lpoint em {
+    text-indent: -9999em;
+    font-size: 0;
+}

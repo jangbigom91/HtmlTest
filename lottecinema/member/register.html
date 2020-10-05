@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>LOTTE CINEMA::로그인페이지</title>
+    <title>LOTTE CINEMA::회원가입</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
@@ -114,63 +114,103 @@
             <a href="#" class="qick_top">TOP</a>
         </div>
     </div>
-    <div id="contents" class="contents_full contents_member_comn">
-        <div id="loginContents">
-            <ul class="tab_wrap outer full">
-                <li class="active">
-                    <button type="button" class="tab_tit" style="left: 50%; width: 326.667px; margin-left: -490px;">
-                        <span>회원</span>
-                    </button>
-                    <div class="tab_con">
-                        <h3 class="hidden">회원</h3>
-                        <div class="member_login_wrap">
-                            <div class="contents_inner">
-                                <div class="login_box">
-                                    <p class="tip">L.POINT, 롯데시네마 ID로 별도의 회원가입 없이 이용 가능 합니다. </p>
-                                    <div class="login_area">
-                                        <input type="text" id="userId" maxlength="50" placeholder="아이디 또는 이메일을 입력해 주세요." title="입력태그">
-                                        <input type="password" id="userPassword" maxlength="15" placeholder="비밀번호를 입력해 주세요." title="입력태그">
-                                        <input type="hidden" name="hidLoginType" id="hidLoginType" value>
-                                        <button type="button" class="btn_login">로그인</button>
-                                    </div>
-                                    <div class="login_bot_wrap">
-                                        <div class="login_check">
-                                            <input type="checkbox" name="loginCheck" id="checkSavedID">
-                                            <label for="checkSavedID">아이디 저장</label>
-                                        </div>
-                                        <div class="login_menu">
-                                            <a href="#" title="페이지 이동">회원가입</a>
-                                            <a href="#" title="페이지 이동">아이디 찾기</a>
-                                            <a href="#" title="페이지 이동">비밀번호 찾기</a>
-                                        </div>
-                                    </div>
-                                    <div class="login_ad">
-                                        <a href="#" target>
-                                            <img src="../img/Minwise_18126.png" alt="테스트지면">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="ad_box">
-                                    <a href="#" target="_blank">
-                                        <img src="../img/Shinhan_450220.jpg" alt="신한카드 이용하고 영화관람권 5매 받자!">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+    <div id="contents" class="contents_lpoint">
+        <ul class="tab_wrap outer">
+            <li class="active">
+                <button type="button" class="tab_tit" style="width: 50%; left: 0%;">
+                    <span>가입방법</span>
+                </button>
+                <div class="tab_con">
+                    <h3 class="hidder">가입방법</h3>
+                    <div class="banner_01">
+                        <img src="../img/lpoint_980_new.png" alt="당신의 영화생활을 더 행복하게 하는 L.POINT">
                     </div>
-                </li>
-                <li class>
-                    <button type="button" class="tab_tit" style="left: 50%; width: 326.667px; margin-left: -163.333px;">
-                        <span>비회원</span>
-                    </button>
-                </li>
-                <li>
-                    <button type="button" class="tab_tit" style="left: 50%; width: 326.667px; margin-left: 163.333px;">
-                        <span>소셜 로그인</span>
-                    </button>
-                </li>
-            </ul>
-        </div>
+                    <div class="join_wrap">
+                        <h4 class="step_tit">
+                            <span class="step">STEP.1</span>
+                            회원가입
+                        </h4>
+                        <p>L.POINT 아이디 하나면, 모든 L.POINT 제휴사의 온라인/모바일을 편리하게 이용할 수 있습니다.</p>
+                        <a href="#" class="btn_col7 ty6 btn_join">
+                            회원가입하기
+                        </a>
+                    </div>
+                    <div class="join_wrap">
+                        <h4 class="step_tit">
+                            <span class="step">STEP.2</span>
+                            L.POINT 카드 신청
+                        </h4>
+                        <table class="inner_table" summary="L.POINT 카드신청관련 테이블">
+                            <caption>L.POINT 카드신청</caption>
+                            <colgroup>
+                                <col style="width: 50%;">
+                                <col style="width: auto;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">영화관 현장신청</th>
+                                    <th scope="col">홈페이지 신청</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text_1">
+                                        <ul class="list_txt">
+                                            <li>가까운 영화관에 방문하시면 포인트 카드를 수령할 수 있습니다.</li>
+                                            <li>수령한 카드는 L.POINT 홈페이지(www.lpoint.com) 및 모바일에서 등록해 주세요.</li>
+                                        </ul>
+                                        <div class="tit">※ 유의사항</div>
+                                        <ul class="list_txt sm">
+                                            <li>카드 등록 전에는 결제 금액의 0.1%가 L.POINT로 적립됩니다. </li>
+                                            <li>(이미 포인트를 적립 받은 예매 건에 대해서는 카드 등록 후에도 추가 포인트가 제공되지 않습니다.) </li>
+                                            <li>카드 등록 전에 예매한 건에 대해서는 카드 등록 후에도 VIP 승급 내역에 반영되지않습니다. </li>
+                                            <li>카드 등록 전에는 포인트 적립만 가능하며 사용은 불가능합니다. </li>
+                                            <li>카드 등록 전 분실 시, 적립된 포인트는 반환되지 않습니다. </li>
+                                            <li>만 14세 이상만 카드 등록이 가능합니다. </li>
+                                        </ul>
+                                    </td>
+                                    <td class="text_1">
+                                        <ul class="list_txt">
+                                            <li>
+                                                온라인 신청서를 작성하면 L.POINT 카드를 발급 받을 수 있습니다.<br>
+                                                신청한 카드는 신청 후 한 달 이내에 카드 신청 시 입력된 주소로 배송 됩니다.
+                                            </li>
+                                            <li>
+                                                롯데신용카드는 L.POINT 카드로 동시 사용이 가능하므로 <br>
+                                                롯데신용카드를 소지하였을 경우 포인트카드를 별도로 신청하지 않아도 됩니다.
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn_col3 ty7">
+                                            <span class="ico_lpoint">
+                                                <em>L.POINT</em>
+                                            </span>
+                                            카드등록
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn_col3 ty7">
+                                            <span class="ico_lpoint">
+                                                <em>L.POINT</em>
+                                            </span>
+                                            카드신청
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <button type="button" class="tab_tit" style="width: 50%; left: 50%;">
+                    <span>L.POINT 안내</span>
+                </button>
+            </li>
+        </ul>
     </div>
     <div id="banner_section" class="banner_wrap">
         <div class="banner_01">
