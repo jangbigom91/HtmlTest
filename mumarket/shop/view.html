@@ -2,142 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>맨유::shop</title>
+    <title>맨유::shop-view</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="../js/top.js"></script>
-    <script src="../js/bannerSlider.js"></script>
     <script src="../js/best.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link rel="stylesheet" href="../css/style.css"/>
-    <script>
-       
-    </script>
     <style>
-        /* shop 공통 */
-        main > section > nav {
-            width: 100%;
-            height: 36px;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #000;
-            box-sizing: border-box;
-        }
-        main > section > nav > p {
-            float: right;
-            margin-top: 10px;
-        }
-        main > section > nav > h1 {
-            display: inline-block;
-            font-weight: bold;
-            font-size: 1.5em;
-            padding: 0 0 7px;
-            line-height: 1em;
-        }
-        strong {font-weight: bold;}
-        
-        /* view 상품 상세페이지 */
-        #view {
-            padding: 16px;
-            box-sizing: border-box;
-        }
-        #view > section {
-            margin-top: 10px;
-        }
-        #view > section > article {
-            width: 100%;
-            height: auto;
-            box-sizing: border-box;
-        }
-        #view > section > article:after {
-            clear: both;
-            display: block;
-            content: '';
-        }
 
-        #view .info {}
-        #view .info > div {
-            float: left;
-            width: 50%;
-            height: 100%;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-        #view > .info > .image {}
-        #view > .info > .image > img {width: 100%;}
-
-        #view .info > .summary * {}
-        #view .info > .summary > nav {
-            border-bottom: 1px solid #eaeaea;
-            padding-bottom: 10px;
-            margin-bottom: 12px;
-            overflow: hidden;
-        }
-        #view .info > .summary > nav > h1 {
-            float: left;
-            color: #1e2732;
-            font-weight: bold;
-            font-size: 1.5em;
-        }
-        #view .info > .summary > nav > h2 {
-            float: right;
-            color: #777;
-            margin-top: 8px;
-        }
-        #view .info > .summary .org_price {}
-        #view .info > .summary .org_price > del::after {content: "원";}
-        #view .info > .summary .org_price > ins::after {content: "원";}
-        #view .info > .summary .org_price > del {
-            font-size: 18px;
-            color: #aaa;
-        }
-        #view .info > .summary .org_price > span {
-            color: #eb000a;
-            font-size: 16px;
-            margin-left: 6px;
-        }
-        #view .info > .summary .org_price > span::after{content: "↓";}
-
-        #view .info > .summary .dis_price {}
-        #view .info > .summary .dis_price > ins {
-            font-size: 18px;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        #view .info > .summary .dis_price > ins::after {content: "원";} 
-
-        #view .info > .summary .delivery {
-            font-size: 16px;
-            color: #2e8de5;
-        }
-        
-        #view .info > .summary .arrival {
-            font-size: 14px;
-            margin-left: 10px;
-        }
-        #view .info > .summary .desc {
-            display: block;
-            color: #aaa;
-        }
-
-        #view .info > .summary .card > i {
-            display: inline-block;
-            width: 30px;
-            height: 18px;
-            top: 4px;
-            background-image: url('../img/sp_icon.png');
-            font-size: 0;
-            vertical-align: text-top;
-            margin-right: 2px;
-        }
-        #view .info > .summary .cardfree > i { background-position: -126px 0; }
-        #view .info > .summary .cardadd > i { background-position: -51px -21px; }
-    </style>
+  </style>
+<script>
+ 
+</script>
 </head>
-
 <body>
     <div id="wrapper">
         <header>
@@ -168,10 +48,10 @@
                         <li><a href="#">할인상품</a></li>
                     </ul>
                     <ul>
-                        <li><a href="#">쿠폰존</a></li>
-                        <li><a href="#">사용후기</a></li>
-                        <li><a href="#">개인결제</a></li>
-                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">주문조회</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">1:1문의</a></li>
                         <li><a href="#">FAQ</a></li>
                     </ul>
                 </div>
@@ -455,10 +335,10 @@
         </main>
         <footer>
             <ul>
-                <li><a href="#">회사소개</a></li>
-                <li><a href="#">서비스이용약관</a></li>
-                <li><a href="#">개인정보처리방침</a></li>
-                <li><a href="#">전자금융거래약관</a></li>
+                <li><a href="#">개인정보 보호 정책</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">사이트맵</a></li>
+                <li><a href="#">더 알아보기</a></li>
             </ul>
 
             <div>
@@ -468,16 +348,16 @@
                 <p class="footer2">
                     <strong>MANCHESTER UNITED</strong><br />
                     영국 스트렛포드 올드 트래포드<br />
-                    대표이사 : Ed Woodward<br />
+                    대표이사 : 김우드워드<br />
                     사업자등록번호 : 110-11-12345 사업자정보확인<br />
-                    통신판매업신고 : 영국 12345호 Fax : +44-111-1123<br />
+                    통신판매업신고 : 부산 12345호 Fax : 051-211-1123<br />
                 </p>
                 <p class="footer3">
-                    <strong>고객센터</strong>
-                    Tel : +44-1111-1234 (평일 9:00~18:00)<br />
+                    <strong>고객센터</strong><br />
+                    Tel : 051-243-1234 (평일 9:00~18:00)<br />
                     올드 트래포드 전용 : 1554-1212 (365일 9:00~18:00)<br />
-                    영국 스트렛포드 캐링턴 훈련장<br />
-                    Fax : +44-111-1212 | Mail : MU@ManUtd.co.uk<br />
+                    부산시 부산진구 구덕로 123번길 맨체스터빌딩<br />
+                    Fax : 051-243-1111 | Mail : MU@ManUtd.co.kr<br />
                 </p>
             </div>
         </footer>

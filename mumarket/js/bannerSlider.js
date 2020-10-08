@@ -4,4 +4,4 @@ $(document).ready(function(){
         speed:300,
         pager: false
     });
-});
+  });
