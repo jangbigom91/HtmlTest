@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LOTTE CINEMA::단체관람/대관문의</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/member.css">
+    <link rel="stylesheet" href="../css/movie.css">
+
+<style>
+/* customer - groupview */
+#contents > .title_top {
+    margin-bottom: 20px;
+    padding: 25px 0 14px;
+    border-bottom: 1px solid #EEE;
+}
+#contents > .title_top .tit {
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+#contents > .title_top:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.tab_wrap {position: relative;}
+.tab_wrap.outer {padding-top: 80px;}
+.tab_wrap > li > .tab_tit {
+    position: absolute;
+    top: 0;
+}
+.tab_wrap > li > .tab_tit {border: none;}
+.tab_wrap.outer > li > .tab_tit {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #CCC;
+    font-size: 15px;
+    color: #7F7F7F;
+}
+.tab_wrap > li > .tab_tit span {
+    vertical-align: top;
+    white-space: nowrap;
+}
+.tab_wrap.outer > li.active > .tab_tit {
+    border-bottom: 2px solid #111;
+    color: #000;
+}
+
+.tab_wrap > li > .tab_con {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 0;
+}
+.tab_wrap > li > .tab_con.ty5 {margin-top: -30px;}
+.tab_wrap > li.active > .tab_con {
+    overflow: inherit;
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+.contents_customer .con_top {
+    position: relative;
+    background-color: #F8F8F8;
+    padding: 35px 0;
+    text-align: center;
+}
+.contents_customer .con_top .ico_tit {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: top 50% left;
+    min-width: 250px;
+    line-height: 1.4;
+    padding-left: 55px;
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+}
+.contents_customer .con_top .ico_tit.lnt {
+    background-image: url('../img/ic_lnt.png');
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.mt10 {margin-top: 10px !important;}
+.contents_customer .con_top [class^="btn_col"] {
+    min-width: 146px;
+    margin-left: 10px;
+}
+.btn_col1.ty4, .btn_col2.ty4, .btn_col3.ty4, .btn_col4.ty4, .btn_col5.ty4, .btn_col6.ty4, .btn_col7.ty4, .btn_col8.ty4, .btn_col9.ty4, .btn_col10.ty4 {
+    height: 33px;
+    line-height: 31px;
+    padding: 0 14px;
+}
+.btn_col4 {
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #dddddd;
+    font-size: 14px;
+    color: #000000 !important;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #bb9191;
+}
+
+.contents_customer .con_tit {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+.contents_customer .con_tit.ty2 .tit {
+    display: inline-block;
+    font-weight: bold;
+}
+.contents_customer .con_tit .group_rgt {
+    float: right;
+    margin-top: 4px;
+}
+.contents_customer .con_tit .txt_req {
+    font-size: 14px;
+    color: #FF243E;
+}
+.contents_customer .con_tit .txt_req:before {
+    content: '*';
+    margin-right: 4px;
+    font-size: 14px;
+    color: #FF243E;
+}
+
+.tbl_form {
+    border-top: 1px solid #BBBBBB;
+    margin-bottom: 60px;
+}
+.tbl_form th {
+    font-weight: bold;
+    text-align: left;
+}
+.tbl_form th, .tbl_form td {
+    border-bottom: 1px solid #EEEEEE;
+    height: 40px;
+    padding: 7px 4px;
+    font-size: 15px;
+}
+.tbl_form th.req:after {
+    content: '*';
+    margin-left: 10px;
+    color: #FF243E;
+}
+.bx_file {
+    position: relative;
+    display: inline-block;
+}
+.tbl_form td [class^="btn_col"] {width: 146px;}
+.btn_col1.ty5, .btn_col2.ty5, .btn_col3.ty5, .btn_col4.ty5, .btn_col5.ty5, .btn_col6.ty5, .btn_col7.ty5, .btn_col8.ty5, .btn_col9.ty5, .btn_col10.ty5 {
+    height: 40px;
+    line-height: 38px;
+    padding: 0 18px;
+}
+.btn_col3 {
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #000000;
+    font-size: 14px;
+    color: #000000 !important;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #ffffff;
+}
+input[type="radio"], input[type="checkbox"] {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    vertical-align: middle;
+    border: none 0;
+}
+input[type="radio"] + label, input[type="checkbox"] + label {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+input[type="radio"] + label:before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    background: #fff;
+    border: 1px solid #DDD;
+    border-radius: 50%;
+    vertical-align: -5px;
+}
+input[type="radio"]:checked + label:before {
+    border-color: #000;
+    background: #fff url('../img/rad_12.png') no-repeat center center;
+}
+input[type="radio"] + label:last-of-type, input[type="checkbox"] + label:last-of-type {margin-right: 0px;}
+.contents_customer .lnt_count th {
+    padding: 20px 4px;
+    vertical-align: top;
+}
+.text_r {text-align: right !important;}
+.contents_customer .lnt_count td {border-bottom: 0px none;}
+.contents_customer .lnt_count span {
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+    font-weight: bold;
+}
+input.inp_cont {
+    width: 54px;
+    margin: 0 3px;
+}
+.contents_customer input.inp_cont {padding: 0 14px;}
+input[type="password"].ty2, input[type="text"].ty2, input[type="number"].ty2, input[type="tel"].ty2 {
+    background-color: #F8F8F8;
+    border-color: #DDD;
+}
+input[type="password"], input[type="text"], input[type="number"], input[type="tel"] {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 18px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    background-color: #fff;
+    font-size: 14px;
+    box-sizing: border-box;
+    border: 1px solid #DDD;
+}
+</style>
+</head>
+<body>
+    <div id="loading" class="loader loader-bouncing is-active hidden"></div>
+    <div id="skip_nav_section" class="skip_nav">
+        <ul>
+            <li>
+                <a href="#">주 메뉴 바로가기</a>
+            </li>
+            <li>
+                <a href="#">본문 바로가기</a>
+            </li>
+        </ul>
+    </div>
+    <div id="header_section" class="header">
+        <h1 class="logo">
+            <a href="#">LOTTE CINEMA</a>
+        </h1>
+        <div class="gnb">
+            <ul class="g_menu1">
+                <li>
+                    <a href="http://www.facebook.com/" class="btn_facebook" target="_blank" title="롯데시네마 페이스북 새창열림">좋아요</a>
+                </li>
+                <li>
+                    <a href="http://www.youtube.com/" class="btn_youtube" target="_blank" title="새창열림">구독하기</a>
+                </li>
+            </ul>
+            <ul class="g_menu2">
+                <li>
+                    <a href="#">멤버십</a>
+                </li>
+                <li>
+                    <a href="#">고객센터</a>
+                </li>
+                <li>
+                    <a href="#">로그인</a>
+                </li>
+            </ul>
+            <ul class="g_menu3">
+                <li>
+                    <a href="#" class="btn_my">회원가입</a>
+                </li>
+                <li>
+                    <a href="#" class="btn_reserve">바로 예매</a>
+                </li>
+                <li>
+                    <button class="btn_menu_all">전체 메뉴 레이어 열기</button>
+                    <div id="allmenu"></div>
+                </li>
+            </ul>
+        </div>
+        <div id="nav">
+            <ul>
+                <li class>
+                    <a href="#">예매</a>
+                </li>
+                <li class>
+                    <a href="#">영화</a>
+                </li>
+                <li class>
+                    <a href="#">영화관</a>
+                </li>
+                <li class>
+                    <a href="#">이벤트</a>
+                </li>
+                <li class>
+                    <a href="#">스토어</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="quick_wrap" style="padding-top: 105px;">
+        <div id="quick_menu" class="quick_menu" style="top: 220px;">
+            <a href="#">
+                <img src="../img/961c9cbf311b4f1299827c21a61fab76.png" alt="예매하기">
+            </a>
+            <a href="#">
+                <img src="../img/c1dbce4f91e948498c7c78239b7157ac.png" alt="상영시간표">
+            </a>
+            <a href="#">
+                <img src="../img/c793af89f3b648aa99cc679186ccfa02.png" alt="discount-guide">
+            </a>
+            <a href="#">
+                <img src="../img/c0945ca778f1470db48a5a90123f2e11.png" alt="merbership">
+            </a>
+            <a href="#">
+                <img src="../img/e339dfaae8d74acfbf7b0c6987442ac8.png" alt="고객센터">
+            </a>
+            <a href="#">
+                <img src="../img/df3d477b5f0f46fc86babc5de3753636.png" alt="스페셜관">
+            </a>
+            
+            <a href="#" class="qick_top">TOP</a>
+        </div>
+    </div>
+    <div id="contents" class="contents_customer" style>
+        <div class="title_top">
+            <h2 class="tit">고객센터</h2>
+        </div>
+        <ul class="tab_wrap outer">
+            <li>
+                <button type="button" class="tab_tit" style="width: 20%; left: 0%;">
+                    <span>FAQ</span>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="tab_tit" style="width: 20%; left: 20%;">
+                    <span>공지사항</span>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="tab_tit" style="width: 20%; left: 40%;">
+                    <span>1:1문의</span>
+                </button>
+            </li>
+            <li class="active">
+                <button type="button" class="tab_tit" style="width: 20%; left: 60%;">
+                    <span>단체관람/대관문의</span>
+                </button>
+                <div class="tab_con ty5">
+                    <h3 class="hidden">단체관람/대관문의</h3>
+                    <div class="con_top">
+                        <div class="ico_tit lnt">
+                            단체관람 및 대관을 원하시는 고객님께 할인 혜택을 드리고 있습니다.
+                            <br>
+                            신청을 원하시거나 문의사항이 있으시면 아래 정보를 입력해주세요.
+                            <div class="mt10">
+                                <a href="#" class="btn_col4 ty4" title="레이어팝업 열기">영화관 별 대관/단체 전용 번호</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="con_tit ty2">
+                        <h4 class="tit">문의내용</h4>
+                        <div class="group_rgt">
+                            <span class="txt_req">필수입력</span>
+                        </div>
+                    </div>
+                    <table class="tbl_form" summary="문의내용작성 테이블">
+                        <caption>문의 내용을 작성해주세요.</caption>
+                        <colgroup>
+                            <col style="width: 20%;">
+                            <col style="width: 18%;">
+                            <col style="width: 18%;">
+                            <col style="width: 20%;">
+                            <col style="width: auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="req">영화관</th>
+                                <td colspan="4">
+                                    <div class="bx_file">
+                                        <button class="btn_col3 ty5">영화관선택</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="req">분류</th>
+                                <td colspan="4">
+                                    <input type="radio" name="classification" id="radio1" checked>
+                                    <label for="radio1">단체관람</label>
+                                    <input type="radio" name="classification" id="radio2">
+                                    <label for="radio2">대관</label>
+                                </td>
+                            </tr>
+                            <tr class="lnt_count">
+                                <th scope="row" rowspan="3">예상인원</th>
+                                <td class="text_r">
+                                    <span>성인</span>
+                                    <input type="text" class="ty2 inp_cont" id="expect01" title="성인 예상인원" maxlength="3">
+                                    <span>명</span>
+                                </td>
+                                <td class="text_r">
+                                    <span>청소년</span>
+                                    <input type="text" class="ty2 inp_cont" id="expect02" title="청소년 예상인원" maxlength="3">
+                                    <span>명</span>
+                                </td>
+                                <td class="text_r">
+                                    <span>
+                                        장애인
+                                        <br>
+                                        (정도가 심한)
+                                    </span>
+                                    <input type="text" class="ty2 inp_cont" id="expect03" title="장애인 (정도가 심한) 예상인원" maxlength="3">
+                                    <span>명</span>
+                                </td>
+                                <td class="text_r">
+                                    <span>
+                                        장애인
+                                        <br>
+                                        (정도가 심하지 않은)
+                                    </span>
+                                    <input type="text" class="ty2 inp_cont" id="expect04" title="장애인 (정도가 심하지 않은) 예상인원" maxlength="3">
+                                    <span>명</span>
+                                </td>
+                            </tr>
+                            <tr class="lnt_count">
+                                <td class="text_r">
+                                    <span>시니어</span>
+                                    <input type="text" class="ty2 inp_cont" id="expect05" title="시니어" maxlength="3">
+                                    <span>명</span>
+                                </td>
+                                <td class="text_r">
+                                    <span>국가유공자</span>
+                                    <input type="text" class="ty2 inp_cont" id="expect06" title="국가유공자" maxlength="3">
+                                    <span>명</span>
+                                </td>
+                                <td class="text_r">
+                                    <span>어린이</span>
+                                    <input type="text" class="ty2 inp_cont" id="expect07" title="어린이" maxlength="3">
+                                    <span>명</span>
+                                </td>
+                                <td class="text_r">
+                                    <span>유아</span>
+                                    <input type="text" class="ty2 inp_cont" id="expect08" title="유아" maxlength="3">
+                                    <span>명</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <div class="txt_form">해당하는 인원란에 숫자만 입력해주세요. 해당 인원이 없으면 비워두세요.</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">희망일</th>
+                                <td colspan="4">
+                                    <input type="text" id="dp00" class="ty2 hasDatepicker" readonly>
+                                    <button type="button" class="ui-datepicker-trigger">날짜선택</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">희망시간</th>
+                                <td colspan="4">
+                                    <input type="text" class="ty2 inp_cont" id="hopeTimeHour1" title="시작시간" maxlength="2">시 ~
+                                    <input type="text" class="ty2 inp_cont" id="hopeTimeHour2" title="끝나는시간" maxlength="2">시 사이
+                                </td>
+                            </tr>
+                            <tr class="lnt_inp">
+                                <th scope="row" rowspan="2" class="req">내용</th>
+                                <td colspan="4">
+                                    <input type="text" class="ty2 w_full" id="movieName" placeholder="영화명을 입력해주세요">
+                                    <input type="text" class="ty2 w_full" id="title" placeholder="제목을 입력해주세요">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <div class="bx_textarea">
+                                        <textarea class="ty2" cols="10" rows="10" placeholder="내용을 입력해주세요" id="comment"></textarea>
+                                        <span class="txt_count">
+                                            <em id="strongContentsCount">0</em>
+                                            /한글
+                                            <em>110</em>자
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">답변수신 여부</th>
+                                <td colspan="4">
+                                    <input type="checkbox" id="chkEmail" checked>
+                                    <label for="chkEmail">이메일 알림받기</label>
+                                    <input type="checkbox" id="chkSms">
+                                    <label for="chkSms">SMS 알림받기</label>
+                                    <span class="txt_caution fl_r">비회원 문의 시 이메일로 답변 내용이 발송되므로 이메일로 답변 알림 받기는 필수입니다. </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="con_tit ty2">
+                        <h4 class="tit">신청자 정보</h4>
+                        <div class="group_rgt">
+                            <span class="txt_req">필수입력</span>
+                        </div>
+                    </div>
+                    <table class="tbl_form" summary="신청자 정보작성 테이블">
+                        <caption>신청자 정보를 작성해주세요</caption>
+                        <colgroup>
+                            <col style="width: 20%;">
+                            <col style="width: auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="req">단체명</th>
+                                <td>
+                                    <input type="text" class="ty2 inp_name" placeholder id="mutipleName" title="단체명을 입력해주세요">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="req">성명</th>
+                                <td>
+                                    <input type="text" class="ty2 inp_name" placeholder id="applyName" title="성명을 입력해주세요" value>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="req">생년월일</th>
+                                <td>
+                                    <select class="ty2" title="년" name="birthyy" id="birthyy">
+                                        <option value selected>출생년도</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2014">2014</option>
+                                        <option value="2013">2013</option>
+                                        <option value="2012">2012</option>
+                                        <option value="2011">2011</option>
+                                        <option value="2010">2010</option>
+                                        <option value="2009">2009</option>
+                                        <option value="2008">2008</option>
+                                        <option value="2007">2007</option>
+                                        <option value="2006">2006</option>
+                                        <option value="2005">2005</option>
+                                        <option value="2004">2004</option>
+                                        <option value="2003">2003</option>
+                                        <option value="2002">2002</option>
+                                        <option value="2001">2001</option>
+                                        <option value="2000">2000</option>
+                                        <option value="1999">1999</option>
+                                        <option value="1998">1998</option>
+                                        <option value="1997">1997</option>
+                                        <option value="1996">1996</option>
+                                        <option value="1995">1995</option>
+                                        <option value="1994">1994</option>
+                                        <option value="1993">1993</option>
+                                        <option value="1992">1992</option>
+                                        <option value="1991">1991</option>
+                                        <option value="1990">1990</option>
+                                        <option value="1989">1989</option>
+                                        <option value="1988">1988</option>
+                                        <option value="1987">1987</option>
+                                        <option value="1986">1986</option>
+                                        <option value="1985">1985</option>
+                                        <option value="1984">1984</option>
+                                        <option value="1983">1983</option>
+                                        <option value="1982">1982</option>
+                                        <option value="1981">1981</option>
+                                        <option value="1980">1980</option>
+                                        <option value="1979">1979</option>
+                                        <option value="1978">1978</option>
+                                        <option value="1977">1977</option>
+                                        <option value="1976">1976</option>
+                                        <option value="1975">1975</option>
+                                        <option value="1974">1974</option>
+                                        <option value="1973">1973</option>
+                                        <option value="1972">1972</option>
+                                        <option value="1971">1971</option>
+                                        <option value="1970">1970</option>
+                                    </select>
+                                    <select class="ty2" title="월" name="birthmm" id="birthmm">
+                                        <option value selected>월</option>
+                                        <option value="01">1</option>
+                                        <option value="02">2</option>
+                                        <option value="03">3</option>
+                                        <option value="04">4</option>
+                                        <option value="05">5</option>
+                                        <option value="06">6</option>
+                                        <option value="07">7</option>
+                                        <option value="08">8</option>
+                                        <option value="09">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                    <select class="ty2" title="일" name="birthdd" id="birthdd">
+                                        <option value selected>일</option>
+                                        <option value="01">1</option>
+                                        <option value="02">2</option>
+                                        <option value="03">3</option>
+                                        <option value="04">4</option>
+                                        <option value="04">5</option>
+                                        <option value="05">6</option>
+                                        <option value="07">7</option>
+                                        <option value="08">8</option>
+                                        <option value="09">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                        <option value="31">31</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="req">연락처</th>
+                                <td>
+                                    <select class="ty2" title="연락처" id="userPhone1">
+                                        <option value selected>선택</option>
+                                        <option value="010">010</option>
+                                        <option value="011">011</option>
+                                        <option value="016">016</option>
+                                        <option value="017">017</option>
+                                        <option value="018">018</option>
+                                        <option value="019">019</option>
+                                    </select>
+                                    <input type="text" class="ty2 inp_phon" id="userPhone2" title="연락처 가운데 숫자" maxlength="4" value>
+                                    <input type="text" class="ty2 inp_phon" id="userPhone3" title="연락처 끝 숫자" maxlength="4" value>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="req">이메일</th>
+                                <td>
+                                    <input type="text" class="ty2 inp_id" id="email" title="이메일 아이디" value>
+                                    @
+                                    <input type="text" class="ty2 inp_emai" id="email2" title="이메일 주소" value>
+                                    <span class="txt_caution1 fl_r with_inp">답변 등록시 해당 이메일로 자동 발송됩니다.</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="con_tit ty2">
+                        <h4 class="tit">개인정보 수집에 대한 동의</h4>
+                        <div class="group_rgt">
+                            <p class="txt_form"> 문의를 통해 아래의 개인정보를 수집합니다. 수집된 개인정보는 문의 외 목적으로 사용하지 않습니다. </p>
+                        </div>
+                    </div>
+                    <div class="privacy_wrap">
+                        <div class="txtarea">
+                            개인정보의 수집목적 및 항목
+                            <br>
+                            ① 수집 목적 : 원활한 고객 상담, 단체관람/대관문의 관련 서비스의 제공
+                            <br>
+                            ② 수집 항목
+                            <br>
+                            *필수입력사항
+                            <br>
+                            - 이용자 식별을 위한 항목 : 성명, 연락처, 생년월일, 이메일, 아이디(로그인 시 수집)
+                            <br>
+                            <span class="color_red">
+                                <br>
+                                개인정보의 보유 및 이용기간
+                                <br>
+                                내부 방침에 의해 각종 문의에 대한 최적의 서비스 제공을 위하여 고객 상담기록을 다음과 같이 보유합니다. (단, 생년월일은 이용자 식별 목적으로 이용되며 별도 보관되지 않습니다.)
+                                <br>
+                                보유기간 : 문의 접수 후 12개월간
+                            </span>
+                            <br>
+                            <br>
+                            ※ 단체 문의 서비스 제공을 위한 최소한의 개인정보이며 거부할 수 있습니다. 다만, 수집에 동의하지 않을 경우 서비스 이용이 제한됩니다.
+                        </div>
+                        <div class="bx_inp">
+                            <input type="radio" name="rdo01" id="agree1">
+                            <label for="agree1">동의</label>
+                            <input type="radio" name="rdo01" id="radio11" checked>
+                            <label for="radio11">동의하지않음</label>
+                        </div>
+                        <div class="btn_btm_wrap">
+                            <a href="#" class="btn_col3 ty6">취소</a>
+                            <a href="#" class="btn_col2 ty6">확인</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <button type="button" class="tab_tit" style="width: 20%; left: 80%;">
+                    <span>분실물안내</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div id="banner_section" class="banner_wrap">
+        <div class="banner_01">
+            <a href="#" target>
+                <img src="../img/Kingdom_980180.jpg" alt="킹덤오브헤븐 디렉터스컷 2020.11.11 전세계 최초 개봉">
+            </a>
+        </div>
+        <div id="footerBanner" class="banner_type02" style="background-color: rgb(255, 194, 76); background-image: url('../img/bg_01.jpg'); background-repeat: repeat-x; background-position: 0px 0px;">
+           <a href="#" target="_blank">
+               <img src="../img/Lottecard_980240.png" alt="롤라가 드리는 최대 10만원 캐시백 1억원 다이아몬드 당첨의 기회까지">
+           </a>
+        </div>
+    </div>
+    <div id="footer_section" class="footer">
+        <div class="inner">
+            <span class="f_logo">
+                <img src="../img/logo_footer.gif" alt="LOTTE CINEMA">
+            </span>
+            <ul class="f_menu">
+                <li>
+                    <a href="#" title="회원약관" target="_self">회원약관</a>
+                </li>
+                <li>
+                    <a href="#" title="개인정보처리방침" target="_self">
+                        <strong>개인정보처리방침</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="이메일" target="_self">이메일무단수집거부</a>
+                </li>
+                <li>
+                    <a href="#" title="영상정보처리기기 운영∙관리방침" target="_self">영상정보처리기기 운영∙관리방침</a>
+                </li>
+                <li>
+                    <a href="#" title="L.POINT회원안내" target="_self">L.POINT회원안내</a>
+                </li>
+                <li>
+                    <a href="#" title="배정기준" target="_self">배정기준</a>
+                </li>
+                <li>
+                    <a href="#" title="채용안내" target="_self">채용안내</a>
+                </li>
+                <li>
+                    <a href="#" title="광고/임대문의" target="_self">광고/임대문의</a>
+                </li>
+                <li>
+                    <a href="#" title="윤리경영" target="_self">윤리경영</a>
+                </li>
+                <li>
+                    <a href="#" title="기업정보" target="_self">기업정보</a>
+                </li>
+            </ul>
+            <div class="bx_address">
+                <address>서울특별시 송파구 올림픽로 300 롯데월드타워 27층</address>
+                <span class="bar">고객센터 1544-8855</span>
+                <br>
+                <span>대표이사 기원규</span>
+                <span class="bar">사업자등록번호 313-87-00979</span>
+                <span class="bar">통신판매업신고번호 제1184호</span>
+                <span class="bar">개인정보 보호책임자 이미선</span>
+            </div>
+            <p class="copyright">COPYRIGHT© LOTTE CINEMA ALL RIGHT RESERVED.</p>
+        </div>
+        <div class="article_award">
+            <div class="inner">
+                <ul>
+                    <li>
+                        <img src="../img/footer_award_NCSI5.png" alt="NCSI / NCSI 영화관부문 5년 연속 1위">
+                    </li>
+                    <li>
+                        <img src="../img/footer_award_kcsi.png" alt="KCSI 영화관부문 7년 연속 1위(총12회)">
+                    </li>
+                    <li>
+                        <img src="../img/footer_award_kssqi.png" alt="KS-SQI 영화관부문 8년 연속 1위(총11회)">
+                    </li>
+                    <li>
+                        <img src="../img/footer_award_brandcinema.png" alt="올해의 브랜드대상 영화관 부문 10년 연속 1위">
+                    </li>
+                    <li>
+                        <img src="../img/footer_award_greenstar.png" alt="그린스타 영화관 부문 4년 연속 1위">
+                    </li>
+                    <li>
+                        <img src="../img/footer_award_brandstar.png" alt="대한민국 브랜드 스타 영화관 부문 1위">
+                    </li>
+                    <li>
+                        <img src="../img/footer_award_familyship.png" alt="가족친화 인증기업 선정">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -16,6 +16,7 @@
 
 <style>
 
+
 </style>
 <script>
 
@@ -147,21 +148,599 @@
            </div>
            <div id="reserveStep01" class="section_step_con step01 active">
                <h3 class="hidden">상영시간</h3>
-               <div class="article article_cinema"></div>
-               <div class="article article_movie"></div>
-               <div class="article article_time"></div>
+               <div class="article article_cinema">
+                   <div class="group_top">
+                       <h4 class="tit">영화관</h4>
+                   </div>
+                   <div class="inner">
+                       <ul class="tab_wrap outer">
+                           <li class="active">
+                               <button type="button" class="tab_tit" style="width: 50%; left: 0%;">
+                                <span>전체</span>    
+                               </button>
+                               <div class="tab_con">
+                                   <h5 class="hidden">전체</h5>
+                                   <div class="cinema_select_wrap cinemaSelect basicCinema">
+                                       <ul>
+                                           <li class="depth1">
+                                               <a href="#">
+                                                    MY 영화관   
+                                                    <em>(0)</em>
+                                               </a>
+                                           </li>
+                                           <li class="depth1 active">
+                                               <a href="#">
+                                                   서울
+                                                   <em>(24)</em>
+                                               </a>
+                                               <div class="depth2">
+                                                   <div class="mCustomScrollbar basicCinemaScroll _mCS_1 mCS-autoHide" data-mcs-theme="minimal-dark" style="position: relative; overflow: visible;">
+                                                        <div id="mCSB_1" class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside" style="max-height: none;" tabindex="0">
+                                                            <div id="mCSB_1_container" class="mCSB_container" style="position: relative; top: 0; left: 0;" dir="ltr">
+                                                                <ul>
+                                                                    <li class><a>가산디지털</a></li>
+                                                                    <li class><a>가양</a></li>
+                                                                    <li class><a>강동</a></li>
+                                                                    <li class><a>건대입구</a></li>
+                                                                    <li class><a>김포공항</a></li>
+                                                                    <li class><a>노원</a></li>
+                                                                    <li class><a>도곡</a></li>
+                                                                    <li class><a>독산</a></li>
+                                                                    <li class><a>브로드웨이(신사)</a></li>
+                                                                    <li class><a>서울대입구</a></li>
+                                                                    <li class><a>수락산</a></li>
+                                                                    <li class><a>수유</a></li>
+                                                                    <li class><a>신도림</a></li>
+                                                                    <li class><a>신림</a></li>
+                                                                    <li class><a>에비뉴엘(명동)</a></li>
+                                                                    <li class><a>영등포</a></li>
+                                                                    <li class><a>용산</a></li>
+                                                                    <li class><a>월드타워</a></li>
+                                                                    <li class><a>은평(롯데몰)</a></li>
+                                                                    <li class><a>장안</a></li>
+                                                                    <li class>
+                                                                        <a>
+                                                                            중랑
+                                                                            <span class="txt_rnd_new">신규오픈</span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class><a>청량리</a></li>
+                                                                    <li class><a>합정</a></li>
+                                                                    <li class><a>홍대입구</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div> 
+                                                        <div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-minimal-dark mCSB_scrollTools_vertical" style="display: block;">
+                                                            <div class="mCSB_draggerContainer">
+                                                                <div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 50px; display: block; height: 601px; max-height: 719px; top: 0px;">
+                                                                    <div class="mCSB_dragger_bar" style="line-height: 50px;"></div>
+                                                                </div>
+                                                                <div class="mCSB_draggerRail"></div>
+                                                            </div>
+                                                        </div>
+                                                   </div>
+                                               </div>
+                                           </li>
+                                           <li class="depth1">
+                                               <a href="#">
+                                                    경기/인천
+                                                    <em>(44)</em>
+                                                </a>
+                                           </li>
+                                           <li class="depth1">
+                                               <a href="#">
+                                                    충청/대전
+                                                    <em>(9)</em>
+                                                </a>
+                                           </li>
+                                           <li class="depth1">
+                                               <a href="#">
+                                                    전라/광주
+                                                    <em>(9)</em>
+                                                </a>
+                                           </li>
+                                           <li class="depth1">
+                                               <a href="#">
+                                                    경북/대구
+                                                    <em>(16)</em>
+                                                </a>
+                                           </li>
+                                           <li class="depth1">
+                                               <a href="#">
+                                                    경남/부산/울산
+                                                    <em>(24)</em>
+                                                </a>
+                                           </li>
+                                           <li class="depth1">
+                                               <a href="#">
+                                                    강원
+                                                    <em>(4)</em>
+                                                </a>
+                                           </li>
+                                           <li class="depth1">
+                                               <a href="#">
+                                                    제주
+                                                    <em>(3)</em>
+                                                </a>
+                                           </li>
+                                       </ul>
+                                   </div>
+                               </div>
+                           </li>
+                           <li>
+                               <button type="button" class="tab_tit" style="width: 50%; left: 50%;">
+                                    <span>스페셜관</span>
+                               </button>
+                           </li>
+                       </ul>
+                   </div>
+               </div>
+               <div class="article article_movie">
+                   <div class="group_top">
+                       <h4 class="tit movie_name">영화 선택</h4>
+                   </div>
+                   <div class="inner">
+                       <div class="list_filter">
+                           <select>
+                               <option value="A">예매순</option>
+                               <option value="B">관객순</option>
+                               <option value="C">평점순</option>
+                               <option value="D">예정작</option>
+                           </select>
+                           <div class="bx_btn_view">
+                               <span class="hidden">목록 보기 방식</span>
+                               <ul>
+                                   <li>
+                                       <button type="button" class="btn_view_txt viewTxt active">텍스트형</button>
+                                   </li>
+                                   <li>
+                                    <button type="button" class="btn_view_thm viewThm">썸네일형</button>
+                                   </li>
+                               </ul>
+                           </div>
+                       </div>
+                       <div class="movie_select_wrap list movieSelect">
+                           <div class="mCustomScrollbar movieScroll _mCS_9 mCS-autoHide" data-mcs-theme="minimal-dark" style="position: relative; overflow: visible;">
+                                <div id="mCSB_9" class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside" tabindex="0" style="max-height: none;">
+                                    <div id="mCSB_9_container" class="mCSB_container" style="position: relative; top: 0; left: 0;" dir="ltr">
+                                        <ul>
+                                            <li class>
+                                                <a>
+                                                    <div class="group_infor">
+                                                        <div class="bx_tit">
+                                                            <span class="ic_grade gr_all">0세 관람가</span>
+                                                            <strong class="tit">미스터트롯: 더 무비</strong>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class>
+                                                <a>
+                                                    <div class="group_infor">
+                                                        <div class="bx_tit">
+                                                            <span class="ic_grade gr_12">12세 관람가</span>
+                                                            <strong class="tit">담보</strong>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class>
+                                                <a>
+                                                    <div class="group_infor">
+                                                        <div class="bx_tit">
+                                                            <span class="ic_grade gr_15">15세 관람가</span>
+                                                            <strong class="tit">애프터: 그 후</strong>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class>
+                                                <a>
+                                                    <div class="group_infor">
+                                                        <div class="bx_tit">
+                                                            <span class="ic_grade gr_12">12세 관람가</span>
+                                                            <strong class="tit">그린랜드</strong>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class>
+                                                <a>
+                                                    <div class="group_infor">
+                                                        <div class="bx_tit">
+                                                            <span class="ic_grade gr_12">12세 관람가</span>
+                                                            <strong class="tit">테넷</strong>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class>
+                                                <a>
+                                                    <div class="group_infor">
+                                                        <div class="bx_tit">
+                                                            <span class="ic_grade gr_15">15세 관람가</span>
+                                                            <strong class="tit">국제수사</strong>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class>
+                                                <a>
+                                                    <div class="group_infor">
+                                                        <div class="bx_tit">
+                                                            <span class="ic_grade gr_all">0세 관람가</span>
+                                                            <strong class="tit">극장판 포켓몬스터 뮤츠의 역습 EVOLUTION</strong>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class>
+                                                <a>
+                                                    <div class="group_infor">
+                                                        <div class="bx_tit">
+                                                            <span class="ic_grade gr_all">0세 관람가</span>
+                                                            <strong class="tit">밥정</strong>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class>
+                                                <a>
+                                                    <div class="group_infor">
+                                                        <div class="bx_tit">
+                                                            <span class="ic_grade gr_all">0세 관람가</span>
+                                                            <strong class="tit">극장판 미니특공대: 햄버거괴물의 습격</strong>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class>
+                                                <a>
+                                                    <div class="group_infor">
+                                                        <div class="bx_tit">
+                                                            <span class="ic_grade gr_all">0세 관람가</span>
+                                                            <strong class="tit">트롤킹</strong>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class>
+                                                <a>
+                                                    <div class="group_infor">
+                                                        <div class="bx_tit">
+                                                            <span class="ic_grade gr_all">0세 관람가</span>
+                                                            <strong class="tit">마르지엘라</strong>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class>
+                                                <a>
+                                                    <div class="group_infor">
+                                                        <div class="bx_tit">
+                                                            <span class="ic_grade gr_15">15세 관람가</span>
+                                                            <strong class="tit">검객</strong>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class>
+                                                <a>
+                                                    <div class="group_infor">
+                                                        <div class="bx_tit">
+                                                            <span class="ic_grade gr_15">15세 관람가</span>
+                                                            <strong class="tit">죽지않는 인간들의 밤</strong>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class>
+                                                <a>
+                                                    <div class="group_infor">
+                                                        <div class="bx_tit">
+                                                            <span class="ic_grade gr_15">15세 관람가</span>
+                                                            <strong class="tit">아웃포스트</strong>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class>
+                                                <a>
+                                                    <div class="group_infor">
+                                                        <div class="bx_tit">
+                                                            <span class="ic_grade gr_all">0세 관람가</span>
+                                                            <strong class="tit">교실 안의 야크</strong>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class>
+                                                <a>
+                                                    <div class="group_infor">
+                                                        <div class="bx_tit">
+                                                            <span class="ic_grade gr_15">15세 관람가</span>
+                                                            <strong class="tit">강철비2: 정상회담 확장판</strong>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class>
+                                                <a>
+                                                    <div class="group_infor">
+                                                        <div class="bx_tit">
+                                                            <span class="ic_grade gr_15">15세 관람가</span>
+                                                            <strong class="tit">기기괴괴 성형수</strong>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class>
+                                                <a>
+                                                    <div class="group_infor">
+                                                        <div class="bx_tit">
+                                                            <span class="ic_grade gr_15">15세 관람가</span>
+                                                            <strong class="tit">디바</strong>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class>
+                                                <a>
+                                                    <div class="group_infor">
+                                                        <div class="bx_tit">
+                                                            <span class="ic_grade gr_12">12세 관람가</span>
+                                                            <strong class="tit">뮬란</strong>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class>
+                                                <a>
+                                                    <div class="group_infor">
+                                                        <div class="bx_tit">
+                                                            <span class="ic_grade gr_15">15세 관람가</span>
+                                                            <strong class="tit">프린시스 하</strong>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class>
+                                                <a>
+                                                    <div class="group_infor">
+                                                        <div class="bx_tit">
+                                                            <span class="ic_grade gr_all">0세 관람가</span>
+                                                            <strong class="tit">카일라스 가는 길</strong>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class>
+                                                <a>
+                                                    <div class="group_infor">
+                                                        <div class="bx_tit">
+                                                            <span class="ic_grade gr_12">12세 관람가</span>
+                                                            <strong class="tit">우리가 이별 뒤에 알게 되는 것들</strong>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class>
+                                                <a>
+                                                    <div class="group_infor">
+                                                        <div class="bx_tit">
+                                                            <span class="ic_grade gr_12">12세 관람가</span>
+                                                            <strong class="tit">다시 만난 날들</strong>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class>
+                                                <a>
+                                                    <div class="group_infor">
+                                                        <div class="bx_tit">
+                                                            <span class="ic_grade gr_all">0세 관람가</span>
+                                                            <strong class="tit">파밍 보이즈</strong>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div id="mCSB_9_scrollbar_vertical" class="mCSB_scrollTools mCSB_9_scrollbar mCS-minimal-dark mCSB_scrollTools_vertical" style="display: block;">
+                                    <div class="mCSB_draggerContainer">
+                                        <div id="mCSB_9_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 50px; display: block; height: 247px; max-height: 720px; top: 483px;">
+                                            <div class="mCSB_dragger_bar" style="line-height: 50px;"></div>
+                                        </div>
+                                        <div class="mCSB_draggerRail"></div>
+                                    </div>
+                                </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="article article_time">
+                   <div class="group_top">
+                       <h4 class="tit">2020-10-19(오늘)</h4>
+                   </div>
+                   <div class="inner">
+                       <div class="date_select_wrap dateReserveWrap">
+                           <div class="slide_wrap slide_reserve_date">
+                               <ul class="owl-carousel owl-loaded owl-drag">
+                                   <div class="owl-stage-outer">
+                                       <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 735px;">
+                                            <div class="owl-item active" style="width: 52.5px;">
+                                                <li class="item">
+                                                    <strong class="month">10월</strong>
+                                                    <span class="date">
+                                                        <label>
+                                                            <input type="radio" name="radioDate1" data-displayyn="Y" data-playdate="2020-10-19" data-isplaydate="Y" data-playweek="오늘" checked>
+                                                            <strong>19</strong>
+                                                            <em>오늘</em>
+                                                        </label>
+                                                    </span>
+                                                </li>
+                                            </div>
+                                            <div class="owl-item active" style="width: 52.5px;">
+                                                <li class="item">
+                                                    <span class="date">
+                                                        <label>
+                                                            <input type="radio" name="radioDate1" data-displayyn="Y" data-playdate="2020-10-20" data-isplaydate="Y" data-playweek="화">
+                                                            <strong>20</strong>
+                                                            <em>화</em>
+                                                        </label>
+                                                    </span>
+                                                </li>
+                                            </div>
+                                            <div class="owl-item active" style="width: 52.5px;">
+                                                <li class="item">
+                                                    <span class="date">
+                                                        <label>
+                                                            <input type="radio" name="radioDate1" data-displayyn="Y" data-playdate="2020-10-21" data-isplaydate="Y" data-playweek="수">
+                                                            <strong>21</strong>
+                                                            <em>수</em>
+                                                        </label>
+                                                    </span>
+                                                </li>
+                                            </div>
+                                            <div class="owl-item active" style="width: 52.5px;">
+                                                <li class="item">
+                                                    <span class="date">
+                                                        <label>
+                                                            <input type="radio" name="radioDate1" data-displayyn="Y" data-playdate="2020-10-22" data-isplaydate="Y" data-playweek="목">
+                                                            <strong>22</strong>
+                                                            <em>목</em>
+                                                        </label>
+                                                    </span>
+                                                </li>
+                                            </div>
+                                            <div class="owl-item active" style="width: 52.5px;">
+                                                <li class="item">
+                                                    <span class="date">
+                                                        <label>
+                                                            <input type="radio" name="radioDate1" data-displayyn="Y" data-playdate="2020-10-23" data-isplaydate="Y" data-playweek="금">
+                                                            <strong>23</strong>
+                                                            <em>금</em>
+                                                        </label>
+                                                    </span>
+                                                </li>
+                                            </div>
+                                            <div class="owl-item active" style="width: 52.5px;">
+                                                <li class="item">
+                                                    <span class="date">
+                                                        <label>
+                                                            <input type="radio" name="radioDate1" data-displayyn="Y" data-playdate="2020-10-24" data-isplaydate="Y" data-playweek="토">
+                                                            <strong>24</strong>
+                                                            <em>토</em>
+                                                        </label>
+                                                    </span>
+                                                </li>
+                                            </div>
+                                            <div class="owl-item active" style="width: 52.5px;">
+                                                <li class="item">
+                                                    <span class="date">
+                                                        <label>
+                                                            <input type="radio" name="radioDate1" data-displayyn="Y" data-playdate="2020-10-25" data-isplaydate="Y" data-playweek="일">
+                                                            <strong>25</strong>
+                                                            <em>일</em>
+                                                        </label>
+                                                    </span>
+                                                </li>
+                                            </div>
+                                            <div class="owl-item active" style="width: 52.5px;">
+                                                <li class="item">
+                                                    <span class="date">
+                                                        <label>
+                                                            <input type="radio" name="radioDate1" data-displayyn="Y" data-playdate="2020-10-26" data-isplaydate="Y" data-playweek="월">
+                                                            <strong>26</strong>
+                                                            <em>월</em>
+                                                        </label>
+                                                    </span>
+                                                </li>
+                                            </div>
+                                       </div>
+                                   </div>
+                                   <!--
+                                   <div class="owl-nav">
+                                        <button type="button" role="presentation" class="owl-prev disabled">
+                                           <span aria-label="Previous"><</span>
+                                        </button>
+                                       <button type="button" role="presentation" class="owl-next">
+                                           <span aria-label="Next">></span>
+                                       </button>
+                                   </div>
+                                    -->
+                                   <div class="owl-dots disabled"></div>
+                               </ul>
+                           </div>
+                       </div>
+                       <ul class="tab_wrap outer sml">
+                           <li class="active">
+                               <button type="button" class="tab_tit" style="width: 16.6667%; left: 0%;">
+                                    <span>전체</span>
+                               </button>
+                               <div class="tab_con ty5">
+                                   <h5 class="hidden">전체</h5>
+                                   <div class="mCustomScrollbar timeScroll _mCS_11 mCS-autoHide mCS_no_scrollbar" data-mcs-theme="minimal-dark" style="position: relative; overflow: visible;">
+                                        <div id="mCSB_11" class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside" style="max-height: none;" tabindex="0">
+                                            <div id="mCSB_11_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position: relative; top: 0; left: 0;" dir="ltr">
+                                                <div class="bx_notice">
+                                                    <p>조회 가능한 상영시간이 없습니다.</p>
+                                                    <p>조건을 변경해주세요.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="mCSB_11_scrollbar_vertical" class="mCSB_scrollTools mCSB_11_scrollbar mCS-minimal-dark mCSB_scrollTools_vertical" style="display: none;">
+                                            <div class="mCSB_draggerContainer">
+                                                <div id="mCSB_11_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 50px; height: 0px; top: 0px;">
+                                                    <div class="mCSB_dragger_bar" style="line-height: 50px;"></div>
+                                                </div>
+                                                <div class="mCSB_draggerRail"></div>
+                                            </div>
+                                        </div>
+                                   </div>
+                               </div>
+                           </li>
+                           <li class>
+                               <button type="button" class="tab_tit" style="width: 16.6667%; left: 16.6667%;">
+                                    <span>스페셜관</span>
+                               </button>
+                           </li>
+                           <li>
+                               <button type="button" class="tab_tit" style="width: 16.6667%; left: 16.6667%;">
+                                    <span>Atmos</span>
+                               </button>
+                           </li>
+                           <li>
+                               <button type="button" class="tab_tit" style="width: 16.6667%; left: 16.6667%;">
+                                    <span>13시간 이후</span>
+                               </button>
+                           </li>
+                           <li>
+                               <button type="button" class="tab_tit" style="width: 16.6667%; left: 16.6667%;">
+                                    <span>19시간 이후</span>
+                               </button>
+                           </li>
+                           <li>
+                               <button type="button" class="tab_tit" style="width: 16.6667%; left: 16.6667%;">
+                                    <span>심야</span>
+                               </button>
+                           </li>
+                       </ul>
+                   </div>
+               </div>
            </div>
        </div>
     </div>
     <div id="banner_reserve_section" class="banner_reserve_wrap">
         <div class="bx_lft">
             <a href="#" target="_blank">
-                <img src="" alt="롯데시네마x신한카드 나만 몰랐던 영화관람권 5매 득템 이벤트">
+                <img src="../img/Hyundaicard_160300.jpg" alt="금요일 토요일 5000 엠포인트 사용 그 외 2500 엠포인트">
             </a>
         </div>
         <div class="bx_rgt">
             <a href="#" target="_blank">
-                <img src="" alt="금요일 토요일 5000 엠포인트 사용 그 외 2500 엠포인트">
+                <img src="../img/Hyundaicard_160300.jpg" alt="금요일 토요일 5000 엠포인트 사용 그 외 2500 엠포인트">
             </a>
         </div>
     </div>

@@ -354,3 +354,714 @@ button > * {position: relative;}
     text-indent: -9999em;
     font-size: 0;
 }
+
+
+/* lottecinema - membervip */
+#contents.contents_vipzone:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 114px;
+    height: 280px;
+    background: url('../img/bg_vipzone.jpg') repeat-x;
+}
+#contents.contents_vipzone > .vip_title {
+    margin-bottom: 50px;
+    text-align: center;
+}
+.vip_top_infor {
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto 50px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
+    background-color: #FFF;
+}
+.vip_top_infor .nomem_page_box {
+    margin: 40px 38px 62px;
+}
+.vip_top_infor .nomem_page_box .user_info .bx_con {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.vip_top_infor .nomem_page_box .user_info .bx_con .profile_img {
+    display: none;
+    overflow: hidden;
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 8px;
+}
+.profile_img {
+    display: block;
+    width: 75px;
+    height: 75px;
+    border-radius: 75px;
+    overflow: hidden;
+}
+.profile_img img {width: 100%;}
+.vip_top_infor .nomem_page_box .user_info .bx_con .txt {
+    line-height: 1.4;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #666;
+}
+.vip_top_infor .nomem_page_box .user_info .bx_con .txt strong {
+    font-weight: bold;
+    color: #000;
+}
+.btn_col3.rnd {border-radius: 52px;}
+.btn_col3.ty3 {
+    height: 28px;
+    line-height: 26px;
+    padding: 0 14px;
+}
+.vip_top_infor .nomem_page_box .user_info .bx_btm {
+    position: relative;
+    text-align: center;
+}
+.vip_top_infor .nomem_page_box .user_info .bx_btm .btn_lnk2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+a.btn_lnk2 {
+    border-bottom: 1px solid #666;
+    font-size: 12px;
+    color: #666;
+    vertical-align: middle;
+}
+
+.rank_2020_wrap {margin-top: 50px;}
+.rank_2020_wrap > .tit {font-size: 18px;}
+.rank_2020_wrap .rank_2020_list_ty2 {
+    position: relative;
+    margin-top: 20px;
+    border-top: 1px solid #bbb;
+}
+.rank_2020_wrap .rank_2020_list_ty2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 79px;
+    width: 100%;
+    height: 1px;
+    background-color: #bbb;
+}
+.rank_2020_wrap .rank_2020_list_ty2 dl.tit {width: 12%;}
+.rank_2020_wrap .rank_2020_list_ty2 dl {
+    float: left;
+    width: 22%;
+    text-align: center;
+}
+.rank_2020_wrap .rank_2020_list_ty2 dl dt {
+    margin-bottom: 16px;
+    padding-top: 40px;
+}
+[class^="ic_2020_"] {background-repeat: no-repeat;}
+[class*="txt_2020_rank"] {
+    display: inline-block;
+    padding: 0 4px;
+    min-width: 54px;
+    height: 24px;
+    color: #fff;
+    line-height: 26px;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Roboto';
+    border-radius: 25px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.rank_2020_wrap .rank_2020_list_ty2 dl dd {
+    padding: 28px 0;
+    font-size: 15px;
+    border-bottom: 1px solid #eee;
+}
+.ic_2020_vip {
+    background-image: url('../img/2020_vip.png');
+    background-position: center 21px;
+}
+.txt_2020_rank1 {background-color: #675448;}
+.rank_2020_wrap .rank_2020_list_ty2 dl dd em {font-family: "Roboto";}
+
+.ic_2020_vvip {
+    background-image: url('../img/2020_vvip.png');
+    background-position: center 20px;
+}
+.txt_2020_rank2 {background-color: #969697;}
+
+.ic_2020_gold {
+    background-image: url('../img/2020_gold.png');
+    background-position: center 16px;
+}
+.txt_2020_rank3 {background-color: #756023;}
+
+.ic_2020_platinum {
+    background-image: url('../img/2020_platinum.png');
+    background-position: center 15px;
+}
+.txt_2020_rank4 {background-color: #000;}
+
+.benefit_wrap {margin-top: 60px;}
+.benefit_wrap > .tit {font-size: 18px;}
+.benefit_wrap .benefit_box_ty2 {margin-top: 60px;}
+.benefit_wrap .benefit_box_ty2 > li {
+    position: relative;
+    float: left;
+    padding: 56px 25px 30px;
+    width: 230px;
+    font-size: 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.ic_rank_vip, .ic_rank_vvip, .ic_rank_gold, .ic_rank_platinum {box-shadow: 0px 5px 10px 3px #e6e6e6;}
+.ic_rank_vip {
+    color: #666;
+    background: url('../img/ic_rank_vip3.png') #fff no-repeat center 23px;
+}
+[class^="ic_rank_"] {
+    position: absolute;
+    left: 50%;
+    top: -40px;
+    margin-left: -40px;
+    padding-top: 45px;
+    width: 80px;
+    height: 80px;
+    font-family: 'Roboto';
+    text-align: center;
+    border-radius: 80px;
+    border: 1px solid #999;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.benefit_wrap .benefit_box_ty2 .benefit .tit {
+    padding-bottom: 8px;
+    font-size: 15px;
+    border-bottom: 1px solid #000;
+}
+.benefit_wrap .benefit_box_ty2 .benefit .tit span {
+    margin-left: 5px;
+    font-size: 11px;
+}
+.benefit_wrap .benefit_box_ty2 strong + .benefit .tit + .list.type1 {min-height: 40px;}
+.benefit_wrap .benefit_box_ty2 strong + .benefit .tit + .list {min-height: 70px;}
+.benefit_wrap .benefit_box_ty2 .benefit .tit + .list {padding-top: 12px;}
+.benefit_wrap .benefit_box_ty2 .benefit .list {
+    padding-left: 6px;
+    padding-right: 12px;
+}
+.benefit_wrap .benefit_box_ty2 .benefit .list li {
+    position: relative;
+    line-height: 25px;
+}
+.benefit_wrap .benefit_box_ty2 .benefit .list strong {font-size: 13px;}
+.benefit_wrap .benefit_box_ty2 .benefit .list strong::before  {
+    display: inline-block;
+    content: "·";
+    padding-right: 4px;
+}
+.benefit_wrap .benefit_box_ty2 .benefit .list span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 13px;
+}
+.benefit_wrap .benefit_box_ty2 .benefit .list span::before {
+    content: '';
+    position: absolute;
+    right: 26px;
+    top: 7px;
+    width: 9px;
+    height: 9px;
+    background: url('../img/cross_11.png') no-repeat;
+}
+.benefit_wrap .benefit_box_ty2 .benefit .list span em {
+    font-size: 18px;
+    font-family: "Roboto";
+}
+.benefit_wrap .benefit_box_ty2 .benefit .list li ~ li {margin-top: 4px;}
+
+.benefit_wrap .benefit_box_ty2 .benefit + .benefit {margin-top: 28px;}
+
+.benefit_wrap .benefit_box_ty2 > li ~ li {margin-left: 19px;}
+.benefit_wrap .benefit_box_ty2 > li {
+    position: relative;
+    float: left;
+    padding: 56px 25px 30px;
+    width: 230px;
+    font-size: 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.ic_rank_vvip {
+    color: #666;
+    background: url('../img/ic_rank_vvip.png') #fff no-repeat center 21px;
+}
+.ic_rank_gold {
+    color: #756023;
+    background: url('../img/ic_rank_gold.png') #fff no-repeat center 17px;
+}
+.ic_rank_platinum {
+    color: #000;
+    background: url('../img/ic_rank_platinum.png') #fff no-repeat center 16px;
+}
+.benefit_wrap .benefit_box_ty2::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+
+.mypage_event_box_ty2 {
+    margin-top: 100px;
+    padding-left: 140px;
+    height: 255px;
+    background: url('../img/bg_vip_event.jpg') repeat;
+}
+.mypage_event_box_ty2 li {
+    float: left;
+    width: 200px;
+    padding-left: 70px;
+}
+.mypage_event_box_ty2 li:first-child {padding-left: 0;}
+.mypage_event_box_ty2 li a {
+    display: block;
+    position: relative;
+    padding-top: 110px;
+}
+.mypage_event_box_ty2 li .thm {
+    position: absolute;
+    left: 0;
+    top: -40px;
+}
+.mypage_event_box_ty2 li .num {
+    display: block;
+    width: 42px;
+    height: 17px;
+    color: #fff;
+    line-height: 17px;
+    font-size: 11px;
+    text-align: center;
+    background-color: #786D4C;
+}
+.mypage_event_box_ty2 li em {
+    font-family: "Roboto";
+    letter-spacing: 0;
+}
+.mypage_event_box_ty2 li .cont {
+    margin-top: 8px;
+    line-height: 20px;
+    font-size: 16px;
+    letter-spacing: -.5px;
+}
+.mypage_event_box_ty2 li .cont .tip {
+    display: block;
+    margin-top: 8px;
+    font-size: 11px;
+    font-family: "Roboto";
+    letter-spacing: 0;
+    line-height: 15px;
+}
+.mypage_event_box_ty2::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.contents_vipzone .txt_list_wrap {margin-top: 60px;}
+.txt_list_wrap > .tit {
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.txt_list_wrap > .tit em {font-family: 'Roboto';}
+.list_bdr_box {
+    padding: 30px 25px;
+    line-height: 17px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+.list_txt {font-size: 13px;}
+.list_bdr_box .list_txt > p, .list_bdr_box .list_txt > li {letter-spacing: -.5px;}
+.list_txt > li {
+    line-height: 1.4;
+    margin: 0 0 5px 8px;
+    text-indent: -8px;
+    color: #333;
+}
+.list_txt > li:before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    margin: 8px 5px 0 0;
+    border-radius: 50%;
+    vertical-align: top;
+    background-color: #666;
+}
+
+
+/* lottecinema - membervip */
+#contents.contents_vipzone:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 114px;
+    height: 280px;
+    background: url('../img/bg_vipzone.jpg') repeat-x;
+}
+#contents.contents_vipzone > .vip_title {
+    margin-bottom: 50px;
+    text-align: center;
+}
+.vip_top_infor {
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto 50px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
+    background-color: #FFF;
+}
+.vip_top_infor .nomem_page_box {
+    margin: 40px 38px 62px;
+}
+.vip_top_infor .nomem_page_box .user_info .bx_con {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.vip_top_infor .nomem_page_box .user_info .bx_con .profile_img {
+    display: none;
+    overflow: hidden;
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 8px;
+}
+.profile_img {
+    display: block;
+    width: 75px;
+    height: 75px;
+    border-radius: 75px;
+    overflow: hidden;
+}
+.profile_img img {width: 100%;}
+.vip_top_infor .nomem_page_box .user_info .bx_con .txt {
+    line-height: 1.4;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #666;
+}
+.vip_top_infor .nomem_page_box .user_info .bx_con .txt strong {
+    font-weight: bold;
+    color: #000;
+}
+.btn_col3.rnd {border-radius: 52px;}
+.btn_col3.ty3 {
+    height: 28px;
+    line-height: 26px;
+    padding: 0 14px;
+}
+.vip_top_infor .nomem_page_box .user_info .bx_btm {
+    position: relative;
+    text-align: center;
+}
+.vip_top_infor .nomem_page_box .user_info .bx_btm .btn_lnk2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+a.btn_lnk2 {
+    border-bottom: 1px solid #666;
+    font-size: 12px;
+    color: #666;
+    vertical-align: middle;
+}
+
+.rank_2020_wrap {margin-top: 50px;}
+.rank_2020_wrap > .tit {font-size: 18px;}
+.rank_2020_wrap .rank_2020_list_ty2 {
+    position: relative;
+    margin-top: 20px;
+    border-top: 1px solid #bbb;
+}
+.rank_2020_wrap .rank_2020_list_ty2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 79px;
+    width: 100%;
+    height: 1px;
+    background-color: #bbb;
+}
+.rank_2020_wrap .rank_2020_list_ty2 dl.tit {width: 12%;}
+.rank_2020_wrap .rank_2020_list_ty2 dl {
+    float: left;
+    width: 22%;
+    text-align: center;
+}
+.rank_2020_wrap .rank_2020_list_ty2 dl dt {
+    margin-bottom: 16px;
+    padding-top: 40px;
+}
+[class^="ic_2020_"] {background-repeat: no-repeat;}
+[class*="txt_2020_rank"] {
+    display: inline-block;
+    padding: 0 4px;
+    min-width: 54px;
+    height: 24px;
+    color: #fff;
+    line-height: 26px;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Roboto';
+    border-radius: 25px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.rank_2020_wrap .rank_2020_list_ty2 dl dd {
+    padding: 28px 0;
+    font-size: 15px;
+    border-bottom: 1px solid #eee;
+}
+.ic_2020_vip {
+    background-image: url('../img/2020_vip.png');
+    background-position: center 21px;
+}
+.txt_2020_rank1 {background-color: #675448;}
+.rank_2020_wrap .rank_2020_list_ty2 dl dd em {font-family: "Roboto";}
+
+.ic_2020_vvip {
+    background-image: url('../img/2020_vvip.png');
+    background-position: center 20px;
+}
+.txt_2020_rank2 {background-color: #969697;}
+
+.ic_2020_gold {
+    background-image: url('../img/2020_gold.png');
+    background-position: center 16px;
+}
+.txt_2020_rank3 {background-color: #756023;}
+
+.ic_2020_platinum {
+    background-image: url('../img/2020_platinum.png');
+    background-position: center 15px;
+}
+.txt_2020_rank4 {background-color: #000;}
+
+.benefit_wrap {margin-top: 60px;}
+.benefit_wrap > .tit {font-size: 18px;}
+.benefit_wrap .benefit_box_ty2 {margin-top: 60px;}
+.benefit_wrap .benefit_box_ty2 > li {
+    position: relative;
+    float: left;
+    padding: 56px 25px 30px;
+    width: 230px;
+    font-size: 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.ic_rank_vip, .ic_rank_vvip, .ic_rank_gold, .ic_rank_platinum {box-shadow: 0px 5px 10px 3px #e6e6e6;}
+.ic_rank_vip {
+    color: #666;
+    background: url('../img/ic_rank_vip3.png') #fff no-repeat center 23px;
+}
+[class^="ic_rank_"] {
+    position: absolute;
+    left: 50%;
+    top: -40px;
+    margin-left: -40px;
+    padding-top: 45px;
+    width: 80px;
+    height: 80px;
+    font-family: 'Roboto';
+    text-align: center;
+    border-radius: 80px;
+    border: 1px solid #999;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.benefit_wrap .benefit_box_ty2 .benefit .tit {
+    padding-bottom: 8px;
+    font-size: 15px;
+    border-bottom: 1px solid #000;
+}
+.benefit_wrap .benefit_box_ty2 .benefit .tit span {
+    margin-left: 5px;
+    font-size: 11px;
+}
+.benefit_wrap .benefit_box_ty2 strong + .benefit .tit + .list.type1 {min-height: 40px;}
+.benefit_wrap .benefit_box_ty2 strong + .benefit .tit + .list {min-height: 70px;}
+.benefit_wrap .benefit_box_ty2 .benefit .tit + .list {padding-top: 12px;}
+.benefit_wrap .benefit_box_ty2 .benefit .list {
+    padding-left: 6px;
+    padding-right: 12px;
+}
+.benefit_wrap .benefit_box_ty2 .benefit .list li {
+    position: relative;
+    line-height: 25px;
+}
+.benefit_wrap .benefit_box_ty2 .benefit .list strong {font-size: 13px;}
+.benefit_wrap .benefit_box_ty2 .benefit .list strong::before  {
+    display: inline-block;
+    content: "·";
+    padding-right: 4px;
+}
+.benefit_wrap .benefit_box_ty2 .benefit .list span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 13px;
+}
+.benefit_wrap .benefit_box_ty2 .benefit .list span::before {
+    content: '';
+    position: absolute;
+    right: 26px;
+    top: 7px;
+    width: 9px;
+    height: 9px;
+    background: url('../img/cross_11.png') no-repeat;
+}
+.benefit_wrap .benefit_box_ty2 .benefit .list span em {
+    font-size: 18px;
+    font-family: "Roboto";
+}
+.benefit_wrap .benefit_box_ty2 .benefit .list li ~ li {margin-top: 4px;}
+
+.benefit_wrap .benefit_box_ty2 .benefit + .benefit {margin-top: 28px;}
+
+.benefit_wrap .benefit_box_ty2 > li ~ li {margin-left: 19px;}
+.benefit_wrap .benefit_box_ty2 > li {
+    position: relative;
+    float: left;
+    padding: 56px 25px 30px;
+    width: 230px;
+    font-size: 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.ic_rank_vvip {
+    color: #666;
+    background: url('../img/ic_rank_vvip.png') #fff no-repeat center 21px;
+}
+.ic_rank_gold {
+    color: #756023;
+    background: url('../img/ic_rank_gold.png') #fff no-repeat center 17px;
+}
+.ic_rank_platinum {
+    color: #000;
+    background: url('../img/ic_rank_platinum.png') #fff no-repeat center 16px;
+}
+.benefit_wrap .benefit_box_ty2::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+
+.mypage_event_box_ty2 {
+    margin-top: 100px;
+    padding-left: 140px;
+    height: 255px;
+    background: url('../img/bg_vip_event.jpg') repeat;
+}
+.mypage_event_box_ty2 li {
+    float: left;
+    width: 200px;
+    padding-left: 70px;
+}
+.mypage_event_box_ty2 li:first-child {padding-left: 0;}
+.mypage_event_box_ty2 li a {
+    display: block;
+    position: relative;
+    padding-top: 110px;
+}
+.mypage_event_box_ty2 li .thm {
+    position: absolute;
+    left: 0;
+    top: -40px;
+}
+.mypage_event_box_ty2 li .num {
+    display: block;
+    width: 42px;
+    height: 17px;
+    color: #fff;
+    line-height: 17px;
+    font-size: 11px;
+    text-align: center;
+    background-color: #786D4C;
+}
+.mypage_event_box_ty2 li em {
+    font-family: "Roboto";
+    letter-spacing: 0;
+}
+.mypage_event_box_ty2 li .cont {
+    margin-top: 8px;
+    line-height: 20px;
+    font-size: 16px;
+    letter-spacing: -.5px;
+}
+.mypage_event_box_ty2 li .cont .tip {
+    display: block;
+    margin-top: 8px;
+    font-size: 11px;
+    font-family: "Roboto";
+    letter-spacing: 0;
+    line-height: 15px;
+}
+.mypage_event_box_ty2::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.contents_vipzone .txt_list_wrap {margin-top: 60px;}
+.txt_list_wrap > .tit {
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.txt_list_wrap > .tit em {font-family: 'Roboto';}
+.list_bdr_box {
+    padding: 30px 25px;
+    line-height: 17px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+.list_txt {font-size: 13px;}
+.list_bdr_box .list_txt > p, .list_bdr_box .list_txt > li {letter-spacing: -.5px;}
+.list_txt > li {
+    line-height: 1.4;
+    margin: 0 0 5px 8px;
+    text-indent: -8px;
+    color: #333;
+}
+.list_txt > li:before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    margin: 8px 5px 0 0;
+    border-radius: 50%;
+    vertical-align: top;
+    background-color: #666;
+}
+.list_bdr_box .list_txt + .tit {margin-top: 30px;}

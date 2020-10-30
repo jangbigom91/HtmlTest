@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LOTTE CINEMA::스토어best</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/member.css">
+
+<style>
+
+</style>
+<script>
+
+</script>
+</head>
+<body>
+    <div id="loading" class="loader loader-bouncing is-active hidden"></div>
+    <div id="skip_nav_section" class="skip_nav">
+        <ul>
+            <li>
+                <a href="#">주 메뉴 바로가기</a>
+            </li>
+            <li>
+                <a href="#">본문 바로가기</a>
+            </li>
+        </ul>
+    </div>
+    <div id="header_section" class="header">
+        <h1 class="logo">
+            <a href="#">LOTTE CINEMA</a>
+        </h1>
+        <div class="gnb">
+            <ul class="g_menu1">
+                <li>
+                    <a href="http://www.facebook.com/" class="btn_facebook" target="_blank" title="롯데시네마 페이스북 새창열림">좋아요</a>
+                </li>
+                <li>
+                    <a href="http://www.youtube.com/" class="btn_youtube" target="_blank" title="새창열림">구독하기</a>
+                </li>
+            </ul>
+            <ul class="g_menu2">
+                <li>
+                    <a href="#">멤버십</a>
+                </li>
+                <li>
+                    <a href="#">고객센터</a>
+                </li>
+                <li>
+                    <a href="#">로그인</a>
+                </li>
+            </ul>
+            <ul class="g_menu3">
+                <li>
+                    <a href="#" class="btn_my">회원가입</a>
+                </li>
+                <li>
+                    <a href="#" class="btn_reserve">바로 예매</a>
+                </li>
+                <li>
+                    <button class="btn_menu_all">전체 메뉴 레이어 열기</button>
+                    <div id="allmenu"></div>
+                </li>
+            </ul>
+        </div>
+        <div id="nav">
+            <ul>
+                <li class>
+                    <a href="#">예매</a>
+                </li>
+                <li class>
+                    <a href="#">영화</a>
+                </li>
+                <li class>
+                    <a href="#">영화관</a>
+                </li>
+                <li class>
+                    <a href="#">이벤트</a>
+                </li>
+                <li class>
+                    <a href="#">스토어</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="quick_wrap" style="padding-top: 105px;">
+        <div id="quick_menu" class="quick_menu" style="top: 220px;">
+            <a href="#">
+                <img src="../img/961c9cbf311b4f1299827c21a61fab76.png" alt="예매하기">
+            </a>
+            <a href="#">
+                <img src="../img/c1dbce4f91e948498c7c78239b7157ac.png" alt="상영시간표">
+            </a>
+            <a href="#">
+                <img src="../img/c793af89f3b648aa99cc679186ccfa02.png" alt="discount-guide">
+            </a>
+            <a href="#">
+                <img src="../img/c0945ca778f1470db48a5a90123f2e11.png" alt="merbership">
+            </a>
+            <a href="#">
+                <img src="../img/e339dfaae8d74acfbf7b0c6987442ac8.png" alt="고객센터">
+            </a>
+            <a href="#">
+                <img src="../img/df3d477b5f0f46fc86babc5de3753636.png" alt="스페셜관">
+            </a>
+            
+            <a href="#" class="qick_top">TOP</a>
+        </div>
+    </div>
+    <div id="sub_section">
+        <div class="visual_top visual_mall" style>
+            <div class="inner">
+                <img src="../img/cd29de8de4104808ac9a22160cfcff76.png" alt="팝콘&음료, 스낵에서 영화 티켓까지 한번에!">
+            </div>
+        </div>
+        <div id="contents" class="contents_mall_home">
+            <ul class="tab_wrap_lnk anchor">
+                <li class="active">
+                    <a href="#" style="width: 33.3333%; left: 0%;">베스트&nbsp;</a>
+                </li>
+                <li class>
+                    <a href="#" style="width: 33.3333%; left: 33.3333%;">관람권&nbsp;</a>
+                </li>
+                <li class>
+                    <a href="#" style="width: 33.3333%; left: 66.6667%;">스낵음료&nbsp;</a>
+                </li>
+            </ul>
+            <div class="tab_con_lnk">
+                <div id="store2" class="lc_wrap ty3" tabindex="0" style="outline: none;">
+                    <h3 class="lc_tit">베스트</h3>
+                    <a href="#" class="lc_itm">
+                        <div class="itm_img">
+                            <img src="../img/8e3ff805ea1b47ca9ae6c25545b00a92.jpg" alt="일반관람권">
+                        </div>
+                        <div class="itm_cont">
+                            <div class="badge_wrap"></div>
+                            <div class="itm_tit">
+                                <h4>일반 관람권</h4>
+                                <p>2D일반관람권 1매</p>
+                            </div>
+                            <div class="txt_price_wrap">
+                                <span class="txt_price">
+                                    10,000<em>원</em>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="lc_itm">
+                        <div class="itm_img">
+                            <img src="../img/d873a7e7252c45ec8972894bff740499.jpg" alt="샤롯데 관람권 상품이미지">
+                        </div>
+                        <div class="itm_cont">
+                            <div class="badge_wrap"></div>
+                            <div class="itm_tit">
+                                <h4>샤롯데 관람권</h4>
+                                <p>샤롯데관람권 1매</p>
+                            </div>
+                            <div class="txt_price_wrap">
+                                <span class="txt_price">
+                                    35,000<em>원</em>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div id="store3" class="lc_wrap ty3" tabindex="0" style="outline: none;">
+                    <h3 class="lc_tit">관람권</h3>
+                    <a href="#" class="lc_itm">
+                        <div class="itm_img">
+                            <img src="../img/8e3ff805ea1b47ca9ae6c25545b00a92.jpg" alt="일반관람권">
+                        </div>
+                        <div class="itm_cont">
+                            <div class="badge_wrap"></div>
+                            <div class="itm_tit">
+                                <h4>일반 관람권</h4>
+                                <p>2D일반관람권 1매</p>
+                            </div>
+                            <div class="txt_price_wrap">
+                                <span class="txt_price">
+                                    10,000<em>원</em>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="lc_itm">
+                        <div class="itm_img">
+                            <img src="../img/6adcc9947e054d8fb22baaa292bb7fce.jpg" alt="수퍼 3종 관람권">
+                        </div>
+                        <div class="itm_cont">
+                            <div class="badge_wrap"></div>
+                            <div class="itm_tit">
+                                <h4>수퍼 3종 관람권</h4>
+                                <p>
+                                    수퍼 3종 관람권 1매
+                                    <br>
+                                    (2D, 3D, 수퍼4D, 수퍼S, 수퍼플렉스G 사용가능)
+                                </p>
+                            </div>
+                            <div class="txt_price_wrap">
+                                <span class="txt_price">
+                                    15,000<em>원</em>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="lc_itm">
+                        <div class="itm_img">
+                            <img src="../img/d873a7e7252c45ec8972894bff740499.jpg" alt="샤롯데 관람권 상품이미지">
+                        </div>
+                        <div class="itm_cont">
+                            <div class="badge_wrap"></div>
+                            <div class="itm_tit">
+                                <h4>샤롯데 관람권</h4>
+                                <p>샤롯데관람권 1매</p>
+                            </div>
+                            <div class="txt_price_wrap">
+                                <span class="txt_price">
+                                    35,000<em>원</em>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div id="store4" class="lc_wrap ty3" tabindex="0" style="outline: none;">
+                    <h3 class="lc_tit">스낵음료</h3>
+                    <a href="#" class="lc_itm">
+                        <div class="itm_img">
+                            <img src="../img/12be3d9823e84b619250715a8c4e4cb3.jpg" alt="스위트콤보 상품이미지">
+                        </div>
+                        <div class="itm_cont">
+                            <div class="badge_wrap"></div>
+                            <div class="itm_tit">
+                                <h4>스위트콤보</h4>
+                                <p>오리지널L + 탄산음료M2</p>
+                            </div>
+                            <div class="txt_price_wrap">
+                                <span class="txt_price">
+                                    9,000<em>원</em>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="lc_itm">
+                        <div class="itm_img">
+                            <img src="../img/12be3d9823e84b619250715a8c4e4cb3.jpg" alt="반반콤보">
+                        </div>
+                        <div class="itm_cont">
+                            <div class="badge_wrap"></div>
+                            <div class="itm_tit">
+                                <h4>반반콤보</h4>
+                                <p>반반팝콘L + 탄산음료M2</p>
+                            </div>
+                            <div class="txt_price_wrap">
+                                <span class="txt_price">
+                                    9,500<em>원</em>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="lc_itm">
+                        <div class="itm_img">
+                            <img src="../img/62305784d3074aaf9c723e1c509b848c.jpg" alt="더블콤보">
+                        </div>
+                        <div class="itm_cont">
+                            <div class="badge_wrap"></div>
+                            <div class="itm_tit">
+                                <h4>더블콤보</h4>
+                                <p>카라멜팝콘M+오리지널팝콘M+탄산음료M2</p>
+                            </div>
+                            <div class="txt_price_wrap">
+                                <span class="txt_price">
+                                    13,000<em>원</em>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="lc_itm">
+                        <div class="itm_img">
+                            <img src="../img/e617eb3d1125448aa5bc896c8164b0ba.jpg" alt="즉석구이한마리콤보">
+                        </div>
+                        <div class="itm_cont">
+                            <div class="badge_wrap"></div>
+                            <div class="itm_tit">
+                                <h4>즉석구이콤보</h4>
+                                <p>카라멜팝콘M+즉석구이(몸통or다리)+탄산음료M2</p>
+                            </div>
+                            <div class="txt_price_wrap">
+                                <span class="txt_price">
+                                    13,500<em>원</em>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="lc_itm">
+                        <div class="itm_img">
+                            <img src="../img/c1b0e7abca314e9aa9bfdb846c25b013.jpg" alt="자몽에이드 R">
+                        </div>
+                        <div class="itm_cont">
+                            <div class="badge_wrap"></div>
+                            <div class="itm_tit">
+                                <h4>자몽에이드</h4>
+                                <p>자몽에이드R</p>
+                            </div>
+                            <div class="txt_price_wrap">
+                                <span class="txt_price">
+                                    5,000<em>원</em>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="lc_itm">
+                        <div class="itm_img">
+                            <img src="../img/a5b93e2154fd46d19442b1eb47d313a6.jpg" alt="레몬에이드 R">
+                        </div>
+                        <div class="itm_cont">
+                            <div class="badge_wrap"></div>
+                            <div class="itm_tit">
+                                <h4>레몬에이드</h4>
+                                <p>레몬에이드 R</p>
+                            </div>
+                            <div class="txt_price_wrap">
+                                <span class="txt_price">
+                                    5,000<em>원</em>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="lc_itm">
+                        <div class="itm_img">
+                            <img src="../img/b1afb5f5ac1e4a829d55a7e55804e8ff.jpg" alt="콜라 M">
+                        </div>
+                        <div class="itm_cont">
+                            <div class="badge_wrap"></div>
+                            <div class="itm_tit">
+                                <h4>콜라</h4>
+                                <p>콜라M</p>
+                            </div>
+                            <div class="txt_price_wrap">
+                                <span class="txt_price">
+                                    2,500<em>원</em>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="lc_itm">
+                        <div class="itm_img">
+                            <img src="../img/ec0e406684144242b92027b44199421c.jpg" alt="콜라 L">
+                        </div>
+                        <div class="itm_cont">
+                            <div class="badge_wrap"></div>
+                            <div class="itm_tit">
+                                <h4>콜라</h4>
+                                <p>콜라L</p>
+                            </div>
+                            <div class="txt_price_wrap">
+                                <span class="txt_price">
+                                    3,000<em>원</em>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="lc_itm">
+                        <div class="itm_img">
+                            <img src="../img/d0194ffb476f45239ffdd73ce61fd2ca.jpg" alt="사이다 M">
+                        </div>
+                        <div class="itm_cont">
+                            <div class="badge_wrap"></div>
+                            <div class="itm_tit">
+                                <h4>사이다</h4>
+                                <p>사이다M</p>
+                            </div>
+                            <div class="txt_price_wrap">
+                                <span class="txt_price">
+                                    2,500<em>원</em>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="lc_itm">
+                        <div class="itm_img">
+                            <img src="../img/778aa961d4064a67b0a909607b241186.jpg" alt="사이다 L">
+                        </div>
+                        <div class="itm_cont">
+                            <div class="badge_wrap"></div>
+                            <div class="itm_tit">
+                                <h4>사이다</h4>
+                                <p>사이다L</p>
+                            </div>
+                            <div class="txt_price_wrap">
+                                <span class="txt_price">
+                                    3,000<em>원</em>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="lc_itm">
+                        <div class="itm_img">
+                            <img src="../img/e7e770f99b144d42a6b9719264c29002.jpg" alt="오리지널팝콘(M)">
+                        </div>
+                        <div class="itm_cont">
+                            <div class="badge_wrap"></div>
+                            <div class="itm_tit">
+                                <h4>오리지널팝콘 M</h4>
+                                <p>오리지널팝콘M</p>
+                            </div>
+                            <div class="txt_price_wrap">
+                                <span class="txt_price">
+                                    4,500<em>원</em>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="lc_itm">
+                        <div class="itm_img">
+                            <img src="../img/94cf906dcad94d318ad52bee5c305b16.jpg" alt="오리지널팝콘(L)">
+                        </div>
+                        <div class="itm_cont">
+                            <div class="badge_wrap"></div>
+                            <div class="itm_tit">
+                                <h4>오리지널팝콘 L</h4>
+                                <p>오리지널팝콘L</p>
+                            </div>
+                            <div class="txt_price_wrap">
+                                <span class="txt_price">
+                                    5,000<em>원</em>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="lc_itm">
+                        <div class="itm_img">
+                            <img src="../img/4b96c3a9097540e7b66137d502119780.jpg" alt="카라멜팝콘 M">
+                        </div>
+                        <div class="itm_cont">
+                            <div class="badge_wrap"></div>
+                            <div class="itm_tit">
+                                <h4>카라멜팝콘 M</h4>
+                                <p>카라멜팝콘M</p>
+                            </div>
+                            <div class="txt_price_wrap">
+                                <span class="txt_price">
+                                    5,500<em>원</em>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="lc_itm">
+                        <div class="itm_img">
+                            <img src="../img/99900693c14b46a2a66fe75d7ba6f4a0.jpg" alt="카라멜팝콘(L)">
+                        </div>
+                        <div class="itm_cont">
+                            <div class="badge_wrap"></div>
+                            <div class="itm_tit">
+                                <h4>카라멜팝콘 L</h4>
+                                <p>카라멜팝콘L</p>
+                            </div>
+                            <div class="txt_price_wrap">
+                                <span class="txt_price">
+                                    6,000<em>원</em>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="lc_itm">
+                        <div class="itm_img">
+                            <img src="../img/f29ff6be068349b08a85343742cb5dd8.jpg" alt="(오리지널+카라멜) L">
+                        </div>
+                        <div class="itm_cont">
+                            <div class="badge_wrap"></div>
+                            <div class="itm_tit">
+                                <h4>반반팝콘(오리지널/카라멜) L</h4>
+                                <p>반반팝콘(오리지널+카라멜)L</p>
+                            </div>
+                            <div class="txt_price_wrap">
+                                <span class="txt_price">
+                                    6,000<em>원</em>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="banner_section" class="banner_wrap">
+        <div class="banner_01">
+            <a href="#" target>
+                <img src="../img/MisterTrot_980180.jpg" alt="모두가 열광한 그들이 온다! 미스터트롯 더 무비 절찬상영중">
+            </a>
+        </div>
+        <div id="footerBanner" class="banner_type02" style="background-color: rgb(0, 92, 185); background-image: url('../img/bg_01.jpg'); background-repeat: repeat-x; background-position: 0px 0px;">
+           <a href="#" target="_blank">
+               <img src="../img/Hyundaicard_980240.jpg" alt="금요일 토요일 5000 엠포인트 사용 그 외 2500 엠포인트">
+           </a>
+        </div>
+    </div>
+    <div id="footer_section" class="footer">
+        <div class="inner">
+            <span class="f_logo">
+                <img src="../img/logo_footer.gif" alt="LOTTE CINEMA">
+            </span>
+            <ul class="f_menu">
+                <li>
+                    <a href="#" title="회원약관" target="_self">회원약관</a>
+                </li>
+                <li>
+                    <a href="#" title="개인정보처리방침" target="_self">
+                        <strong>개인정보처리방침</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="이메일" target="_self">이메일무단수집거부</a>
+                </li>
+                <li>
+                    <a href="#" title="영상정보처리기기 운영∙관리방침" target="_self">영상정보처리기기 운영∙관리방침</a>
+                </li>
+                <li>
+                    <a href="#" title="L.POINT회원안내" target="_self">L.POINT회원안내</a>
+                </li>
+                <li>
+                    <a href="#" title="배정기준" target="_self">배정기준</a>
+                </li>
+                <li>
+                    <a href="#" title="채용안내" target="_self">채용안내</a>
+                </li>
+                <li>
+                    <a href="#" title="광고/임대문의" target="_self">광고/임대문의</a>
+                </li>
+                <li>
+                    <a href="#" title="윤리경영" target="_self">윤리경영</a>
+                </li>
+                <li>
+                    <a href="#" title="기업정보" target="_self">기업정보</a>
+                </li>
+            </ul>
+            <div class="bx_address">
+                <address>서울특별시 송파구 올림픽로 300 롯데월드타워 27층</address>
+                <span class="bar">고객센터 1544-8855</span>
+                <br>
+                <span>대표이사 기원규</span>
+                <span class="bar">사업자등록번호 313-87-00979</span>
+                <span class="bar">통신판매업신고번호 제1184호</span>
+                <span class="bar">개인정보 보호책임자 이미선</span>
+            </div>
+            <p class="copyright">COPYRIGHT© LOTTE CINEMA ALL RIGHT RESERVED.</p>
+        </div>
+        <div class="article_award">
+            <div class="inner">
+                <ul>
+                    <li>
+                        <img src="../img/footer_award_NCSI5.png" alt="NCSI / NCSI 영화관부문 5년 연속 1위">
+                    </li>
+                    <li>
+                        <img src="../img/footer_award_kcsi.png" alt="KCSI 영화관부문 7년 연속 1위(총12회)">
+                    </li>
+                    <li>
+                        <img src="../img/footer_award_kssqi.png" alt="KS-SQI 영화관부문 8년 연속 1위(총11회)">
+                    </li>
+                    <li>
+                        <img src="../img/footer_award_brandcinema.png" alt="올해의 브랜드대상 영화관 부문 10년 연속 1위">
+                    </li>
+                    <li>
+                        <img src="../img/footer_award_greenstar.png" alt="그린스타 영화관 부문 4년 연속 1위">
+                    </li>
+                    <li>
+                        <img src="../img/footer_award_brandstar.png" alt="대한민국 브랜드 스타 영화관 부문 1위">
+                    </li>
+                    <li>
+                        <img src="../img/footer_award_familyship.png" alt="가족친화 인증기업 선정">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
