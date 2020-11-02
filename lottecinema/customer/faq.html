@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LOTTE CINEMA::FAQ</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/member.css">
+    <link rel="stylesheet" href="../css/movie.css">
+    <link rel="stylesheet" href="../css/customer.css">
+<style>
+/* customer - faq */
+.faq_icon_wrap {
+    position: relative;
+    background: #F5F5F5;
+    padding: 12px 13px;
+    margin-bottom: 48px;
+    white-space: nowrap;
+    text-align: center;
+}
+.faq_icon_wrap button.active {
+    background-color: #fff;
+    border-color: #C9C9C9;
+}
+.faq_icon_wrap button:first-child {margin-left: 0;}
+.faq_icon_wrap button {
+    display: inline-block;
+    border: 1px solid #EEEEEE;
+    border-radius: 4px;
+    background: transparent no-repeat top 23px center;
+    width: 98px;
+    padding: 57px 0 19px;
+    margin-left: 6px;
+    font-size: 13px;
+    text-align: center;
+    -webkit-border-radius: 4px;
+}
+.faq_icon_wrap .ico_01 {
+    background-image: url('../img/ic_faq_cate_01.png');
+    background-position: center 25px;
+}
+.faq_icon_wrap .ico_02 {
+    background-image: url('../img/ic_faq_cate_02_new.png');
+    background-position: center 22px;
+}
+.faq_icon_wrap .ico_03 {
+    background-image: url('../img/ic_faq_cate_03.png');
+    background-position: center 24px;
+}
+.faq_icon_wrap .ico_04 {
+    background-image: url('../img/ic_faq_cate_04.png');
+    background-position: center 23px;
+}
+.faq_icon_wrap .ico_05 {
+    background-image: url('../img/ic_faq_cate_05.png');
+    background-position: center 26px;
+}
+.faq_icon_wrap .ico_06 {
+    background-image: url('../img/ic_faq_cate_06.png');
+    background-position: center 24px;
+}
+.faq_icon_wrap .ico_07 {
+    background-image: url('../img/ic_faq_cate_07.png');
+    background-position: center 30px;
+}
+.faq_icon_wrap .ico_08 {
+    background-image: url('../img/ic_faq_cate_08.png');
+    background-position: center 23px;
+}
+.faq_icon_wrap .ico_09 {
+    background-image: url('../img/ic_faq_cate_09.png');
+    background-position: center 22px;
+}
+
+
+.search_wrap.ty2 input[type="text"] {
+    width: 440px;
+    margin-right: 8px;
+}
+.search_wrap .txt_help_wrap {
+    float: right;
+    border-left: 1px solid rgba(0, 0, 0, .27);
+    padding: 0 25px;
+    margin-left: 20px;
+    font-size: 12px;
+}
+.search_wrap .txt_help_wrap p {
+    color: #666666;
+    margin-bottom: 10px;
+}
+.search_wrap .txt_help_wrap a {
+    color: #000;
+    text-decoration: underline;
+    margin-right: 24px;
+}
+
+.tb_acc_wrap thead th {
+    border-bottom-color: #BBBBBB;
+    font-weight: bold;
+}
+.tb_acc_wrap th, .tb_acc_wrap td {
+    position: relative;
+    border-bottom: 1px solid #EEEEEE;
+    padding: 15px 0;
+    font-size: 15px;
+    text-align: center;
+    line-height: 24px;
+}
+.tb_acc_wrap tbody tr.acc_head {cursor: pointer;}
+.tb_acc_wrap td.text_l {padding: 20px;}
+.tb_acc_wrap tbody .ic_q, .tb_acc_wrap tbody .ic_a {text-align: left;}
+.tb_acc_wrap tbody .ic_q {padding-left: 30px;}
+.txt_qna {
+    overflow: hidden;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 50%;
+    text-align: center;
+}
+.tb_acc_wrap .txt_qna {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.txt_qna.q {background-color: #FF7787;}
+.txt_qna.q:before {content: "Q";}
+.txt_qna:before {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    color: #FFF;
+}
+.txt_qna span {
+    display: block;
+    text-indent: -9999em;
+}
+.tb_acc_wrap tbody tr.acc_head td:last-child:after {
+    content: '';
+    float: right;
+    display: inline-block;
+    background: url('../img/arr_dw_13.png') no-repeat 50% 50%;
+    width: 15px;
+    height: 15px;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-left: -10px;
+    vertical-align: middle;
+}
+</style>
+</head>
+<body>
+    <div id="loading" class="loader loader-bouncing is-active hidden"></div>
+    <div id="skip_nav_section" class="skip_nav">
+        <ul>
+            <li>
+                <a href="#">주 메뉴 바로가기</a>
+            </li>
+            <li>
+                <a href="#">본문 바로가기</a>
+            </li>
+        </ul>
+    </div>
+    <div id="header_section" class="header">
+        <h1 class="logo">
+            <a href="#">LOTTE CINEMA</a>
+        </h1>
+        <div class="gnb">
+            <ul class="g_menu1">
+                <li>
+                    <a href="http://www.facebook.com/" class="btn_facebook" target="_blank" title="롯데시네마 페이스북 새창열림">좋아요</a>
+                </li>
+                <li>
+                    <a href="http://www.youtube.com/" class="btn_youtube" target="_blank" title="새창열림">구독하기</a>
+                </li>
+            </ul>
+            <ul class="g_menu2">
+                <li>
+                    <a href="#">멤버십</a>
+                </li>
+                <li>
+                    <a href="#">고객센터</a>
+                </li>
+                <li>
+                    <a href="#">로그인</a>
+                </li>
+            </ul>
+            <ul class="g_menu3">
+                <li>
+                    <a href="#" class="btn_my">회원가입</a>
+                </li>
+                <li>
+                    <a href="#" class="btn_reserve">바로 예매</a>
+                </li>
+                <li>
+                    <button class="btn_menu_all">전체 메뉴 레이어 열기</button>
+                    <div id="allmenu"></div>
+                </li>
+            </ul>
+        </div>
+        <div id="nav">
+            <ul>
+                <li class>
+                    <a href="#">예매</a>
+                </li>
+                <li class>
+                    <a href="#">영화</a>
+                </li>
+                <li class>
+                    <a href="#">영화관</a>
+                </li>
+                <li class>
+                    <a href="#">이벤트</a>
+                </li>
+                <li class>
+                    <a href="#">스토어</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="quick_wrap" style="padding-top: 105px;">
+        <div id="quick_menu" class="quick_menu" style="top: 220px;">
+            <a href="#">
+                <img src="../img/961c9cbf311b4f1299827c21a61fab76.png" alt="예매하기">
+            </a>
+            <a href="#">
+                <img src="../img/c1dbce4f91e948498c7c78239b7157ac.png" alt="상영시간표">
+            </a>
+            <a href="#">
+                <img src="../img/c793af89f3b648aa99cc679186ccfa02.png" alt="discount-guide">
+            </a>
+            <a href="#">
+                <img src="../img/c0945ca778f1470db48a5a90123f2e11.png" alt="merbership">
+            </a>
+            <a href="#">
+                <img src="../img/e339dfaae8d74acfbf7b0c6987442ac8.png" alt="고객센터">
+            </a>
+            <a href="#">
+                <img src="../img/df3d477b5f0f46fc86babc5de3753636.png" alt="스페셜관">
+            </a>
+            
+            <a href="#" class="qick_top">TOP</a>
+        </div>
+    </div>
+    <div id="contents" class="contents_customer" style>
+        <div class="title_top">
+            <h2 class="tit">고객센터</h2>
+        </div>
+        <ul class="tab_wrap outer">
+            <li class="active">
+                <button type="button" class="tab_tit" style="width: 20%; left: 0%;">
+                    <span>FAQ</span>
+                </button>
+                <div class="tab_con ty2">
+                    <h3 class="hidden">FAQ</h3>
+                    <div class="faq_icon_wrap bx_category_slct">
+                        <button class="active ico_01" id="7">영화관 이용</button>
+                        <button class="ico_02" id="4">&nbsp;</button>
+                        <button class="ico_03" id="3">회원</button>
+                        <button class="ico_04" id="11">VIP/클럽멤버십</button>
+                        <button class="ico_05" id="5">온라인</button>
+                        <button class="ico_06" id="6">할인혜택</button>
+                        <button class="ico_07" id="12">관람권</button>
+                        <button class="ico_08" id="13">스토어</button>
+                        <button class="ico_09" id="14">스페셜관</button>
+                    </div>
+                    <fieldset class="search_wrap ty2">
+                        <legend>영화관 FAQ 검색하기</legend>
+                        <input type="text" placeholder="검색어를 입력해주세요." id="searchKeyword">
+                        <button type="button" class="btn_col2">검색</button>
+                        <div class="txt_help_wrap">
+                            <p>더 궁금한 점이 있거나, 이미 문의한 내용과 답변을 확인하려면?</p>
+                            <a href="#">1:1문의 바로가기</a>
+                        </div>
+                    </fieldset>
+                    <table class="tb_acc_wrap" summary="FAQ 표입니다. 구분, 질문 순서로 행이 구성되어 있습니다.">
+                        <caption>FAQ</caption>
+                        <colgroup>
+                            <col style="width: 20%;">
+                            <col style="width: auto;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col" id="thead0">구분</th>
+                                <th scope="col" id="thead1">질문</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tab">
+                            <tr class="acc_head" aria-expanded="false" role="button" id="tr_150">
+                                <td id="row0" headers="thead0">영화관 이용</td>
+                                <td headers="thead1 row0" class="text_l">
+                                    <a href="#" class="ic_q" title="열기">
+                                        <strong class="txt_qna q">
+                                            <span>질문</span>
+                                        </strong>
+                                        카드로 결제할 경우 환불은 언제 되나요?
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="acc_head" aria-expanded="false" role="button" id="tr_141">
+                                <td id="row0" headers="thead0">영화관 이용</td>
+                                <td headers="thead1 row0" class="text_l">
+                                    <a href="#" class="ic_q" title="열기">
+                                        <strong class="txt_qna q">
+                                            <span>질문</span>
+                                        </strong>
+                                        국가유공자 할인은 어떻게 받나요?
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="acc_head" aria-expanded="false" role="button" id="tr_79">
+                                <td id="row0" headers="thead0">영화관 이용</td>
+                                <td headers="thead1 row0" class="text_l">
+                                    <a href="#" class="ic_q" title="열기">
+                                        <strong class="txt_qna q">
+                                            <span>질문</span>
+                                        </strong>
+                                        SWEET SPOT이 무엇인가요?
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="acc_head" aria-expanded="false" role="button" id="tr_78">
+                                <td id="row0" headers="thead0">영화관 이용</td>
+                                <td headers="thead1 row0" class="text_l">
+                                    <a href="#" class="ic_q" title="열기">
+                                        <strong class="txt_qna q">
+                                            <span>질문</span>
+                                        </strong>
+                                        분실물을 찾고 싶어요.
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="acc_head" aria-expanded="false" role="button" id="tr_77">
+                                <td id="row0" headers="thead0">영화관 이용</td>
+                                <td headers="thead1 row0" class="text_l">
+                                    <a href="#" class="ic_q" title="열기">
+                                        <strong class="txt_qna q">
+                                            <span>질문</span>
+                                        </strong>
+                                        단체 관람의 경우 할인 혜택이 어떻게 되나요?
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="acc_head" aria-expanded="false" role="button" id="tr_76">
+                                <td id="row0" headers="thead0">영화관 이용</td>
+                                <td headers="thead1 row0" class="text_l">
+                                    <a href="#" class="ic_q" title="열기">
+                                        <strong class="txt_qna q">
+                                            <span>질문</span>
+                                        </strong>
+                                        장애인 할인 혜택에 대해 알려 주세요.
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="acc_head" aria-expanded="false" role="button" id="tr_75">
+                                <td id="row0" headers="thead0">영화관 이용</td>
+                                <td headers="thead1 row0" class="text_l">
+                                    <a href="#" class="ic_q" title="열기">
+                                        <strong class="txt_qna q">
+                                            <span>질문</span>
+                                        </strong>
+                                        시니어 할인 혜택에 대해 알려 주세요.
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="acc_head" aria-expanded="false" role="button" id="tr_39">
+                                <td id="row0" headers="thead0">영화관 이용</td>
+                                <td headers="thead1 row0" class="text_l">
+                                    <a href="#" class="ic_q" title="열기">
+                                        <strong class="txt_qna q">
+                                            <span>질문</span>
+                                        </strong>
+                                        결제(예매) 및 취소 규정 안내
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="acc_head" aria-expanded="false" role="button" id="tr_37">
+                                <td id="row0" headers="thead0">영화관 이용</td>
+                                <td headers="thead1 row0" class="text_l">
+                                    <a href="#" class="ic_q" title="열기">
+                                        <strong class="txt_qna q">
+                                            <span>질문</span>
+                                        </strong>
+                                        상영관 내 외부 음식물 반입 제한 안내
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="acc_head" aria-expanded="false" role="button" id="tr_35">
+                                <td id="row0" headers="thead0">영화관 이용</td>
+                                <td headers="thead1 row0" class="text_l">
+                                    <a href="#" class="ic_q" title="열기">
+                                        <strong class="txt_qna q">
+                                            <span>질문</span>
+                                        </strong>
+                                        관람등급 안내
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="brd_paginate">
+                        <ol>
+                            <li>
+                                <strong title="현재 페이지">1</strong>
+                            </li>
+                            <li>
+                                <a href="#">2</a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <button type="button" class="tab_tit" style="width: 20%; left: 20%;">
+                    <span>공지사항</span>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="tab_tit" style="width: 20%; left: 40%;">
+                    <span>1:1문의</span>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="tab_tit" style="width: 20%; left: 60%;">
+                    <span>단체관람/대관문의</span>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="tab_tit" style="width: 20%; left: 80%;">
+                    <span>분실물안내</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div id="banner_section" class="banner_wrap">
+        <div class="banner_01">
+            <a href="#" target>
+                <img src="../img/Kingdom_980180.jpg" alt="킹덤오브헤븐 디렉터스컷 2020.11.11 전세계 최초 개봉">
+            </a>
+        </div>
+        <div id="footerBanner" class="banner_type02" style="background-color: rgb(255, 194, 76); background-image: url('../img/bg_01.jpg'); background-repeat: repeat-x; background-position: 0px 0px;">
+           <a href="#" target="_blank">
+               <img src="../img/Lottecard_980240.png" alt="롤라가 드리는 최대 10만원 캐시백 1억원 다이아몬드 당첨의 기회까지">
+           </a>
+        </div>
+    </div>
+    <div id="footer_section" class="footer">
+        <div class="inner">
+            <span class="f_logo">
+                <img src="../img/logo_footer.gif" alt="LOTTE CINEMA">
+            </span>
+            <ul class="f_menu">
+                <li>
+                    <a href="#" title="회원약관" target="_self">회원약관</a>
+                </li>
+                <li>
+                    <a href="#" title="개인정보처리방침" target="_self">
+                        <strong>개인정보처리방침</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="이메일" target="_self">이메일무단수집거부</a>
+                </li>
+                <li>
+                    <a href="#" title="영상정보처리기기 운영∙관리방침" target="_self">영상정보처리기기 운영∙관리방침</a>
+                </li>
+                <li>
+                    <a href="#" title="L.POINT회원안내" target="_self">L.POINT회원안내</a>
+                </li>
+                <li>
+                    <a href="#" title="배정기준" target="_self">배정기준</a>
+                </li>
+                <li>
+                    <a href="#" title="채용안내" target="_self">채용안내</a>
+                </li>
+                <li>
+                    <a href="#" title="광고/임대문의" target="_self">광고/임대문의</a>
+                </li>
+                <li>
+                    <a href="#" title="윤리경영" target="_self">윤리경영</a>
+                </li>
+                <li>
+                    <a href="#" title="기업정보" target="_self">기업정보</a>
+                </li>
+            </ul>
+            <div class="bx_address">
+                <address>서울특별시 송파구 올림픽로 300 롯데월드타워 27층</address>
+                <span class="bar">고객센터 1544-8855</span>
+                <br>
+                <span>대표이사 기원규</span>
+                <span class="bar">사업자등록번호 313-87-00979</span>
+                <span class="bar">통신판매업신고번호 제1184호</span>
+                <span class="bar">개인정보 보호책임자 이미선</span>
+            </div>
+            <p class="copyright">COPYRIGHT© LOTTE CINEMA ALL RIGHT RESERVED.</p>
+        </div>
+        <div class="article_award">
+            <div class="inner">
+                <ul>
+                    <li>
+                        <img src="../img/footer_award_NCSI5.png" alt="NCSI / NCSI 영화관부문 5년 연속 1위">
+                    </li>
+                    <li>
+                        <img src="../img/footer_award_kcsi.png" alt="KCSI 영화관부문 7년 연속 1위(총12회)">
+                    </li>
+                    <li>
+                        <img src="../img/footer_award_kssqi.png" alt="KS-SQI 영화관부문 8년 연속 1위(총11회)">
+                    </li>
+                    <li>
+                        <img src="../img/footer_award_brandcinema.png" alt="올해의 브랜드대상 영화관 부문 10년 연속 1위">
+                    </li>
+                    <li>
+                        <img src="../img/footer_award_greenstar.png" alt="그린스타 영화관 부문 4년 연속 1위">
+                    </li>
+                    <li>
+                        <img src="../img/footer_award_brandstar.png" alt="대한민국 브랜드 스타 영화관 부문 1위">
+                    </li>
+                    <li>
+                        <img src="../img/footer_award_familyship.png" alt="가족친화 인증기업 선정">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

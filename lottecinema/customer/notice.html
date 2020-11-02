@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LOTTE CINEMA::공지사항</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/member.css">
+    <link rel="stylesheet" href="../css/movie.css">
+    <link rel="stylesheet" href="../css/customer.css">
+<style>
+
+</style>
+</head>
+<body>
+    <div id="loading" class="loader loader-bouncing is-active hidden"></div>
+    <div id="skip_nav_section" class="skip_nav">
+        <ul>
+            <li>
+                <a href="#">주 메뉴 바로가기</a>
+            </li>
+            <li>
+                <a href="#">본문 바로가기</a>
+            </li>
+        </ul>
+    </div>
+    <div id="header_section" class="header">
+        <h1 class="logo">
+            <a href="#">LOTTE CINEMA</a>
+        </h1>
+        <div class="gnb">
+            <ul class="g_menu1">
+                <li>
+                    <a href="http://www.facebook.com/" class="btn_facebook" target="_blank" title="롯데시네마 페이스북 새창열림">좋아요</a>
+                </li>
+                <li>
+                    <a href="http://www.youtube.com/" class="btn_youtube" target="_blank" title="새창열림">구독하기</a>
+                </li>
+            </ul>
+            <ul class="g_menu2">
+                <li>
+                    <a href="#">멤버십</a>
+                </li>
+                <li>
+                    <a href="#">고객센터</a>
+                </li>
+                <li>
+                    <a href="#">로그인</a>
+                </li>
+            </ul>
+            <ul class="g_menu3">
+                <li>
+                    <a href="#" class="btn_my">회원가입</a>
+                </li>
+                <li>
+                    <a href="#" class="btn_reserve">바로 예매</a>
+                </li>
+                <li>
+                    <button class="btn_menu_all">전체 메뉴 레이어 열기</button>
+                    <div id="allmenu"></div>
+                </li>
+            </ul>
+        </div>
+        <div id="nav">
+            <ul>
+                <li class>
+                    <a href="#">예매</a>
+                </li>
+                <li class>
+                    <a href="#">영화</a>
+                </li>
+                <li class>
+                    <a href="#">영화관</a>
+                </li>
+                <li class>
+                    <a href="#">이벤트</a>
+                </li>
+                <li class>
+                    <a href="#">스토어</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="quick_wrap" style="padding-top: 105px;">
+        <div id="quick_menu" class="quick_menu" style="top: 220px;">
+            <a href="#">
+                <img src="../img/961c9cbf311b4f1299827c21a61fab76.png" alt="예매하기">
+            </a>
+            <a href="#">
+                <img src="../img/c1dbce4f91e948498c7c78239b7157ac.png" alt="상영시간표">
+            </a>
+            <a href="#">
+                <img src="../img/c793af89f3b648aa99cc679186ccfa02.png" alt="discount-guide">
+            </a>
+            <a href="#">
+                <img src="../img/c0945ca778f1470db48a5a90123f2e11.png" alt="merbership">
+            </a>
+            <a href="#">
+                <img src="../img/e339dfaae8d74acfbf7b0c6987442ac8.png" alt="고객센터">
+            </a>
+            <a href="#">
+                <img src="../img/df3d477b5f0f46fc86babc5de3753636.png" alt="스페셜관">
+            </a>
+            
+            <a href="#" class="qick_top">TOP</a>
+        </div>
+    </div>
+    <div id="contents" class="contents_customer" style>
+        <div class="title_top">
+            <h2 class="tit">고객센터</h2>
+        </div>
+        <ul class="tab_wrap outer">
+            <li>
+                <button type="button" class="tab_tit" style="width: 20%; left: 0%;">
+                    <span>FAQ</span>
+                </button>
+            </li>
+            <li class="active">
+                <button type="button" class="tab_tit" style="width: 20%; left: 20%;">
+                    <span>공지사항</span>
+                </button>
+                <div class="tab_con">
+                    <h3 class="hidden">공지사항</h3>
+                    <ul class="tab_wrap inner">
+                        <li class="active">
+                            <button type="button" class="tab_tit" id="1" style="left: 0px; margin-left: 266.406pt;">
+                                <span>전체 공지</span>
+                            </button>
+                            <div class="tab_con ty3">
+                                <h4 class="hidden">전체 공지</h4>
+                                <fieldset class="search_wrap" id="search_wrap1">
+                                    <legend>전체 공지 검색하기</legend>
+                                    <select id="selectArea1" style="display: none;"></select>
+                                    <select id="selectCinema1" style="display: none;"></select>
+                                    <select id="selectCondition1" class="ty3" title="검색조건 제목 선택">
+                                        <option value="1" selected>제목</option>
+                                        <option value="2">내용</option>
+                                        <option value="3">제목+내용</option>
+                                    </select>
+                                    <input type="text" placeholder="검색어를 입력해주세요." title="검색어를 입력해주세요." id="searchKeyword1" style="width: 580px;">
+                                    <button type="button" class="btn_col2" id="btnSearch1">검색</button>
+                                </fieldset>
+                                <table class="tbl_list text_c" summary="공지사항에 대한 표입니다.">
+                                    <caption>전체 공지사항 내용</caption>
+                                    <colgroup>
+                                        <col style="width: 10%;">
+                                        <col style="width: 15%;">
+                                        <col style="width: auto;">
+                                        <col style="width: 15%;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">번호</th>
+                                            <th scope="col">구분</th>
+                                            <th scope="col">제목</th>
+                                            <th scope="col">등록일</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <strong class="ico_imp">
+                                                    <span>중요</span>
+                                                </strong>
+                                            </td>
+                                            <td>전체</td>
+                                            <td class="text_l">
+                                                <a href="#" id="2209" class="txt_color01">크리에이티브 공모전 수상작 발표</a>
+                                            </td>
+                                            <td>2020-10-28</td>
+                                        </tr>
+                                        <tr>
+                                            <td>357</td>
+                                            <td>전체</td>
+                                            <td class="text_l">
+                                                <a href="#" id="2207" class>삼진그룹영어토익반 <무비싸다구> 오픈 시간 안내</a>
+                                            </td>
+                                            <td>2020-10-16</td>
+                                        </tr>
+                                        <tr>
+                                            <td>356</td>
+                                            <td>전체</td>
+                                            <td class="text_l">
+                                                <a href="#" id="2206" class>시스템 점검 안내</a>
+                                            </td>
+                                            <td>2020-10-19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>355</td>
+                                            <td>전체</td>
+                                            <td class="text_l">
+                                                <a href="#" id="2205" class>SKT 예매 티켓 L.POINT 적립 서비스 안내</a>
+                                            </td>
+                                            <td>2020-10-14</td>
+                                        </tr>
+                                        <tr>
+                                            <td>354</td>
+                                            <td>전체</td>
+                                            <td class="text_l">
+                                                <a href="#" id="2204" class>롯데시네마 고객센터(1544-8855) 상담원 연결 시간 조정 안내</a>
+                                            </td>
+                                            <td>2020-10-13</td>
+                                        </tr>
+                                        <tr>
+                                            <td>353</td>
+                                            <td>전체</td>
+                                            <td class="text_l">
+                                                <a href="#" id="2200" class>롯데시네마 회원약관 및 개인정보처리방침 개정 안내</a>
+                                            </td>
+                                            <td>2020-09-21</td>
+                                        </tr>
+                                        <tr>
+                                            <td>352</td>
+                                            <td>전체</td>
+                                            <td class="text_l">
+                                                <a href="#" id="2196" class>구미프라임1번가 영업 종료 안내</a>
+                                            </td>
+                                            <td>2020-09-14</td>
+                                        </tr>
+                                        <tr>
+                                            <td>351</td>
+                                            <td>전체</td>
+                                            <td class="text_l">
+                                                <a href="#" id="2194" class>춘천관 리뉴얼 안내(9/26(토) 오픈)</a>
+                                            </td>
+                                            <td>2020-09-07</td>
+                                        </tr>
+                                        <tr>
+                                            <td>350</td>
+                                            <td>전체</td>
+                                            <td class="text_l">
+                                                <a href="#" id="2192" class>롯데시네마 황학 영업 종료 안내</a>
+                                            </td>
+                                            <td>2020-09-14</td>
+                                        </tr>
+                                        <tr>
+                                            <td>349</td>
+                                            <td>전체</td>
+                                            <td class="text_l">
+                                                <a href="#" id="2187" class>[부천관] 영업 재개 안내</a>
+                                            </td>
+                                            <td>2020-09-02</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="brd_paginate">
+                                    <ol>
+                                        <li>
+                                            <strong title="현재 페이지">1</strong>
+                                        </li>
+                                        <li>
+                                            <a href="#">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">5</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">6</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">7</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">8</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">9</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">10</a>
+                                        </li>
+                                    </ol>
+                                    <button type="button" class="btn_pg_next">다음 페이지로 이동</button>
+                                    <button type="button" class="btn_pg_last">마지막 페이지로 이동</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <button type="button" class="tab_tit" style="width: 20%; left: 40%;">
+                    <span>1:1문의</span>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="tab_tit" style="width: 20%; left: 60%;">
+                    <span>단체관람/대관문의</span>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="tab_tit" style="width: 20%; left: 80%;">
+                    <span>분실물안내</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div id="banner_section" class="banner_wrap">
+        <div class="banner_01">
+            <a href="#" target>
+                <img src="../img/Kingdom_980180.jpg" alt="킹덤오브헤븐 디렉터스컷 2020.11.11 전세계 최초 개봉">
+            </a>
+        </div>
+        <div id="footerBanner" class="banner_type02" style="background-color: rgb(255, 194, 76); background-image: url('../img/bg_01.jpg'); background-repeat: repeat-x; background-position: 0px 0px;">
+           <a href="#" target="_blank">
+               <img src="../img/Lottecard_980240.png" alt="롤라가 드리는 최대 10만원 캐시백 1억원 다이아몬드 당첨의 기회까지">
+           </a>
+        </div>
+    </div>
+    <div id="footer_section" class="footer">
+        <div class="inner">
+            <span class="f_logo">
+                <img src="../img/logo_footer.gif" alt="LOTTE CINEMA">
+            </span>
+            <ul class="f_menu">
+                <li>
+                    <a href="#" title="회원약관" target="_self">회원약관</a>
+                </li>
+                <li>
+                    <a href="#" title="개인정보처리방침" target="_self">
+                        <strong>개인정보처리방침</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="이메일" target="_self">이메일무단수집거부</a>
+                </li>
+                <li>
+                    <a href="#" title="영상정보처리기기 운영∙관리방침" target="_self">영상정보처리기기 운영∙관리방침</a>
+                </li>
+                <li>
+                    <a href="#" title="L.POINT회원안내" target="_self">L.POINT회원안내</a>
+                </li>
+                <li>
+                    <a href="#" title="배정기준" target="_self">배정기준</a>
+                </li>
+                <li>
+                    <a href="#" title="채용안내" target="_self">채용안내</a>
+                </li>
+                <li>
+                    <a href="#" title="광고/임대문의" target="_self">광고/임대문의</a>
+                </li>
+                <li>
+                    <a href="#" title="윤리경영" target="_self">윤리경영</a>
+                </li>
+                <li>
+                    <a href="#" title="기업정보" target="_self">기업정보</a>
+                </li>
+            </ul>
+            <div class="bx_address">
+                <address>서울특별시 송파구 올림픽로 300 롯데월드타워 27층</address>
+                <span class="bar">고객센터 1544-8855</span>
+                <br>
+                <span>대표이사 기원규</span>
+                <span class="bar">사업자등록번호 313-87-00979</span>
+                <span class="bar">통신판매업신고번호 제1184호</span>
+                <span class="bar">개인정보 보호책임자 이미선</span>
+            </div>
+            <p class="copyright">COPYRIGHT© LOTTE CINEMA ALL RIGHT RESERVED.</p>
+        </div>
+        <div class="article_award">
+            <div class="inner">
+                <ul>
+                    <li>
+                        <img src="../img/footer_award_NCSI5.png" alt="NCSI / NCSI 영화관부문 5년 연속 1위">
+                    </li>
+                    <li>
+                        <img src="../img/footer_award_kcsi.png" alt="KCSI 영화관부문 7년 연속 1위(총12회)">
+                    </li>
+                    <li>
+                        <img src="../img/footer_award_kssqi.png" alt="KS-SQI 영화관부문 8년 연속 1위(총11회)">
+                    </li>
+                    <li>
+                        <img src="../img/footer_award_brandcinema.png" alt="올해의 브랜드대상 영화관 부문 10년 연속 1위">
+                    </li>
+                    <li>
+                        <img src="../img/footer_award_greenstar.png" alt="그린스타 영화관 부문 4년 연속 1위">
+                    </li>
+                    <li>
+                        <img src="../img/footer_award_brandstar.png" alt="대한민국 브랜드 스타 영화관 부문 1위">
+                    </li>
+                    <li>
+                        <img src="../img/footer_award_familyship.png" alt="가족친화 인증기업 선정">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>LOTTE CINEMA::분실물안내</title>
+    <title>LOTTE CINEMA::1:1문의</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
@@ -127,90 +127,112 @@
                     <span>공지사항</span>
                 </button>
             </li>
-            <li>
+            <li class="active">
                 <button type="button" class="tab_tit" style="width: 20%; left: 40%;">
                     <span>1:1문의</span>
                 </button>
-            </li>
-            <li>
-                <button type="button" class="tab_tit" style="width: 20%; left: 60%;">
-                    <span>단체관람/대관문의</span>
-                </button>
-            </li>
-            <li class="active">
-                <button type="button" class="tab_tit" style="width: 20%; left: 80%;">
-                    <span>분실물안내</span>
-                </button>
                 <div class="tab_con">
-                    <h3 class="hidden">단체관람/대관문의</h3>
-                    <div class="con_top ty3">
-                        <p>
-                            분실물에 관련하여 문의가 있으시면 아래의 정보를 입력해주세요.
-                            <br>
-                            담당자 확인 후 신속히 답변을 드리겠습니다.
-                        </p>
+                    <h3 class="hidden">1:1문의</h3>
+                    <div class="con_top">
+                        <div class="ico_tit qus">
+                            FAQ를 이용하시면 궁금증을 더 빠르게 해결하실 수 있습니다.
+                            <ul class="list_txt mt10">
+                                <li>1:1 문의글 답변 운영시간 10:00 ~ 19:00</li>
+                                <li>접수 후 48시간 안에 답변 드리겠습니다.</li>
+                            </ul>
+                        </div>
+                        <div class="btn_wrap"></div>
                     </div>
+                    <dl class="contxt_type1">
+                        <dt class="tit">
+                            고객님의 문의에 
+                            <span class="txt_color02">답변하는 직원은 고객 여러분의 가족 중 한 사람</span>
+                            일 수 있습니다.
+                        </dt>
+                        <dd class="desc">고객의 언어폭력(비하, 욕설, 반말, 성희롱 등)으로부터 직원을 보호하기 위해 관련 법에 따라 수사기관에 필요한 조치를 요구할 수 있으며, 형법에 의해 처벌 대상이 될 수 있습니다.</dd>
+                    </dl>
                     <div class="con_tit ty2">
                         <h4 class="tit">문의내용</h4>
                         <div class="group_rgt">
                             <span class="txt_req">필수입력</span>
                         </div>
                     </div>
-                    <table class="tbl_form" summary="분실물 문의내용작성 테이블">
-                        <caption>분실물 문의 내용을 작성해주세요.</caption>
+                    <table class="tbl_form" summary="문의내용작성 테이블">
+                        <caption>문의 내용을 작성해주세요.</caption>
                         <colgroup>
                             <col style="width: 20%;">
                             <col style="width: auto;">
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th scope="row" class="req">분실장소</th>
+                                <th scope="row" class="req">분류</th>
                                 <td>
-                                    <div class="bx_file">
-                                        <button class="btn_col3 ty5" id="CinemaSelect">영화관선택</button>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row" class="req">분실 일</th>
-                                <td>
-                                    <input type="text" id="dp00" class="ty2 hasDatepicker" readonly>
-                                    <button type="button" class="ui-datepicker-trigger">날짜선택</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row" class="req">분실시간</th>
-                                <td>
-                                    <input type="text" class="ty2 inp_time" placeholder id="hopeTimeHour1" title="시작시간" maxlength="2">시 ~
-                                    <input type="text" class="ty2 inp_time" placeholder id="hopeTimeHour2" title="끝나는시간" maxlength="2">시 사이
-                                    <span class="txt_form">0 부터 59 사이의 숫자만 입력해주세요. 예) 12시 00분</span>
+                                    <select title="문의내용 분류선택" id="iDdivisionCode">
+                                        <option value="0" selected>분류선택</option>
+                                        <option value="600">영화관</option>
+                                        <option value="700">영화</option>
+                                        <option value="800">멤버십</option>
+                                        <option value="900">예매/결제</option>
+                                        <option value="1000">이벤트/시사회/무대인사</option>
+                                        <option value="1100">홈페이지/모바일</option>
+                                        <option value="1200">개인정보</option>
+                                    </select>
+                                    <select title="문의내용 문의종류" id="inquiryType">
+                                        <option value="0">문의 종류</option>
+                                        <option value="3">문의</option>
+                                        <option value="1">칭찬</option>
+                                        <option value="2">불만</option>
+                                        <option value="4">건의</option>
+                                    </select>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row" class="req">종류</th>
-                                <td colspan="4">
-                                    <input type="text" id="lostKind" class="ty2 w_full" placeholder="분실물 종류를 입력해주세요(예: 휴대폰)">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row" class="req">색상</th>
-                                <td colspan="4">
-                                    <input type="text" id="lostColor" class="ty2 w_full" placeholder="분실물 색상을 입력해주세요(예: 검정색)">
-                                </td>
-                            </tr>
-                            <tr class="lnt_inp">
-                                <th scope="row" rowspan="2" class="req">내용</th>
-                            </tr>
-                            <tr>
-                                <td colspan="4">
-                                    <div class="bx_textarea">
-                                        <textarea class="ty2" cols="10" rows="10" placeholder="내용을 입력해주세요" id="comment"></textarea>
-                                        <span class="txt_count">
-                                            <em id="strongContentsCount">0</em>
-                                            /한글
-                                            <em>110</em>자
-                                        </span>
+                                <td>
+                                    <input type="radio" name="rdo00" id="radio01" class="aNoneSelect" checked>
+                                    <label for="radio01">영화관문의</label>
+                                    <input type="radio" name="rdo00" id="radio02">
+                                    <label for="radio02">기탐 문의</label>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <div class="bx_file">
+                                        <button class="btn_col3 ty5">영화관선택</button>
                                     </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="req">내용</th>
+                                <td>
+                                    <input type="text" class="ty2 w_full" id="iDtitle">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"></th>
+                                <td>
+                                   <div class="bx_textarea">
+                                       <textarea class="ty2" id="iDcontents" cols="10" rows="10"></textarea>
+                                       <div class="txt_caution1 txt_color01">
+                                        현재 페이지 내 ‘클릭/타이핑’ 없이 머무르는 경우, 
+                                        <br>
+                                        20분 후 접속이 자동 종료되며 작업한 내용은 저장이 되지 않습니다.
+                                       </div>
+                                       <span class="txt_count">
+                                           <em id="strongContentsCount">0</em>
+                                           /한글
+                                           <em>2,000</em>
+                                           자
+                                       </span>
+                                   </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">첨부파일</th>
+                                <td>
+                                   <div class="bx_file">
+                                       <input type="file" id="file" name="file">
+                                       <label class for="file">파일선택</label>
+                                       <div class="file_item"></div>
+                                   </div>
+                                   <span class="txt_caution1 fl_r with_inp">첨부 파일형식 : jpg / jpeg / png / bmp / gif / pdf (5MB X 1개)</span>
                                 </td>
                             </tr>
                             <tr>
@@ -421,6 +443,16 @@
                         </div>
                     </div>
                 </div>
+            </li>
+            <li>
+                <button type="button" class="tab_tit" style="width: 20%; left: 60%;">
+                    <span>단체관람/대관문의</span>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="tab_tit" style="width: 20%; left: 80%;">
+                    <span>분실물안내</span>
+                </button>
             </li>
         </ul>
     </div>
